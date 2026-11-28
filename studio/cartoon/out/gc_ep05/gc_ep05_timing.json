@@ -1,0 +1,6944 @@
+{
+ "id": "gc_ep05",
+ "total": 348.9616666666667,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75
+ ],
+ "plan": {
+  "length": 349.0,
+  "shots": 75,
+  "visual_changes": 366,
+  "mean_gap": 0.95,
+  "longest_gap": 5.16,
+  "longest_gap_at": 305.1,
+  "over_6s": [],
+  "places": [
+   "gmeadow",
+   "glab",
+   "gz_intro",
+   "gz_logo",
+   "gbench",
+   "gpark",
+   "gsky",
+   "gspace"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 27,
+  "longest_without_question": 40.3,
+  "first_words_at": 0.42,
+  "shot_mean": 4.65,
+  "main_intro": {
+   "at": [
+    11.6,
+    333.1
+   ],
+   "seconds": 30.2
+  },
+  "fails": [],
+  "words_placed": "661/661",
+  "sync": {
+   "pauses_checked": 50,
+   "onset_err_mean_ms": 23.2,
+   "onset_err_max_ms": 130.0,
+   "suspect_words": [],
+   "cuts": 74,
+   "cuts_on_the_half_beat": 74,
+   "songs_entering_on_a_beat": "6/6",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the flower meadow hook: the apple falls"
+  ],
+  [
+   1.14,
+   "action",
+   "the apple falls"
+  ],
+  [
+   2.73,
+   "word",
+   "?"
+  ],
+  [
+   3.44,
+   "new place",
+   "the picture board (blueprint) hook: the ball drops"
+  ],
+  [
+   3.6,
+   "action",
+   "the ball falls"
+  ],
+  [
+   5.89,
+   "word",
+   "EVERY TIME!"
+  ],
+  [
+   7.19,
+   "new place",
+   "Gizmo's lab hook: Gizmo"
+  ],
+  [
+   7.28,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   8.02,
+   "word",
+   "GIZMO"
+  ],
+  [
+   9.28,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   11.56,
+   "action",
+   "the gears turn"
+  ],
+  [
+   11.56,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   11.61,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   12.38,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   12.69,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   13.0,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   13.75,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   13.75,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   13.75,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   14.69,
+   "action",
+   "the gears turn"
+  ],
+  [
+   14.69,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   14.88,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   16.56,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   17.19,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   17.5,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   17.81,
+   "action",
+   "out of the flash"
+  ],
+  [
+   17.81,
+   "action",
+   "the rays turn"
+  ],
+  [
+   17.81,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   18.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   18.57,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   18.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.19,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.7,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   20.31,
+   "action",
+   "confetti"
+  ],
+  [
+   20.31,
+   "action",
+   "the line draws on"
+  ],
+  [
+   20.62,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   20.82,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   20.94,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   21.62,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   21.75,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   22.5,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   23.12,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   23.26,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   23.76,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   24.67,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   24.67,
+   "action",
+   "confetti"
+  ],
+  [
+   24.67,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   24.97,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   25.94,
+   "new place",
+   "Gizmo's lab lab wide"
+  ],
+  [
+   26.22,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   26.97,
+   "word",
+   "HELLO!"
+  ],
+  [
+   29.06,
+   "new place",
+   "Gizmo's work bench bench wide"
+  ],
+  [
+   30.63,
+   "action",
+   "a part lights up"
+  ],
+  [
+   31.87,
+   "word",
+   "A SECRET PULL!"
+  ],
+  [
+   32.81,
+   "new place",
+   "the flower meadow the apple tree"
+  ],
+  [
+   33.45,
+   "action",
+   "a part lights up"
+  ],
+  [
+   33.87,
+   "word",
+   "AN APPLE TREE!"
+  ],
+  [
+   35.31,
+   "new shot",
+   "the flower meadow the apple falls"
+  ],
+  [
+   38.11,
+   "action",
+   "the apple falls"
+  ],
+  [
+   39.43,
+   "word",
+   "PLOP!"
+  ],
+  [
+   40.31,
+   "new place",
+   "the picture board (blueprint) question 1"
+  ],
+  [
+   40.61,
+   "action",
+   "a part lights up"
+  ],
+  [
+   42.66,
+   "sign",
+   "UP"
+  ],
+  [
+   43.01,
+   "sign",
+   "DOWN"
+  ],
+  [
+   44.29,
+   "thinking dot",
+   "1"
+  ],
+  [
+   44.97,
+   "thinking dot",
+   "2"
+  ],
+  [
+   45.64,
+   "thinking dot",
+   "3"
+  ],
+  [
+   46.13,
+   "answer",
+   "DOWN"
+  ],
+  [
+   47.5,
+   "new shot",
+   "the picture board (blueprint) down"
+  ],
+  [
+   47.6,
+   "action",
+   "a big arrow points down"
+  ],
+  [
+   47.6,
+   "word",
+   "DOWN!"
+  ],
+  [
+   49.1,
+   "action",
+   "the apple falls"
+  ],
+  [
+   51.25,
+   "new place",
+   "the sunny park after the rain think"
+  ],
+  [
+   51.53,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   52.88,
+   "word",
+   "WHY?"
+  ],
+  [
+   53.67,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   55.0,
+   "new place",
+   "the picture board (blueprint) gravity"
+  ],
+  [
+   56.45,
+   "action",
+   "a part lights up"
+  ],
+  [
+   56.45,
+   "word",
+   "GRAVITY!"
+  ],
+  [
+   57.5,
+   "new shot",
+   "the picture board (blueprint) invisible pull"
+  ],
+  [
+   59.28,
+   "word",
+   "A PULL!"
+  ],
+  [
+   60.46,
+   "action",
+   "arrows show the pull"
+  ],
+  [
+   62.81,
+   "new shot",
+   "the picture board (blueprint) question 2"
+  ],
+  [
+   64.31,
+   "sign",
+   "YES"
+  ],
+  [
+   64.66,
+   "sign",
+   "NO"
+  ],
+  [
+   65.96,
+   "thinking dot",
+   "1"
+  ],
+  [
+   66.63,
+   "thinking dot",
+   "2"
+  ],
+  [
+   67.31,
+   "thinking dot",
+   "3"
+  ],
+  [
+   67.79,
+   "answer",
+   "NO"
+  ],
+  [
+   69.06,
+   "new shot",
+   "the picture board (blueprint) arrows"
+  ],
+  [
+   69.99,
+   "word",
+   "INVISIBLE!"
+  ],
+  [
+   71.47,
+   "action",
+   "arrows show the pull"
+  ],
+  [
+   73.0,
+   "action",
+   "a part lights up"
+  ],
+  [
+   73.75,
+   "action",
+   "it appears"
+  ],
+  [
+   73.75,
+   "new shot",
+   "the picture board (blueprint) toward the center"
+  ],
+  [
+   76.08,
+   "action",
+   "the center lights up"
+  ],
+  [
+   77.03,
+   "action",
+   "a part lights up"
+  ],
+  [
+   77.03,
+   "word",
+   "THE CENTER!"
+  ],
+  [
+   77.81,
+   "new shot",
+   "the picture board (blueprint) people all around"
+  ],
+  [
+   78.27,
+   "action",
+   "little people stand all around the Earth"
+  ],
+  [
+   79.01,
+   "action",
+   "the Earth turns"
+  ],
+  [
+   79.01,
+   "word",
+   "ALL AROUND!"
+  ],
+  [
+   81.56,
+   "new place",
+   "the flower meadow pulled the apple"
+  ],
+  [
+   82.22,
+   "action",
+   "the apple falls"
+  ],
+  [
+   82.22,
+   "word",
+   "PULL!"
+  ],
+  [
+   83.05,
+   "action",
+   "an arrow points down"
+  ],
+  [
+   85.62,
+   "new shot",
+   "the flower meadow on the grass"
+  ],
+  [
+   85.82,
+   "action",
+   "a part lights up"
+  ],
+  [
+   87.68,
+   "word",
+   "ON THE GRASS!"
+  ],
+  [
+   88.75,
+   "action",
+   "it appears"
+  ],
+  [
+   88.75,
+   "new place",
+   "the picture board (blueprint) question 2b"
+  ],
+  [
+   89.05,
+   "action",
+   "a part lights up"
+  ],
+  [
+   91.87,
+   "sign",
+   "THE CENTER"
+  ],
+  [
+   92.22,
+   "sign",
+   "THE SKY"
+  ],
+  [
+   94.17,
+   "thinking dot",
+   "1"
+  ],
+  [
+   94.84,
+   "thinking dot",
+   "2"
+  ],
+  [
+   95.51,
+   "thinking dot",
+   "3"
+  ],
+  [
+   96.0,
+   "answer",
+   "THE CENTER"
+  ],
+  [
+   97.19,
+   "new place",
+   "Gizmo's lab hop"
+  ],
+  [
+   97.42,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   97.42,
+   "word",
+   "HOP!"
+  ],
+  [
+   102.5,
+   "new shot",
+   "Gizmo's lab point down"
+  ],
+  [
+   102.76,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   102.76,
+   "word",
+   "POINT DOWN!"
+  ],
+  [
+   107.19,
+   "new place",
+   "Gizmo's work bench say it"
+  ],
+  [
+   108.57,
+   "word",
+   "GRAVITY PULLS!"
+  ],
+  [
+   109.81,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   110.62,
+   "action",
+   "it appears"
+  ],
+  [
+   110.62,
+   "new place",
+   "the picture board (blueprint) question 3"
+  ],
+  [
+   112.8,
+   "sign",
+   "GRAVITY"
+  ],
+  [
+   113.15,
+   "sign",
+   "GLUE"
+  ],
+  [
+   114.75,
+   "thinking dot",
+   "1"
+  ],
+  [
+   115.42,
+   "thinking dot",
+   "2"
+  ],
+  [
+   116.09,
+   "thinking dot",
+   "3"
+  ],
+  [
+   116.58,
+   "answer",
+   "GRAVITY"
+  ],
+  [
+   117.81,
+   "new shot",
+   "the picture board (blueprint) part 1 recap"
+  ],
+  [
+   118.01,
+   "word",
+   "GRAVITY!"
+  ],
+  [
+   120.92,
+   "action",
+   "the apple falls"
+  ],
+  [
+   121.88,
+   "new shot",
+   "the picture board (blueprint) two balls"
+  ],
+  [
+   122.49,
+   "action",
+   "a part lights up"
+  ],
+  [
+   122.49,
+   "word",
+   "HEAVY"
+  ],
+  [
+   123.72,
+   "action",
+   "a part lights up"
+  ],
+  [
+   123.72,
+   "word",
+   "LIGHT"
+  ],
+  [
+   125.0,
+   "new shot",
+   "the picture board (blueprint) question 4"
+  ],
+  [
+   128.23,
+   "sign",
+   "HEAVY"
+  ],
+  [
+   128.58,
+   "sign",
+   "TOGETHER"
+  ],
+  [
+   130.91,
+   "thinking dot",
+   "1"
+  ],
+  [
+   131.58,
+   "thinking dot",
+   "2"
+  ],
+  [
+   132.26,
+   "thinking dot",
+   "3"
+  ],
+  [
+   132.74,
+   "answer",
+   "TOGETHER"
+  ],
+  [
+   134.06,
+   "new shot",
+   "the picture board (blueprint) together"
+  ],
+  [
+   134.16,
+   "word",
+   "TOGETHER!"
+  ],
+  [
+   135.54,
+   "action",
+   "both balls fall"
+  ],
+  [
+   138.75,
+   "new place",
+   "Gizmo's lab the same way"
+  ],
+  [
+   138.85,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   142.49,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   142.49,
+   "word",
+   "THE SAME!"
+  ],
+  [
+   143.75,
+   "new place",
+   "the picture board (blueprint) again"
+  ],
+  [
+   145.7,
+   "action",
+   "both balls fall"
+  ],
+  [
+   145.7,
+   "word",
+   "DROP!"
+  ],
+  [
+   146.56,
+   "new place",
+   "high in the sky the feather floats"
+  ],
+  [
+   146.66,
+   "action",
+   "the feather floats down slowly"
+  ],
+  [
+   149.34,
+   "word",
+   "SLOWLY..."
+  ],
+  [
+   150.62,
+   "new place",
+   "the picture board (blueprint) question 5"
+  ],
+  [
+   152.78,
+   "sign",
+   "BALL"
+  ],
+  [
+   153.13,
+   "sign",
+   "FEATHER"
+  ],
+  [
+   153.87,
+   "thinking dot",
+   "1"
+  ],
+  [
+   154.54,
+   "thinking dot",
+   "2"
+  ],
+  [
+   155.22,
+   "thinking dot",
+   "3"
+  ],
+  [
+   155.7,
+   "answer",
+   "BALL"
+  ],
+  [
+   156.88,
+   "new place",
+   "Gizmo's lab think 2"
+  ],
+  [
+   157.46,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   158.52,
+   "word",
+   "WHY?"
+  ],
+  [
+   159.79,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   161.25,
+   "new place",
+   "the picture board (blueprint) the air slows it"
+  ],
+  [
+   161.48,
+   "action",
+   "the ball falls fast"
+  ],
+  [
+   161.48,
+   "action",
+   "the feather floats down slowly"
+  ],
+  [
+   162.35,
+   "action",
+   "a part lights up"
+  ],
+  [
+   162.35,
+   "word",
+   "AIR!"
+  ],
+  [
+   164.38,
+   "new place",
+   "high in the sky the air pushes"
+  ],
+  [
+   164.47,
+   "action",
+   "the feather floats down slowly"
+  ],
+  [
+   167.58,
+   "word",
+   "SIDE TO SIDE!"
+  ],
+  [
+   169.06,
+   "new place",
+   "the picture board (blueprint) question 5b"
+  ],
+  [
+   169.36,
+   "action",
+   "a part lights up"
+  ],
+  [
+   171.44,
+   "sign",
+   "THE AIR"
+  ],
+  [
+   171.79,
+   "sign",
+   "GROUND"
+  ],
+  [
+   173.36,
+   "thinking dot",
+   "1"
+  ],
+  [
+   174.03,
+   "thinking dot",
+   "2"
+  ],
+  [
+   174.7,
+   "thinking dot",
+   "3"
+  ],
+  [
+   175.19,
+   "answer",
+   "THE AIR"
+  ],
+  [
+   176.56,
+   "new place",
+   "Gizmo's lab feather hands"
+  ],
+  [
+   176.62,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   179.14,
+   "word",
+   "SLOWLY!"
+  ],
+  [
+   181.56,
+   "new place",
+   "the picture board (blueprint) no air"
+  ],
+  [
+   183.08,
+   "word",
+   "NO AIR!"
+  ],
+  [
+   184.69,
+   "new shot",
+   "the picture board (blueprint) question 6"
+  ],
+  [
+   188.3,
+   "sign",
+   "THE ROCK"
+  ],
+  [
+   188.65,
+   "sign",
+   "SAME TIME"
+  ],
+  [
+   189.4,
+   "thinking dot",
+   "1"
+  ],
+  [
+   190.08,
+   "thinking dot",
+   "2"
+  ],
+  [
+   190.75,
+   "thinking dot",
+   "3"
+  ],
+  [
+   191.24,
+   "answer",
+   "SAME TIME"
+  ],
+  [
+   192.5,
+   "new shot",
+   "the picture board (blueprint) same time"
+  ],
+  [
+   192.83,
+   "action",
+   "the rock and the feather fall together"
+  ],
+  [
+   194.09,
+   "word",
+   "SAME TIME!"
+  ],
+  [
+   197.5,
+   "new place",
+   "Gizmo's work bench say it 2"
+  ],
+  [
+   199.08,
+   "word",
+   "AIR SLOWS IT!"
+  ],
+  [
+   200.0,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   200.94,
+   "new place",
+   "the picture board (blueprint) part 2 recap"
+  ],
+  [
+   202.25,
+   "action",
+   "both balls fall"
+  ],
+  [
+   202.25,
+   "word",
+   "TOGETHER!"
+  ],
+  [
+   205.94,
+   "new place",
+   "Gizmo's lab everything has gravity"
+  ],
+  [
+   206.93,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   208.27,
+   "word",
+   "EVERYTHING!"
+  ],
+  [
+   211.25,
+   "new place",
+   "the picture board (blueprint) a little pull"
+  ],
+  [
+   211.36,
+   "action",
+   "two tiny arrows by the little ball"
+  ],
+  [
+   211.36,
+   "word",
+   "A LITTLE"
+  ],
+  [
+   212.63,
+   "action",
+   "a part lights up"
+  ],
+  [
+   215.62,
+   "action",
+   "it appears"
+  ],
+  [
+   215.62,
+   "new shot",
+   "the picture board (blueprint) question 6b"
+  ],
+  [
+   218.01,
+   "sign",
+   "YES"
+  ],
+  [
+   218.36,
+   "sign",
+   "NO"
+  ],
+  [
+   219.66,
+   "thinking dot",
+   "1"
+  ],
+  [
+   220.34,
+   "thinking dot",
+   "2"
+  ],
+  [
+   221.01,
+   "thinking dot",
+   "3"
+  ],
+  [
+   221.5,
+   "answer",
+   "YES"
+  ],
+  [
+   222.81,
+   "action",
+   "it appears"
+  ],
+  [
+   222.81,
+   "new shot",
+   "the picture board (blueprint) more mass"
+  ],
+  [
+   223.53,
+   "action",
+   "big arrows by the big Earth"
+  ],
+  [
+   224.45,
+   "word",
+   "MORE!"
+  ],
+  [
+   225.82,
+   "action",
+   "a part lights up"
+  ],
+  [
+   226.88,
+   "new place",
+   "Gizmo's lab you too"
+  ],
+  [
+   227.8,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   227.8,
+   "word",
+   "YOU TOO!"
+  ],
+  [
+   229.05,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   229.69,
+   "new place",
+   "the picture board (blueprint) question 7"
+  ],
+  [
+   231.72,
+   "sign",
+   "A BALL"
+  ],
+  [
+   232.07,
+   "sign",
+   "THE EARTH"
+  ],
+  [
+   233.87,
+   "thinking dot",
+   "1"
+  ],
+  [
+   234.55,
+   "thinking dot",
+   "2"
+  ],
+  [
+   235.22,
+   "thinking dot",
+   "3"
+  ],
+  [
+   235.71,
+   "answer",
+   "THE EARTH"
+  ],
+  [
+   236.88,
+   "new shot",
+   "the picture board (blueprint) the earth"
+  ],
+  [
+   237.34,
+   "word",
+   "THE EARTH!"
+  ],
+  [
+   239.27,
+   "action",
+   "arrows show the pull"
+  ],
+  [
+   240.39,
+   "action",
+   "people stand all around"
+  ],
+  [
+   241.56,
+   "new place",
+   "Gizmo's lab earth arms"
+  ],
+  [
+   242.2,
+   "action",
+   "Gizmo opens his arms wide"
+  ],
+  [
+   242.55,
+   "word",
+   "BIG EARTH!"
+  ],
+  [
+   245.62,
+   "new place",
+   "space above the Earth the moon"
+  ],
+  [
+   245.72,
+   "action",
+   "it goes around"
+  ],
+  [
+   248.01,
+   "action",
+   "a part lights up"
+  ],
+  [
+   248.01,
+   "word",
+   "THE MOON!"
+  ],
+  [
+   250.0,
+   "new shot",
+   "space above the Earth around the earth"
+  ],
+  [
+   250.1,
+   "action",
+   "it goes around"
+  ],
+  [
+   250.85,
+   "word",
+   "AROUND!"
+  ],
+  [
+   253.44,
+   "new place",
+   "Gizmo's lab point up"
+  ],
+  [
+   253.58,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   253.58,
+   "word",
+   "POINT UP!"
+  ],
+  [
+   257.19,
+   "new place",
+   "space above the Earth gravity keeps the moon"
+  ],
+  [
+   257.29,
+   "action",
+   "it goes around"
+  ],
+  [
+   257.64,
+   "action",
+   "an arrow pulls the Moon toward the Earth"
+  ],
+  [
+   257.64,
+   "word",
+   "GRAVITY!"
+  ],
+  [
+   260.94,
+   "new shot",
+   "space above the Earth question 8"
+  ],
+  [
+   261.04,
+   "action",
+   "it goes around"
+  ],
+  [
+   262.98,
+   "sign",
+   "THE MOON"
+  ],
+  [
+   263.33,
+   "sign",
+   "A CLOUD"
+  ],
+  [
+   264.93,
+   "thinking dot",
+   "1"
+  ],
+  [
+   265.6,
+   "thinking dot",
+   "2"
+  ],
+  [
+   266.28,
+   "thinking dot",
+   "3"
+  ],
+  [
+   266.76,
+   "answer",
+   "THE MOON"
+  ],
+  [
+   268.12,
+   "new shot",
+   "space above the Earth around the sun"
+  ],
+  [
+   268.23,
+   "action",
+   "it goes around"
+  ],
+  [
+   272.9,
+   "word",
+   "THE SUN!"
+  ],
+  [
+   273.75,
+   "new place",
+   "Gizmo's lab turn"
+  ],
+  [
+   274.0,
+   "action",
+   "Gizmo turns around"
+  ],
+  [
+   274.0,
+   "word",
+   "TURN!"
+  ],
+  [
+   279.06,
+   "new place",
+   "Gizmo's work bench say it 3"
+  ],
+  [
+   280.59,
+   "word",
+   "EVERYTHING!"
+  ],
+  [
+   281.34,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   282.5,
+   "new place",
+   "the sunny park after the rain ball in the park"
+  ],
+  [
+   283.4,
+   "action",
+   "the ball falls"
+  ],
+  [
+   285.88,
+   "word",
+   "NOW YOU KNOW!"
+  ],
+  [
+   286.88,
+   "new place",
+   "the picture board (blueprint) part 3 recap"
+  ],
+  [
+   287.29,
+   "word",
+   "GRAVITY!"
+  ],
+  [
+   288.19,
+   "action",
+   "arrows show the pull"
+  ],
+  [
+   289.2,
+   "action",
+   "the center lights up"
+  ],
+  [
+   290.0,
+   "new place",
+   "Gizmo's lab quiz time"
+  ],
+  [
+   290.28,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   290.28,
+   "word",
+   "QUIZ TIME!"
+  ],
+  [
+   293.12,
+   "new place",
+   "the flower meadow quiz 1"
+  ],
+  [
+   296.13,
+   "sign",
+   "UP"
+  ],
+  [
+   296.48,
+   "sign",
+   "DOWN"
+  ],
+  [
+   297.83,
+   "thinking dot",
+   "1"
+  ],
+  [
+   298.5,
+   "thinking dot",
+   "2"
+  ],
+  [
+   299.18,
+   "thinking dot",
+   "3"
+  ],
+  [
+   299.66,
+   "answer",
+   "DOWN"
+  ],
+  [
+   300.94,
+   "new shot",
+   "the flower meadow quiz 1 answer"
+  ],
+  [
+   301.09,
+   "word",
+   "DOWN!"
+  ],
+  [
+   302.33,
+   "action",
+   "the apple falls"
+  ],
+  [
+   304.06,
+   "new place",
+   "the picture board (blueprint) quiz 2"
+  ],
+  [
+   304.78,
+   "sign",
+   "HEAVY"
+  ],
+  [
+   305.13,
+   "sign",
+   "TOGETHER"
+  ],
+  [
+   310.29,
+   "thinking dot",
+   "1"
+  ],
+  [
+   310.97,
+   "thinking dot",
+   "2"
+  ],
+  [
+   311.64,
+   "thinking dot",
+   "3"
+  ],
+  [
+   312.13,
+   "answer",
+   "TOGETHER"
+  ],
+  [
+   313.44,
+   "new shot",
+   "the picture board (blueprint) quiz 2 answer"
+  ],
+  [
+   313.55,
+   "word",
+   "TOGETHER!"
+  ],
+  [
+   314.5,
+   "action",
+   "both balls fall"
+  ],
+  [
+   316.25,
+   "new place",
+   "space above the Earth quiz 3"
+  ],
+  [
+   316.35,
+   "action",
+   "it goes around"
+  ],
+  [
+   319.16,
+   "sign",
+   "GRAVITY"
+  ],
+  [
+   319.51,
+   "sign",
+   "A ROPE"
+  ],
+  [
+   321.21,
+   "thinking dot",
+   "1"
+  ],
+  [
+   321.89,
+   "thinking dot",
+   "2"
+  ],
+  [
+   322.56,
+   "thinking dot",
+   "3"
+  ],
+  [
+   323.05,
+   "answer",
+   "GRAVITY"
+  ],
+  [
+   324.38,
+   "new shot",
+   "space above the Earth quiz 3 answer"
+  ],
+  [
+   324.48,
+   "action",
+   "an arrow pulls the Moon"
+  ],
+  [
+   324.48,
+   "action",
+   "it goes around"
+  ],
+  [
+   325.29,
+   "word",
+   "ROUND!"
+  ],
+  [
+   327.19,
+   "new place",
+   "the sunny park after the rain goodbye"
+  ],
+  [
+   331.07,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   331.07,
+   "word",
+   "BYE-BYE!"
+  ],
+  [
+   331.61,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   333.12,
+   "action",
+   "the gears turn"
+  ],
+  [
+   333.12,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   333.18,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   333.94,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   334.25,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   334.57,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   335.31,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   335.31,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   335.31,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   336.56,
+   "action",
+   "the gears turn"
+  ],
+  [
+   336.56,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   336.75,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   338.44,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   339.06,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   339.37,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   339.69,
+   "action",
+   "out of the flash"
+  ],
+  [
+   339.69,
+   "action",
+   "the rays turn"
+  ],
+  [
+   339.69,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   340.13,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   340.45,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   340.76,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   341.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   341.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   341.58,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   342.19,
+   "action",
+   "confetti"
+  ],
+  [
+   342.19,
+   "action",
+   "the line draws on"
+  ],
+  [
+   342.5,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   342.69,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   342.81,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   343.5,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   343.63,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   344.38,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   345.0,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   345.13,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   345.63,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   346.54,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   346.54,
+   "action",
+   "confetti"
+  ],
+  [
+   346.54,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   346.84,
+   "action",
+   "the letters do a wave"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gmeadow",
+   "say": "Why do things fall down? Why not up?",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.6337083333333333,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.24
+    ],
+    [
+     "do",
+     0.24,
+     0.4
+    ],
+    [
+     "things",
+     0.4,
+     0.72
+    ],
+    [
+     "fall",
+     0.72,
+     1.05
+    ],
+    [
+     "down?",
+     1.05,
+     1.6
+    ],
+    [
+     "Why",
+     1.87,
+     2.06
+    ],
+    [
+     "not",
+     2.06,
+     2.31
+    ],
+    [
+     "up?",
+     2.31,
+     2.63
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "hook: the apple falls",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Drop a ball, and down it goes. Every time!",
+   "t0": 3.4375,
+   "t1": 7.1875,
+   "v0": 3.5937083333333333,
+   "dur": 3.14275,
+   "words": [
+    [
+     "Drop",
+     0.01,
+     0.33
+    ],
+    [
+     "a",
+     0.33,
+     0.38
+    ],
+    [
+     "ball,",
+     0.38,
+     0.88
+    ],
+    [
+     "and",
+     0.88,
+     1.02
+    ],
+    [
+     "down",
+     1.02,
+     1.24
+    ],
+    [
+     "it",
+     1.24,
+     1.31
+    ],
+    [
+     "goes.",
+     1.31,
+     1.94
+    ],
+    [
+     "Every",
+     2.3,
+     2.56
+    ],
+    [
+     "time!",
+     2.56,
+     3.14
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: the ball drops",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Hi! I'm Gizmo. Let's find out why things fall down!",
+   "t0": 7.1875,
+   "t1": 11.5625,
+   "v0": 7.276458333333333,
+   "dur": 3.8604583333333333,
+   "words": [
+    [
+     "Hi!",
+     0.0,
+     0.49
+    ],
+    [
+     "I'm",
+     0.49,
+     0.74
+    ],
+    [
+     "Gizmo.",
+     0.74,
+     1.36
+    ],
+    [
+     "Let's",
+     1.75,
+     2.0
+    ],
+    [
+     "find",
+     2.0,
+     2.3
+    ],
+    [
+     "out",
+     2.3,
+     2.45
+    ],
+    [
+     "why",
+     2.45,
+     2.66
+    ],
+    [
+     "things",
+     2.66,
+     3.02
+    ],
+    [
+     "fall",
+     3.02,
+     3.36
+    ],
+    [
+     "down!",
+     3.36,
+     3.86
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Gizmo",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 11.5625,
+   "t1": 14.6875,
+   "v0": 11.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 14.6875,
+   "t1": 17.8125,
+   "v0": 15.0,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 17.8125,
+   "t1": 23.125,
+   "v0": 18.125,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 23.125,
+   "t1": 25.9375,
+   "v0": 23.245,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Welcome to my lab, science fans!",
+   "t0": 25.9375,
+   "t1": 29.0625,
+   "v0": 26.20666666666667,
+   "dur": 2.5085,
+   "words": [
+    [
+     "Welcome",
+     0.01,
+     0.46
+    ],
+    [
+     "to",
+     0.46,
+     0.56
+    ],
+    [
+     "my",
+     0.56,
+     0.76
+    ],
+    [
+     "lab,",
+     0.76,
+     1.33
+    ],
+    [
+     "science",
+     1.33,
+     1.81
+    ],
+    [
+     "fans!",
+     1.81,
+     2.509
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "lab wide",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Today, we learn about a pull that you can not see!",
+   "t0": 29.0625,
+   "t1": 32.8125,
+   "v0": 29.255166666666675,
+   "dur": 3.0788333333333333,
+   "words": [
+    [
+     "Today,",
+     0.01,
+     0.5
+    ],
+    [
+     "we",
+     0.68,
+     0.79
+    ],
+    [
+     "learn",
+     0.79,
+     1.07
+    ],
+    [
+     "about",
+     1.07,
+     1.33
+    ],
+    [
+     "a",
+     1.33,
+     1.37
+    ],
+    [
+     "pull",
+     1.37,
+     1.86
+    ],
+    [
+     "that",
+     1.86,
+     2.03
+    ],
+    [
+     "you",
+     2.03,
+     2.16
+    ],
+    [
+     "can",
+     2.16,
+     2.33
+    ],
+    [
+     "not",
+     2.33,
+     2.61
+    ],
+    [
+     "see!",
+     2.61,
+     3.079
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "bench wide",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Look at this apple tree in the meadow.",
+   "t0": 32.8125,
+   "t1": 35.3125,
+   "v0": 32.87400000000001,
+   "dur": 2.1506666666666665,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.28
+    ],
+    [
+     "at",
+     0.28,
+     0.37
+    ],
+    [
+     "this",
+     0.37,
+     0.58
+    ],
+    [
+     "apple",
+     0.58,
+     1.0
+    ],
+    [
+     "tree",
+     1.0,
+     1.44
+    ],
+    [
+     "in",
+     1.44,
+     1.56
+    ],
+    [
+     "the",
+     1.56,
+     1.63
+    ],
+    [
+     "meadow.",
+     1.63,
+     2.15
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the apple tree",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "One apple lets go of its branch. Down it falls, onto the grass!",
+   "t0": 35.3125,
+   "t1": 40.3125,
+   "v0": 35.564666666666675,
+   "dur": 4.5195,
+   "words": [
+    [
+     "One",
+     0.08,
+     0.31
+    ],
+    [
+     "apple",
+     0.31,
+     0.77
+    ],
+    [
+     "lets",
+     0.77,
+     1.04
+    ],
+    [
+     "go",
+     1.04,
+     1.29
+    ],
+    [
+     "of",
+     1.29,
+     1.37
+    ],
+    [
+     "its",
+     1.37,
+     1.51
+    ],
+    [
+     "branch.",
+     1.51,
+     2.13
+    ],
+    [
+     "Down",
+     2.55,
+     2.81
+    ],
+    [
+     "it",
+     2.81,
+     2.91
+    ],
+    [
+     "falls,",
+     2.91,
+     3.51
+    ],
+    [
+     "onto",
+     3.51,
+     3.78
+    ],
+    [
+     "the",
+     3.78,
+     3.87
+    ],
+    [
+     "grass!",
+     3.87,
+     4.519
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the apple falls",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Which way does the apple fall? Up, or down?",
+   "t0": 40.3125,
+   "t1": 47.5,
+   "v0": 40.624166666666675,
+   "dur": 3.1812916666666666,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.23
+    ],
+    [
+     "way",
+     0.23,
+     0.46
+    ],
+    [
+     "does",
+     0.46,
+     0.7
+    ],
+    [
+     "the",
+     0.7,
+     0.84
+    ],
+    [
+     "apple",
+     0.84,
+     1.15
+    ],
+    [
+     "fall?",
+     1.15,
+     1.72
+    ],
+    [
+     "Up,",
+     2.04,
+     2.32
+    ],
+    [
+     "or",
+     2.32,
+     2.57
+    ],
+    [
+     "down?",
+     2.57,
+     3.18
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Down! Things always fall down, toward the ground.",
+   "t0": 47.5,
+   "t1": 51.25,
+   "v0": 47.54545833333334,
+   "dur": 3.3105416666666665,
+   "words": [
+    [
+     "Down!",
+     0.05,
+     0.75
+    ],
+    [
+     "Things",
+     0.75,
+     1.07
+    ],
+    [
+     "always",
+     1.07,
+     1.55
+    ],
+    [
+     "fall",
+     1.55,
+     1.85
+    ],
+    [
+     "down,",
+     1.85,
+     2.34
+    ],
+    [
+     "toward",
+     2.34,
+     2.63
+    ],
+    [
+     "the",
+     2.63,
+     2.7
+    ],
+    [
+     "ground.",
+     2.7,
+     3.31
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "down",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "But why? What pulls them down? Let's think!",
+   "t0": 51.25,
+   "t1": 55.0,
+   "v0": 51.39600000000001,
+   "dur": 2.7355,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.13
+    ],
+    [
+     "why?",
+     0.13,
+     0.73
+    ],
+    [
+     "What",
+     0.73,
+     0.98
+    ],
+    [
+     "pulls",
+     0.98,
+     1.3
+    ],
+    [
+     "them",
+     1.3,
+     1.48
+    ],
+    [
+     "down?",
+     1.48,
+     1.98
+    ],
+    [
+     "Let's",
+     1.98,
+     2.27
+    ],
+    [
+     "think!",
+     2.27,
+     2.73
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "think",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "It is a force called gravity!",
+   "t0": 55.0,
+   "t1": 57.5,
+   "v0": 55.27150000000001,
+   "dur": 1.8688333333333333,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.15
+    ],
+    [
+     "is",
+     0.15,
+     0.29
+    ],
+    [
+     "a",
+     0.29,
+     0.33
+    ],
+    [
+     "force",
+     0.33,
+     0.85
+    ],
+    [
+     "called",
+     0.85,
+     1.18
+    ],
+    [
+     "gravity!",
+     1.18,
+     1.869
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "gravity",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Gravity is an invisible pull. It pulls things toward each other.",
+   "t0": 57.5,
+   "t1": 62.8125,
+   "v0": 57.680333333333344,
+   "dur": 4.666333333333333,
+   "words": [
+    [
+     "Gravity",
+     0.01,
+     0.66
+    ],
+    [
+     "is",
+     0.66,
+     0.86
+    ],
+    [
+     "an",
+     0.86,
+     1.0
+    ],
+    [
+     "invisible",
+     1.0,
+     1.6
+    ],
+    [
+     "pull.",
+     1.6,
+     2.17
+    ],
+    [
+     "It",
+     2.66,
+     2.78
+    ],
+    [
+     "pulls",
+     2.78,
+     3.26
+    ],
+    [
+     "things",
+     3.26,
+     3.74
+    ],
+    [
+     "toward",
+     3.74,
+     4.09
+    ],
+    [
+     "each",
+     4.09,
+     4.32
+    ],
+    [
+     "other.",
+     4.32,
+     4.666
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "invisible pull",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Can we see gravity? Yes, or no?",
+   "t0": 62.8125,
+   "t1": 69.0625,
+   "v0": 62.88666666666668,
+   "dur": 2.5861666666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.14
+    ],
+    [
+     "we",
+     0.14,
+     0.23
+    ],
+    [
+     "see",
+     0.23,
+     0.47
+    ],
+    [
+     "gravity?",
+     0.47,
+     1.13
+    ],
+    [
+     "Yes,",
+     1.42,
+     1.82
+    ],
+    [
+     "or",
+     1.82,
+     2.04
+    ],
+    [
+     "no?",
+     2.04,
+     2.586
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Gravity is invisible! We drew arrows, so you can see the pull.",
+   "t0": 69.0625,
+   "t1": 73.75,
+   "v0": 69.21283333333335,
+   "dur": 4.288625,
+   "words": [
+    [
+     "Gravity",
+     0.01,
+     0.64
+    ],
+    [
+     "is",
+     0.64,
+     0.78
+    ],
+    [
+     "invisible!",
+     0.78,
+     1.5
+    ],
+    [
+     "We",
+     1.89,
+     1.99
+    ],
+    [
+     "drew",
+     1.99,
+     2.26
+    ],
+    [
+     "arrows,",
+     2.26,
+     2.9
+    ],
+    [
+     "so",
+     2.9,
+     3.1
+    ],
+    [
+     "you",
+     3.1,
+     3.25
+    ],
+    [
+     "can",
+     3.25,
+     3.42
+    ],
+    [
+     "see",
+     3.42,
+     3.7
+    ],
+    [
+     "the",
+     3.7,
+     3.79
+    ],
+    [
+     "pull.",
+     3.79,
+     4.289
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "arrows",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The Earth pulls everything toward its middle, its center.",
+   "t0": 73.75,
+   "t1": 77.8125,
+   "v0": 74.04145833333335,
+   "dur": 3.5267916666666665,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.2
+    ],
+    [
+     "Earth",
+     0.2,
+     0.52
+    ],
+    [
+     "pulls",
+     0.52,
+     1.01
+    ],
+    [
+     "everything",
+     1.01,
+     1.56
+    ],
+    [
+     "toward",
+     1.56,
+     1.89
+    ],
+    [
+     "its",
+     1.89,
+     2.04
+    ],
+    [
+     "middle,",
+     2.04,
+     2.53
+    ],
+    [
+     "its",
+     2.75,
+     2.99
+    ],
+    [
+     "center.",
+     2.99,
+     3.527
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "toward the center",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "So people all around the Earth stand on the ground!",
+   "t0": 77.8125,
+   "t1": 81.5625,
+   "v0": 78.10825000000003,
+   "dur": 3.017541666666667,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.16
+    ],
+    [
+     "people",
+     0.16,
+     0.59
+    ],
+    [
+     "all",
+     0.59,
+     0.9
+    ],
+    [
+     "around",
+     0.9,
+     1.19
+    ],
+    [
+     "the",
+     1.19,
+     1.35
+    ],
+    [
+     "Earth",
+     1.35,
+     1.7
+    ],
+    [
+     "stand",
+     1.7,
+     2.2
+    ],
+    [
+     "on",
+     2.2,
+     2.32
+    ],
+    [
+     "the",
+     2.32,
+     2.39
+    ],
+    [
+     "ground!",
+     2.39,
+     3.018
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "people all around",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Gravity pulled the apple down, toward the Earth's center.",
+   "t0": 81.5625,
+   "t1": 85.625,
+   "v0": 81.6657916666667,
+   "dur": 3.6115,
+   "words": [
+    [
+     "Gravity",
+     0.01,
+     0.55
+    ],
+    [
+     "pulled",
+     0.55,
+     0.87
+    ],
+    [
+     "the",
+     0.87,
+     1.01
+    ],
+    [
+     "apple",
+     1.01,
+     1.38
+    ],
+    [
+     "down,",
+     1.38,
+     1.94
+    ],
+    [
+     "toward",
+     2.23,
+     2.54
+    ],
+    [
+     "the",
+     2.54,
+     2.7
+    ],
+    [
+     "Earth's",
+     2.7,
+     3.05
+    ],
+    [
+     "center.",
+     3.05,
+     3.61
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "pulled the apple",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Plop! There it is, down on the grass.",
+   "t0": 85.625,
+   "t1": 88.75,
+   "v0": 85.81729166666672,
+   "dur": 2.4968333333333335,
+   "words": [
+    [
+     "Plop!",
+     0.0,
+     0.44
+    ],
+    [
+     "There",
+     0.44,
+     0.68
+    ],
+    [
+     "it",
+     0.68,
+     0.81
+    ],
+    [
+     "is,",
+     0.81,
+     1.3
+    ],
+    [
+     "down",
+     1.3,
+     1.67
+    ],
+    [
+     "on",
+     1.67,
+     1.79
+    ],
+    [
+     "the",
+     1.79,
+     1.86
+    ],
+    [
+     "grass.",
+     1.86,
+     2.497
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "on the grass",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Which way does gravity pull? Toward the Earth's center, or up to the sky?",
+   "t0": 88.75,
+   "t1": 97.1875,
+   "v0": 88.85412500000005,
+   "dur": 4.8269166666666665,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.22
+    ],
+    [
+     "way",
+     0.22,
+     0.45
+    ],
+    [
+     "does",
+     0.45,
+     0.68
+    ],
+    [
+     "gravity",
+     0.68,
+     1.22
+    ],
+    [
+     "pull?",
+     1.22,
+     1.75
+    ],
+    [
+     "Toward",
+     2.22,
+     2.54
+    ],
+    [
+     "the",
+     2.54,
+     2.72
+    ],
+    [
+     "Earth's",
+     2.72,
+     3.02
+    ],
+    [
+     "center,",
+     3.02,
+     3.53
+    ],
+    [
+     "or",
+     3.53,
+     3.77
+    ],
+    [
+     "up",
+     3.77,
+     3.95
+    ],
+    [
+     "to",
+     3.95,
+     4.06
+    ],
+    [
+     "the",
+     4.06,
+     4.16
+    ],
+    [
+     "sky?",
+     4.16,
+     4.827
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Hop up, just a little! Gravity brings you back down.",
+   "t0": 97.1875,
+   "t1": 102.5,
+   "v0": 97.42104166666672,
+   "dur": 3.596625,
+   "words": [
+    [
+     "Hop",
+     0.0,
+     0.36
+    ],
+    [
+     "up,",
+     0.36,
+     0.62
+    ],
+    [
+     "just",
+     0.62,
+     0.95
+    ],
+    [
+     "a",
+     0.95,
+     0.98
+    ],
+    [
+     "little!",
+     0.98,
+     1.35
+    ],
+    [
+     "Gravity",
+     1.73,
+     2.26
+    ],
+    [
+     "brings",
+     2.26,
+     2.64
+    ],
+    [
+     "you",
+     2.64,
+     2.74
+    ],
+    [
+     "back",
+     2.74,
+     3.06
+    ],
+    [
+     "down.",
+     3.06,
+     3.597
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hop",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Point down to the ground, where gravity pulls!",
+   "t0": 102.5,
+   "t1": 107.1875,
+   "v0": 102.75766666666674,
+   "dur": 2.833125,
+   "words": [
+    [
+     "Point",
+     0.0,
+     0.3
+    ],
+    [
+     "down",
+     0.3,
+     0.57
+    ],
+    [
+     "to",
+     0.57,
+     0.65
+    ],
+    [
+     "the",
+     0.65,
+     0.74
+    ],
+    [
+     "ground,",
+     0.74,
+     1.35
+    ],
+    [
+     "where",
+     1.35,
+     1.65
+    ],
+    [
+     "gravity",
+     1.65,
+     2.18
+    ],
+    [
+     "pulls!",
+     2.18,
+     2.83
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "point down",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. Gravity pulls things down!",
+   "t0": 107.1875,
+   "t1": 110.625,
+   "v0": 107.33079166666674,
+   "dur": 3.0662083333333334,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.38
+    ],
+    [
+     "with",
+     0.38,
+     0.61
+    ],
+    [
+     "me.",
+     0.61,
+     0.89
+    ],
+    [
+     "Gravity",
+     1.24,
+     1.7
+    ],
+    [
+     "pulls",
+     1.7,
+     2.12
+    ],
+    [
+     "things",
+     2.12,
+     2.48
+    ],
+    [
+     "down!",
+     2.48,
+     3.066
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What keeps you on the ground? Gravity, or glue?",
+   "t0": 110.625,
+   "t1": 117.8125,
+   "v0": 110.93700000000008,
+   "dur": 3.323583333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.22
+    ],
+    [
+     "keeps",
+     0.22,
+     0.58
+    ],
+    [
+     "you",
+     0.58,
+     0.73
+    ],
+    [
+     "on",
+     0.73,
+     0.86
+    ],
+    [
+     "the",
+     0.86,
+     0.93
+    ],
+    [
+     "ground?",
+     0.93,
+     1.53
+    ],
+    [
+     "Gravity,",
+     1.86,
+     2.53
+    ],
+    [
+     "or",
+     2.53,
+     2.77
+    ],
+    [
+     "glue?",
+     2.77,
+     3.32
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Gravity! It keeps you on the ground, and makes things fall.",
+   "t0": 117.8125,
+   "t1": 121.875,
+   "v0": 118.00058333333342,
+   "dur": 3.4167083333333332,
+   "words": [
+    [
+     "Gravity!",
+     0.01,
+     0.66
+    ],
+    [
+     "It",
+     0.93,
+     1.05
+    ],
+    [
+     "keeps",
+     1.05,
+     1.38
+    ],
+    [
+     "you",
+     1.38,
+     1.54
+    ],
+    [
+     "on",
+     1.54,
+     1.67
+    ],
+    [
+     "the",
+     1.67,
+     1.73
+    ],
+    [
+     "ground,",
+     1.73,
+     2.25
+    ],
+    [
+     "and",
+     2.25,
+     2.36
+    ],
+    [
+     "makes",
+     2.36,
+     2.63
+    ],
+    [
+     "things",
+     2.63,
+     2.92
+    ],
+    [
+     "fall.",
+     2.92,
+     3.417
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "part 1 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Here is a heavy ball, and a light ball.",
+   "t0": 121.875,
+   "t1": 125.0,
+   "v0": 121.95729166666676,
+   "dur": 2.5512916666666667,
+   "words": [
+    [
+     "Here",
+     0.09,
+     0.38
+    ],
+    [
+     "is",
+     0.38,
+     0.49
+    ],
+    [
+     "a",
+     0.49,
+     0.53
+    ],
+    [
+     "heavy",
+     0.53,
+     0.88
+    ],
+    [
+     "ball,",
+     0.88,
+     1.6
+    ],
+    [
+     "and",
+     1.6,
+     1.71
+    ],
+    [
+     "a",
+     1.71,
+     1.76
+    ],
+    [
+     "light",
+     1.76,
+     2.06
+    ],
+    [
+     "ball.",
+     2.06,
+     2.55
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "two balls",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "We drop them together. Which lands first? The heavy one, or do they land together?",
+   "t0": 125.0,
+   "t1": 134.0625,
+   "v0": 125.04858333333344,
+   "dur": 5.3745,
+   "words": [
+    [
+     "We",
+     0.0,
+     0.12
+    ],
+    [
+     "drop",
+     0.12,
+     0.49
+    ],
+    [
+     "them",
+     0.49,
+     0.69
+    ],
+    [
+     "together.",
+     0.69,
+     1.3
+    ],
+    [
+     "Which",
+     1.3,
+     1.63
+    ],
+    [
+     "lands",
+     1.63,
+     2.11
+    ],
+    [
+     "first?",
+     2.11,
+     2.72
+    ],
+    [
+     "The",
+     3.08,
+     3.18
+    ],
+    [
+     "heavy",
+     3.18,
+     3.54
+    ],
+    [
+     "one,",
+     3.54,
+     3.89
+    ],
+    [
+     "or",
+     3.89,
+     4.18
+    ],
+    [
+     "do",
+     4.18,
+     4.35
+    ],
+    [
+     "they",
+     4.35,
+     4.5
+    ],
+    [
+     "land",
+     4.5,
+     4.86
+    ],
+    [
+     "together?",
+     4.86,
+     5.37
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 4",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Together! Dropped from the same height, they land at the same time.",
+   "t0": 134.0625,
+   "t1": 138.75,
+   "v0": 134.16308333333342,
+   "dur": 4.146208333333333,
+   "words": [
+    [
+     "Together!",
+     0.0,
+     0.57
+    ],
+    [
+     "Dropped",
+     0.69,
+     1.11
+    ],
+    [
+     "from",
+     1.11,
+     1.31
+    ],
+    [
+     "the",
+     1.31,
+     1.38
+    ],
+    [
+     "same",
+     1.38,
+     1.71
+    ],
+    [
+     "height,",
+     1.71,
+     2.15
+    ],
+    [
+     "they",
+     2.47,
+     2.62
+    ],
+    [
+     "land",
+     2.62,
+     3.05
+    ],
+    [
+     "at",
+     3.05,
+     3.12
+    ],
+    [
+     "the",
+     3.12,
+     3.21
+    ],
+    [
+     "same",
+     3.21,
+     3.58
+    ],
+    [
+     "time.",
+     3.58,
+     4.146
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "together",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Wow! Gravity speeds up heavy things and light things the same way.",
+   "t0": 138.75,
+   "t1": 143.75,
+   "v0": 138.84929166666674,
+   "dur": 4.402375,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.8
+    ],
+    [
+     "Gravity",
+     0.8,
+     1.27
+    ],
+    [
+     "speeds",
+     1.27,
+     1.78
+    ],
+    [
+     "up",
+     1.78,
+     1.92
+    ],
+    [
+     "heavy",
+     1.92,
+     2.22
+    ],
+    [
+     "things",
+     2.22,
+     2.78
+    ],
+    [
+     "and",
+     2.78,
+     2.88
+    ],
+    [
+     "light",
+     2.88,
+     3.16
+    ],
+    [
+     "things",
+     3.16,
+     3.54
+    ],
+    [
+     "the",
+     3.54,
+     3.64
+    ],
+    [
+     "same",
+     3.64,
+     4.07
+    ],
+    [
+     "way.",
+     4.07,
+     4.4
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the same way",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Let's try it again. Ready? Drop!",
+   "t0": 143.75,
+   "t1": 146.5625,
+   "v0": 143.79166666666674,
+   "dur": 2.5082916666666666,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.3
+    ],
+    [
+     "try",
+     0.3,
+     0.64
+    ],
+    [
+     "it",
+     0.64,
+     0.79
+    ],
+    [
+     "again.",
+     0.79,
+     1.27
+    ],
+    [
+     "Ready?",
+     1.5,
+     1.91
+    ],
+    [
+     "Drop!",
+     1.91,
+     2.508
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "again",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "But look at this feather. It floats down, slowly.",
+   "t0": 146.5625,
+   "t1": 150.625,
+   "v0": 146.8399583333334,
+   "dur": 3.2910833333333334,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.12
+    ],
+    [
+     "look",
+     0.12,
+     0.35
+    ],
+    [
+     "at",
+     0.35,
+     0.44
+    ],
+    [
+     "this",
+     0.44,
+     0.64
+    ],
+    [
+     "feather.",
+     0.64,
+     1.13
+    ],
+    [
+     "It",
+     1.47,
+     1.58
+    ],
+    [
+     "floats",
+     1.58,
+     1.99
+    ],
+    [
+     "down,",
+     1.99,
+     2.5
+    ],
+    [
+     "slowly.",
+     2.5,
+     3.29
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the feather floats",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A ball and a feather. Which lands first?",
+   "t0": 150.625,
+   "t1": 156.875,
+   "v0": 150.67104166666675,
+   "dur": 2.7110416666666666,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.08
+    ],
+    [
+     "ball",
+     0.08,
+     0.59
+    ],
+    [
+     "and",
+     0.59,
+     0.68
+    ],
+    [
+     "a",
+     0.68,
+     0.72
+    ],
+    [
+     "feather.",
+     0.72,
+     1.26
+    ],
+    [
+     "Which",
+     1.5,
+     1.7
+    ],
+    [
+     "lands",
+     1.7,
+     2.11
+    ],
+    [
+     "first?",
+     2.11,
+     2.71
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Hmm, why is the feather so slow? Let's think!",
+   "t0": 156.875,
+   "t1": 161.25,
+   "v0": 157.1220833333334,
+   "dur": 3.117875,
+   "words": [
+    [
+     "Hmm,",
+     0.01,
+     0.34
+    ],
+    [
+     "why",
+     0.34,
+     0.54
+    ],
+    [
+     "is",
+     0.54,
+     0.71
+    ],
+    [
+     "the",
+     0.71,
+     0.79
+    ],
+    [
+     "feather",
+     0.79,
+     1.14
+    ],
+    [
+     "so",
+     1.14,
+     1.4
+    ],
+    [
+     "slow?",
+     1.4,
+     2.04
+    ],
+    [
+     "Let's",
+     2.34,
+     2.67
+    ],
+    [
+     "think!",
+     2.67,
+     3.118
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "think 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The ball! The air slows the feather down.",
+   "t0": 161.25,
+   "t1": 164.375,
+   "v0": 161.37995833333338,
+   "dur": 2.689583333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "ball!",
+     0.1,
+     0.81
+    ],
+    [
+     "The",
+     0.81,
+     0.97
+    ],
+    [
+     "air",
+     0.97,
+     1.22
+    ],
+    [
+     "slows",
+     1.22,
+     1.73
+    ],
+    [
+     "the",
+     1.73,
+     1.81
+    ],
+    [
+     "feather",
+     1.81,
+     2.17
+    ],
+    [
+     "down.",
+     2.17,
+     2.69
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the air slows it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "The air pushes on the feather, so it drifts down, side to side.",
+   "t0": 164.375,
+   "t1": 169.0625,
+   "v0": 164.6095416666667,
+   "dur": 4.133,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "air",
+     0.18,
+     0.39
+    ],
+    [
+     "pushes",
+     0.39,
+     0.82
+    ],
+    [
+     "on",
+     0.82,
+     0.97
+    ],
+    [
+     "the",
+     0.97,
+     1.03
+    ],
+    [
+     "feather,",
+     1.03,
+     1.51
+    ],
+    [
+     "so",
+     1.51,
+     1.7
+    ],
+    [
+     "it",
+     1.7,
+     1.76
+    ],
+    [
+     "drifts",
+     1.76,
+     2.13
+    ],
+    [
+     "down,",
+     2.13,
+     2.73
+    ],
+    [
+     "side",
+     2.97,
+     3.39
+    ],
+    [
+     "to",
+     3.39,
+     3.48
+    ],
+    [
+     "side.",
+     3.48,
+     4.13
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the air pushes",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What slows the feather down? The air, or the ground?",
+   "t0": 169.0625,
+   "t1": 176.5625,
+   "v0": 169.2825416666667,
+   "dur": 3.5865833333333335,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.2
+    ],
+    [
+     "slows",
+     0.2,
+     0.69
+    ],
+    [
+     "the",
+     0.69,
+     0.77
+    ],
+    [
+     "feather",
+     0.77,
+     1.11
+    ],
+    [
+     "down?",
+     1.11,
+     1.64
+    ],
+    [
+     "The",
+     1.99,
+     2.16
+    ],
+    [
+     "air,",
+     2.16,
+     2.61
+    ],
+    [
+     "or",
+     2.61,
+     2.77
+    ],
+    [
+     "the",
+     2.77,
+     2.87
+    ],
+    [
+     "ground?",
+     2.87,
+     3.587
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Float your hands down slowly, like a feather!",
+   "t0": 176.5625,
+   "t1": 181.5625,
+   "v0": 176.609125,
+   "dur": 3.1315,
+   "words": [
+    [
+     "Float",
+     0.01,
+     0.35
+    ],
+    [
+     "your",
+     0.35,
+     0.52
+    ],
+    [
+     "hands",
+     0.52,
+     0.96
+    ],
+    [
+     "down",
+     0.96,
+     1.28
+    ],
+    [
+     "slowly,",
+     1.28,
+     2.01
+    ],
+    [
+     "like",
+     2.29,
+     2.49
+    ],
+    [
+     "a",
+     2.49,
+     2.53
+    ],
+    [
+     "feather!",
+     2.53,
+     3.13
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "feather hands",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Now, think of a place with no air at all.",
+   "t0": 181.5625,
+   "t1": 184.6875,
+   "v0": 181.680625,
+   "dur": 2.576208333333333,
+   "words": [
+    [
+     "Now,",
+     0.01,
+     0.42
+    ],
+    [
+     "think",
+     0.42,
+     0.67
+    ],
+    [
+     "of",
+     0.67,
+     0.76
+    ],
+    [
+     "a",
+     0.76,
+     0.8
+    ],
+    [
+     "place",
+     0.8,
+     1.19
+    ],
+    [
+     "with",
+     1.19,
+     1.4
+    ],
+    [
+     "no",
+     1.4,
+     1.65
+    ],
+    [
+     "air",
+     1.81,
+     2.02
+    ],
+    [
+     "at",
+     2.02,
+     2.15
+    ],
+    [
+     "all.",
+     2.15,
+     2.576
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "no air",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "With no air, we drop a rock and a feather. Which lands first?",
+   "t0": 184.6875,
+   "t1": 192.5,
+   "v0": 184.79683333333332,
+   "dur": 4.121375,
+   "words": [
+    [
+     "With",
+     0.0,
+     0.18
+    ],
+    [
+     "no",
+     0.18,
+     0.44
+    ],
+    [
+     "air,",
+     0.44,
+     0.72
+    ],
+    [
+     "we",
+     0.72,
+     0.88
+    ],
+    [
+     "drop",
+     0.88,
+     1.19
+    ],
+    [
+     "a",
+     1.19,
+     1.25
+    ],
+    [
+     "rock",
+     1.25,
+     1.77
+    ],
+    [
+     "and",
+     1.77,
+     1.87
+    ],
+    [
+     "a",
+     1.87,
+     1.9
+    ],
+    [
+     "feather.",
+     1.9,
+     2.45
+    ],
+    [
+     "Which",
+     2.84,
+     3.04
+    ],
+    [
+     "lands",
+     3.04,
+     3.5
+    ],
+    [
+     "first?",
+     3.5,
+     4.12
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 6",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "They land at exactly the same time! No air slows the feather.",
+   "t0": 192.5,
+   "t1": 197.5,
+   "v0": 192.6582083333333,
+   "dur": 4.55475,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.17
+    ],
+    [
+     "land",
+     0.17,
+     0.59
+    ],
+    [
+     "at",
+     0.59,
+     0.7
+    ],
+    [
+     "exactly",
+     0.7,
+     1.33
+    ],
+    [
+     "the",
+     1.33,
+     1.43
+    ],
+    [
+     "same",
+     1.43,
+     1.77
+    ],
+    [
+     "time!",
+     1.77,
+     2.34
+    ],
+    [
+     "No",
+     2.79,
+     3.09
+    ],
+    [
+     "air",
+     3.18,
+     3.43
+    ],
+    [
+     "slows",
+     3.43,
+     3.97
+    ],
+    [
+     "the",
+     3.97,
+     4.05
+    ],
+    [
+     "feather.",
+     4.05,
+     4.55
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "same time",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. The air slows the feather!",
+   "t0": 197.5,
+   "t1": 200.9375,
+   "v0": 197.7529583333333,
+   "dur": 2.824875,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.37
+    ],
+    [
+     "with",
+     0.37,
+     0.57
+    ],
+    [
+     "me.",
+     0.57,
+     0.87
+    ],
+    [
+     "The",
+     1.18,
+     1.33
+    ],
+    [
+     "air",
+     1.33,
+     1.63
+    ],
+    [
+     "slows",
+     1.63,
+     2.16
+    ],
+    [
+     "the",
+     2.16,
+     2.25
+    ],
+    [
+     "feather!",
+     2.25,
+     2.82
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Heavy and light fall together. Only the air slows a feather down.",
+   "t0": 200.9375,
+   "t1": 205.9375,
+   "v0": 201.1178333333333,
+   "dur": 4.472916666666666,
+   "words": [
+    [
+     "Heavy",
+     0.01,
+     0.42
+    ],
+    [
+     "and",
+     0.42,
+     0.53
+    ],
+    [
+     "light",
+     0.53,
+     0.8
+    ],
+    [
+     "fall",
+     0.8,
+     1.13
+    ],
+    [
+     "together.",
+     1.13,
+     1.69
+    ],
+    [
+     "Only",
+     2.16,
+     2.49
+    ],
+    [
+     "the",
+     2.49,
+     2.68
+    ],
+    [
+     "air",
+     2.68,
+     3.01
+    ],
+    [
+     "slows",
+     3.01,
+     3.47
+    ],
+    [
+     "a",
+     3.47,
+     3.51
+    ],
+    [
+     "feather",
+     3.51,
+     3.9
+    ],
+    [
+     "down.",
+     3.9,
+     4.47
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "part 2 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Here is a big surprise. Everything that is made of stuff has gravity!",
+   "t0": 205.9375,
+   "t1": 211.25,
+   "v0": 206.13074999999995,
+   "dur": 4.637,
+   "words": [
+    [
+     "Here",
+     0.0,
+     0.29
+    ],
+    [
+     "is",
+     0.29,
+     0.41
+    ],
+    [
+     "a",
+     0.41,
+     0.48
+    ],
+    [
+     "big",
+     0.48,
+     0.8
+    ],
+    [
+     "surprise.",
+     0.8,
+     1.68
+    ],
+    [
+     "Everything",
+     2.14,
+     2.67
+    ],
+    [
+     "that",
+     2.67,
+     2.82
+    ],
+    [
+     "is",
+     2.82,
+     2.96
+    ],
+    [
+     "made",
+     2.96,
+     3.19
+    ],
+    [
+     "of",
+     3.19,
+     3.29
+    ],
+    [
+     "stuff",
+     3.29,
+     3.75
+    ],
+    [
+     "has",
+     3.75,
+     3.95
+    ],
+    [
+     "gravity!",
+     3.95,
+     4.637
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "everything has gravity",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A little ball has a little bit of gravity, just a tiny pull.",
+   "t0": 211.25,
+   "t1": 215.625,
+   "v0": 211.30774999999994,
+   "dur": 4.115666666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.05
+    ],
+    [
+     "little",
+     0.05,
+     0.33
+    ],
+    [
+     "ball",
+     0.33,
+     0.79
+    ],
+    [
+     "has",
+     0.79,
+     1.01
+    ],
+    [
+     "a",
+     1.01,
+     1.06
+    ],
+    [
+     "little",
+     1.06,
+     1.32
+    ],
+    [
+     "bit",
+     1.32,
+     1.47
+    ],
+    [
+     "of",
+     1.47,
+     1.57
+    ],
+    [
+     "gravity,",
+     1.57,
+     2.27
+    ],
+    [
+     "just",
+     2.67,
+     3.02
+    ],
+    [
+     "a",
+     3.02,
+     3.09
+    ],
+    [
+     "tiny",
+     3.09,
+     3.64
+    ],
+    [
+     "pull.",
+     3.64,
+     4.116
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "a little pull",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Does a little ball have gravity? Yes, or no?",
+   "t0": 215.625,
+   "t1": 222.8125,
+   "v0": 215.9634166666666,
+   "dur": 3.213041666666667,
+   "words": [
+    [
+     "Does",
+     0.0,
+     0.15
+    ],
+    [
+     "a",
+     0.15,
+     0.18
+    ],
+    [
+     "little",
+     0.18,
+     0.42
+    ],
+    [
+     "ball",
+     0.42,
+     0.81
+    ],
+    [
+     "have",
+     0.81,
+     1.03
+    ],
+    [
+     "gravity?",
+     1.03,
+     1.69
+    ],
+    [
+     "Yes,",
+     2.05,
+     2.51
+    ],
+    [
+     "or",
+     2.51,
+     2.75
+    ],
+    [
+     "no?",
+     2.75,
+     3.21
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 6b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Things with more stuff, more mass, have more gravity.",
+   "t0": 222.8125,
+   "t1": 226.875,
+   "v0": 222.91645833333325,
+   "dur": 3.54125,
+   "words": [
+    [
+     "Things",
+     0.01,
+     0.46
+    ],
+    [
+     "with",
+     0.46,
+     0.61
+    ],
+    [
+     "more",
+     0.61,
+     0.85
+    ],
+    [
+     "stuff,",
+     0.85,
+     1.31
+    ],
+    [
+     "more",
+     1.31,
+     1.53
+    ],
+    [
+     "mass,",
+     1.53,
+     2.11
+    ],
+    [
+     "have",
+     2.45,
+     2.67
+    ],
+    [
+     "more",
+     2.67,
+     2.9
+    ],
+    [
+     "gravity.",
+     2.9,
+     3.54
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "more mass",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "You have gravity too, and so do I!",
+   "t0": 226.875,
+   "t1": 229.6875,
+   "v0": 226.99770833333324,
+   "dur": 2.4390416666666668,
+   "words": [
+    [
+     "You",
+     0.0,
+     0.13
+    ],
+    [
+     "have",
+     0.13,
+     0.28
+    ],
+    [
+     "gravity",
+     0.28,
+     0.8
+    ],
+    [
+     "too,",
+     0.8,
+     1.36
+    ],
+    [
+     "and",
+     1.36,
+     1.5
+    ],
+    [
+     "so",
+     1.5,
+     1.76
+    ],
+    [
+     "do",
+     1.76,
+     2.05
+    ],
+    [
+     "I!",
+     2.05,
+     2.439
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "you too",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Which has more gravity? A ball, or the big Earth?",
+   "t0": 229.6875,
+   "t1": 236.875,
+   "v0": 229.9767499999999,
+   "dur": 3.411208333333333,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.23
+    ],
+    [
+     "has",
+     0.23,
+     0.41
+    ],
+    [
+     "more",
+     0.41,
+     0.61
+    ],
+    [
+     "gravity?",
+     0.61,
+     1.32
+    ],
+    [
+     "A",
+     1.67,
+     1.74
+    ],
+    [
+     "ball,",
+     1.74,
+     2.38
+    ],
+    [
+     "or",
+     2.38,
+     2.46
+    ],
+    [
+     "the",
+     2.46,
+     2.56
+    ],
+    [
+     "big",
+     2.56,
+     2.86
+    ],
+    [
+     "Earth?",
+     2.86,
+     3.41
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 7",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The Earth! It is so big, its pull holds all of us down.",
+   "t0": 236.875,
+   "t1": 241.5625,
+   "v0": 237.1279583333332,
+   "dur": 3.959625,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.21
+    ],
+    [
+     "Earth!",
+     0.21,
+     0.73
+    ],
+    [
+     "It",
+     0.73,
+     0.85
+    ],
+    [
+     "is",
+     0.85,
+     0.94
+    ],
+    [
+     "so",
+     0.94,
+     1.25
+    ],
+    [
+     "big,",
+     1.25,
+     1.76
+    ],
+    [
+     "its",
+     1.97,
+     2.14
+    ],
+    [
+     "pull",
+     2.14,
+     2.43
+    ],
+    [
+     "holds",
+     2.43,
+     2.84
+    ],
+    [
+     "all",
+     2.84,
+     3.16
+    ],
+    [
+     "of",
+     3.16,
+     3.26
+    ],
+    [
+     "us",
+     3.26,
+     3.41
+    ],
+    [
+     "down.",
+     3.41,
+     3.96
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the earth",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Make a big round Earth with your arms!",
+   "t0": 241.5625,
+   "t1": 245.625,
+   "v0": 241.62758333333318,
+   "dur": 2.3040416666666665,
+   "words": [
+    [
+     "Make",
+     0.0,
+     0.19
+    ],
+    [
+     "a",
+     0.19,
+     0.24
+    ],
+    [
+     "big",
+     0.24,
+     0.57
+    ],
+    [
+     "round",
+     0.57,
+     0.92
+    ],
+    [
+     "Earth",
+     0.92,
+     1.24
+    ],
+    [
+     "with",
+     1.24,
+     1.41
+    ],
+    [
+     "your",
+     1.41,
+     1.59
+    ],
+    [
+     "arms!",
+     1.59,
+     2.3
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "earth arms",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Now look up, into space. There is the Moon, way up high!",
+   "t0": 245.625,
+   "t1": 250.0,
+   "v0": 245.67162499999984,
+   "dur": 3.866,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.25
+    ],
+    [
+     "look",
+     0.25,
+     0.5
+    ],
+    [
+     "up,",
+     0.5,
+     0.71
+    ],
+    [
+     "into",
+     0.71,
+     0.87
+    ],
+    [
+     "space.",
+     0.87,
+     1.55
+    ],
+    [
+     "There",
+     1.83,
+     2.13
+    ],
+    [
+     "is",
+     2.13,
+     2.26
+    ],
+    [
+     "the",
+     2.26,
+     2.34
+    ],
+    [
+     "Moon,",
+     2.34,
+     2.86
+    ],
+    [
+     "way",
+     2.86,
+     3.16
+    ],
+    [
+     "up",
+     3.16,
+     3.33
+    ],
+    [
+     "high!",
+     3.33,
+     3.866
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the moon",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "The Moon goes around, and around, the Earth.",
+   "t0": 250.0,
+   "t1": 253.4375,
+   "v0": 250.07762499999984,
+   "dur": 2.9620416666666665,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "Moon",
+     0.08,
+     0.43
+    ],
+    [
+     "goes",
+     0.43,
+     0.77
+    ],
+    [
+     "around,",
+     0.77,
+     1.57
+    ],
+    [
+     "and",
+     1.57,
+     1.72
+    ],
+    [
+     "around,",
+     1.72,
+     2.23
+    ],
+    [
+     "the",
+     2.23,
+     2.41
+    ],
+    [
+     "Earth.",
+     2.41,
+     2.96
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "around the earth",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Point up to the Moon in the sky!",
+   "t0": 253.4375,
+   "t1": 257.1875,
+   "v0": 253.5796666666665,
+   "dur": 1.9611666666666667,
+   "words": [
+    [
+     "Point",
+     0.0,
+     0.34
+    ],
+    [
+     "up",
+     0.34,
+     0.47
+    ],
+    [
+     "to",
+     0.47,
+     0.58
+    ],
+    [
+     "the",
+     0.58,
+     0.68
+    ],
+    [
+     "Moon",
+     0.68,
+     1.12
+    ],
+    [
+     "in",
+     1.12,
+     1.24
+    ],
+    [
+     "the",
+     1.24,
+     1.31
+    ],
+    [
+     "sky!",
+     1.31,
+     1.96
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "point up",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Earth's gravity keeps the Moon going around the Earth.",
+   "t0": 257.1875,
+   "t1": 260.9375,
+   "v0": 257.28083333333313,
+   "dur": 3.2594583333333333,
+   "words": [
+    [
+     "Earth's",
+     0.01,
+     0.36
+    ],
+    [
+     "gravity",
+     0.36,
+     1.09
+    ],
+    [
+     "keeps",
+     1.09,
+     1.4
+    ],
+    [
+     "the",
+     1.4,
+     1.49
+    ],
+    [
+     "Moon",
+     1.49,
+     1.94
+    ],
+    [
+     "going",
+     1.94,
+     2.35
+    ],
+    [
+     "around",
+     2.35,
+     2.65
+    ],
+    [
+     "the",
+     2.65,
+     2.8
+    ],
+    [
+     "Earth.",
+     2.8,
+     3.259
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "gravity keeps the moon",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "What goes around the Earth? The Moon, or a cloud?",
+   "t0": 260.9375,
+   "t1": 268.125,
+   "v0": 261.0802916666665,
+   "dur": 3.3629583333333333,
+   "words": [
+    [
+     "What",
+     0.02,
+     0.19
+    ],
+    [
+     "goes",
+     0.19,
+     0.6
+    ],
+    [
+     "around",
+     0.6,
+     0.88
+    ],
+    [
+     "the",
+     0.88,
+     1.05
+    ],
+    [
+     "Earth?",
+     1.05,
+     1.5
+    ],
+    [
+     "The",
+     1.81,
+     1.9
+    ],
+    [
+     "Moon,",
+     1.9,
+     2.41
+    ],
+    [
+     "or",
+     2.41,
+     2.61
+    ],
+    [
+     "a",
+     2.61,
+     2.64
+    ],
+    [
+     "cloud?",
+     2.64,
+     3.36
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 8",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "And the Sun's gravity keeps the Earth, and all the planets, going around the Sun!",
+   "t0": 268.125,
+   "t1": 273.75,
+   "v0": 268.1832499999998,
+   "dur": 5.2740833333333335,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.12
+    ],
+    [
+     "the",
+     0.12,
+     0.19
+    ],
+    [
+     "Sun's",
+     0.19,
+     0.69
+    ],
+    [
+     "gravity",
+     0.69,
+     1.22
+    ],
+    [
+     "keeps",
+     1.22,
+     1.58
+    ],
+    [
+     "the",
+     1.58,
+     1.79
+    ],
+    [
+     "Earth,",
+     1.79,
+     2.32
+    ],
+    [
+     "and",
+     2.71,
+     2.87
+    ],
+    [
+     "all",
+     2.87,
+     3.2
+    ],
+    [
+     "the",
+     3.2,
+     3.29
+    ],
+    [
+     "planets,",
+     3.29,
+     3.94
+    ],
+    [
+     "going",
+     3.94,
+     4.36
+    ],
+    [
+     "around",
+     4.36,
+     4.64
+    ],
+    [
+     "the",
+     4.64,
+     4.72
+    ],
+    [
+     "Sun!",
+     4.72,
+     5.27
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "around the sun",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Turn around slowly, like the Moon going around!",
+   "t0": 273.75,
+   "t1": 279.0625,
+   "v0": 273.9973333333332,
+   "dur": 3.5396666666666667,
+   "words": [
+    [
+     "Turn",
+     0.0,
+     0.33
+    ],
+    [
+     "around",
+     0.33,
+     0.68
+    ],
+    [
+     "slowly,",
+     0.68,
+     1.41
+    ],
+    [
+     "like",
+     1.76,
+     1.96
+    ],
+    [
+     "the",
+     1.96,
+     2.05
+    ],
+    [
+     "Moon",
+     2.05,
+     2.52
+    ],
+    [
+     "going",
+     2.52,
+     2.9
+    ],
+    [
+     "around!",
+     2.9,
+     3.54
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "turn",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. Everything has gravity!",
+   "t0": 279.0625,
+   "t1": 282.5,
+   "v0": 279.2769999999999,
+   "dur": 2.8045833333333334,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.32
+    ],
+    [
+     "it",
+     0.32,
+     0.42
+    ],
+    [
+     "with",
+     0.42,
+     0.66
+    ],
+    [
+     "me.",
+     0.66,
+     0.97
+    ],
+    [
+     "Everything",
+     1.31,
+     1.82
+    ],
+    [
+     "has",
+     1.82,
+     2.06
+    ],
+    [
+     "gravity!",
+     2.06,
+     2.8
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "So when a ball falls down in the park, now you know why!",
+   "t0": 282.5,
+   "t1": 286.875,
+   "v0": 282.6215833333332,
+   "dur": 3.8419583333333334,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.23
+    ],
+    [
+     "when",
+     0.23,
+     0.36
+    ],
+    [
+     "a",
+     0.36,
+     0.41
+    ],
+    [
+     "ball",
+     0.41,
+     0.78
+    ],
+    [
+     "falls",
+     0.78,
+     1.25
+    ],
+    [
+     "down",
+     1.25,
+     1.56
+    ],
+    [
+     "in",
+     1.56,
+     1.65
+    ],
+    [
+     "the",
+     1.65,
+     1.73
+    ],
+    [
+     "park,",
+     1.73,
+     2.33
+    ],
+    [
+     "now",
+     2.67,
+     2.93
+    ],
+    [
+     "you",
+     2.93,
+     3.1
+    ],
+    [
+     "know",
+     3.1,
+     3.26
+    ],
+    [
+     "why!",
+     3.26,
+     3.84
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "ball in the park",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "It is gravity, pulling it toward the Earth!",
+   "t0": 286.875,
+   "t1": 290.0,
+   "v0": 287.00354166666654,
+   "dur": 2.732625,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.13
+    ],
+    [
+     "is",
+     0.13,
+     0.29
+    ],
+    [
+     "gravity,",
+     0.29,
+     0.98
+    ],
+    [
+     "pulling",
+     1.19,
+     1.57
+    ],
+    [
+     "it",
+     1.57,
+     1.68
+    ],
+    [
+     "toward",
+     1.68,
+     2.02
+    ],
+    [
+     "the",
+     2.02,
+     2.2
+    ],
+    [
+     "Earth!",
+     2.2,
+     2.73
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "part 3 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Quiz time! Let's remember what we learned.",
+   "t0": 290.0,
+   "t1": 293.125,
+   "v0": 290.27616666666654,
+   "dur": 2.547125,
+   "words": [
+    [
+     "Quiz",
+     0.0,
+     0.25
+    ],
+    [
+     "time!",
+     0.25,
+     0.78
+    ],
+    [
+     "Let's",
+     0.92,
+     1.17
+    ],
+    [
+     "remember",
+     1.17,
+     1.63
+    ],
+    [
+     "what",
+     1.63,
+     1.85
+    ],
+    [
+     "we",
+     1.85,
+     1.98
+    ],
+    [
+     "learned.",
+     1.98,
+     2.547
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz time",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Which way does an apple fall from a tree? Up, or down?",
+   "t0": 293.125,
+   "t1": 300.9375,
+   "v0": 293.36329166666656,
+   "dur": 3.981708333333333,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.22
+    ],
+    [
+     "way",
+     0.22,
+     0.45
+    ],
+    [
+     "does",
+     0.45,
+     0.67
+    ],
+    [
+     "an",
+     0.67,
+     0.77
+    ],
+    [
+     "apple",
+     0.77,
+     1.13
+    ],
+    [
+     "fall",
+     1.13,
+     1.52
+    ],
+    [
+     "from",
+     1.52,
+     1.7
+    ],
+    [
+     "a",
+     1.7,
+     1.75
+    ],
+    [
+     "tree?",
+     1.75,
+     2.33
+    ],
+    [
+     "Up,",
+     2.77,
+     3.05
+    ],
+    [
+     "or",
+     3.05,
+     3.32
+    ],
+    [
+     "down?",
+     3.32,
+     3.98
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 1",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Down! Gravity pulls it toward the ground.",
+   "t0": 300.9375,
+   "t1": 304.0625,
+   "v0": 301.0849999999999,
+   "dur": 2.7335,
+   "words": [
+    [
+     "Down!",
+     0.01,
+     0.77
+    ],
+    [
+     "Gravity",
+     0.77,
+     1.25
+    ],
+    [
+     "pulls",
+     1.25,
+     1.65
+    ],
+    [
+     "it",
+     1.65,
+     1.73
+    ],
+    [
+     "toward",
+     1.73,
+     2.04
+    ],
+    [
+     "the",
+     2.04,
+     2.11
+    ],
+    [
+     "ground.",
+     2.11,
+     2.73
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 1 answer",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Drop a heavy ball and a light ball. Which lands first? Heavy, or together?",
+   "t0": 304.0625,
+   "t1": 313.4375,
+   "v0": 304.35849999999994,
+   "dur": 5.448625,
+   "words": [
+    [
+     "Drop",
+     0.01,
+     0.37
+    ],
+    [
+     "a",
+     0.37,
+     0.42
+    ],
+    [
+     "heavy",
+     0.42,
+     0.8
+    ],
+    [
+     "ball",
+     0.8,
+     1.3
+    ],
+    [
+     "and",
+     1.3,
+     1.39
+    ],
+    [
+     "a",
+     1.39,
+     1.43
+    ],
+    [
+     "light",
+     1.43,
+     1.75
+    ],
+    [
+     "ball.",
+     1.75,
+     2.37
+    ],
+    [
+     "Which",
+     2.37,
+     2.7
+    ],
+    [
+     "lands",
+     2.7,
+     3.18
+    ],
+    [
+     "first?",
+     3.18,
+     3.77
+    ],
+    [
+     "Heavy,",
+     4.11,
+     4.61
+    ],
+    [
+     "or",
+     4.61,
+     4.87
+    ],
+    [
+     "together?",
+     4.87,
+     5.449
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Together! They land at the same time.",
+   "t0": 313.4375,
+   "t1": 316.25,
+   "v0": 313.54712499999994,
+   "dur": 2.377,
+   "words": [
+    [
+     "Together!",
+     0.0,
+     0.62
+    ],
+    [
+     "They",
+     0.81,
+     0.95
+    ],
+    [
+     "land",
+     0.95,
+     1.31
+    ],
+    [
+     "at",
+     1.31,
+     1.38
+    ],
+    [
+     "the",
+     1.38,
+     1.46
+    ],
+    [
+     "same",
+     1.46,
+     1.81
+    ],
+    [
+     "time.",
+     1.81,
+     2.377
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 2 answer",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "What keeps the Moon going around the Earth? Gravity, or a rope?",
+   "t0": 316.25,
+   "t1": 324.375,
+   "v0": 316.46412499999997,
+   "dur": 4.2625,
+   "words": [
+    [
+     "What",
+     0.02,
+     0.18
+    ],
+    [
+     "keeps",
+     0.18,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.59
+    ],
+    [
+     "Moon",
+     0.59,
+     1.0
+    ],
+    [
+     "going",
+     1.0,
+     1.36
+    ],
+    [
+     "around",
+     1.36,
+     1.64
+    ],
+    [
+     "the",
+     1.64,
+     1.8
+    ],
+    [
+     "Earth?",
+     1.8,
+     2.29
+    ],
+    [
+     "Gravity,",
+     2.7,
+     3.37
+    ],
+    [
+     "or",
+     3.37,
+     3.65
+    ],
+    [
+     "a",
+     3.65,
+     3.68
+    ],
+    [
+     "rope?",
+     3.68,
+     4.26
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Gravity! Round and round goes the Moon.",
+   "t0": 324.375,
+   "t1": 327.1875,
+   "v0": 324.46662499999996,
+   "dur": 2.5202916666666666,
+   "words": [
+    [
+     "Gravity!",
+     0.01,
+     0.59
+    ],
+    [
+     "Round",
+     0.82,
+     1.17
+    ],
+    [
+     "and",
+     1.17,
+     1.32
+    ],
+    [
+     "round",
+     1.32,
+     1.65
+    ],
+    [
+     "goes",
+     1.65,
+     1.95
+    ],
+    [
+     "the",
+     1.95,
+     2.02
+    ],
+    [
+     "Moon.",
+     2.02,
+     2.52
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 3 answer",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Apples, balls, and the Moon. That is gravity! Thanks for exploring with me!",
+   "t0": 327.1875,
+   "t1": 333.125,
+   "v0": 327.52691666666664,
+   "dur": 5.254333333333333,
+   "words": [
+    [
+     "Apples,",
+     0.0,
+     0.53
+    ],
+    [
+     "balls,",
+     0.53,
+     1.24
+    ],
+    [
+     "and",
+     1.24,
+     1.35
+    ],
+    [
+     "the",
+     1.35,
+     1.41
+    ],
+    [
+     "Moon.",
+     1.41,
+     1.97
+    ],
+    [
+     "That",
+     2.29,
+     2.46
+    ],
+    [
+     "is",
+     2.46,
+     2.61
+    ],
+    [
+     "gravity!",
+     2.61,
+     3.3
+    ],
+    [
+     "Thanks",
+     3.54,
+     3.9
+    ],
+    [
+     "for",
+     3.9,
+     4.08
+    ],
+    [
+     "exploring",
+     4.08,
+     4.8
+    ],
+    [
+     "with",
+     4.8,
+     4.99
+    ],
+    [
+     "me!",
+     4.99,
+     5.25
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "goodbye",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 333.125,
+   "t1": 336.5625,
+   "v0": 333.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 336.5625,
+   "t1": 339.6875,
+   "v0": 336.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 339.6875,
+   "t1": 345.0,
+   "v0": 340.0,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 345.0,
+   "t1": 347.9616666666667,
+   "v0": 345.12,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

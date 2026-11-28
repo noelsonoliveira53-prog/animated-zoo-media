@@ -1,0 +1,76 @@
+{
+ "length": 88.6,
+ "shots": 19,
+ "visual_changes": 79,
+ "mean_gap": 1.12,
+ "longest_gap": 5.15,
+ "longest_gap_at": 72.0,
+ "over_6s": [],
+ "places": [
+  "gspace",
+  "glab",
+  "gbench",
+  "gpark"
+ ],
+ "picture_boards": [
+  "paper_gz"
+ ],
+ "questions": 8,
+ "longest_without_question": 14.1,
+ "first_words_at": 0.42,
+ "shot_mean": 4.66,
+ "main_intro": {
+  "at": [],
+  "seconds": 0
+ },
+ "fails": [],
+ "words_placed": "191/191",
+ "sync": {
+  "pauses_checked": 13,
+  "onset_err_mean_ms": 33.1,
+  "onset_err_max_ms": 130.0,
+  "suspect_words": [],
+  "cuts": 18,
+  "cuts_on_the_half_beat": 18,
+  "songs_entering_on_a_beat": "0/0",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)")
+[BrowserManager] Browser launched (HeadlessChrome/158.0.8127.36, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (163ms)
+[initSession:screenshot] GSAP proxy flush complete (166ms)
+[Browser:WARN] GSAP target #s0c1,#s0c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s1c1,#s1c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s2c1,#s2c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s3c1,#s3c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s5c1,#s5c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s6c1,#s6c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s9c1,#s9c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s14c1,#s14c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s15c1,#s15c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s16c1,#s16c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s17c1,#s17c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s18c1,#s18c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (427ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (431ms)
+[initSession:screenshot] applyVideoMetadataHints complete (431ms)
+[initSession:screenshot] media + fonts + tailwind ready (434ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (449ms)
+
+✗  Render failed
+
+   render_cancelled
+   Try --docker for containerized rendering
+
+Render cancelled: render_cancelled_by_sighup

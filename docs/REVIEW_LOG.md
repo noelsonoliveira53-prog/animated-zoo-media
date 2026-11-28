@@ -253,3 +253,7 @@
 | 2026-11-28 | cartoon/zc_ep17_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-28 | cartoon/zc_ep17_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-28 | cartoon/zc_ep17.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-28 | cartoon/gc_ep05.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-28 | cartoon/gc_ep05_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-28 | cartoon/gc_ep05_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-28 | cartoon/gc_ep05_short3.mp4 | cartoon_short_90 | PASS | - | - | - |

@@ -1,0 +1,12 @@
+4K 2160x3840 out/gc_ep05/gc_ep05_short3.mp4
+out/gc_ep05/gc_ep05_short3.mp4: 89 s, 35 visual changes (10 cuts, 4 moves, 21 new elements), one every 2.5 s on average (median 2.2 s), longest stretch 4.8 s
+  0 stretches over 8 s = 0 s = 0% of the video
+  SAME SHOT (no cut, no camera move): a new shot every 5.9 s on average, longest 21.0 s, 2 stretches over 8 s = 31.0 s = 35% of the video
+MARK yes out/gc_ep05/gc_ep05_short3.mp4
+corner sheet: out/gc_ep05/corner_s3.jpg (one picture every 5 s, row by row; the video has the mark)
+  beat: {'heard_bpm': np.float64(120.1)}
+  clicks at: []  silences: []
+  level: {'lufs': None, 'range_lu': None, 'true_peak_db': None, 'clipped_samples': 0, 'quietest_second_db': np.float64(-19.5), 'loudest_second_db': np.float64(-12.7)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.55, 'share_below_120hz': 0.16, 'share_above_4khz': 0.05}
+  picture: /home/claude/animated-zoo-media/studio/cartoon/out/gc_ep05/gc_ep05_short3_listen.png
+DONE

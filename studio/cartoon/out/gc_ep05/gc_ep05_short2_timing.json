@@ -1,0 +1,1794 @@
+{
+ "id": "gc_ep05_short2",
+ "total": 89.18670833333339,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75
+ ],
+ "plan": {
+  "length": 89.2,
+  "shots": 18,
+  "visual_changes": 77,
+  "mean_gap": 1.16,
+  "longest_gap": 4.17,
+  "longest_gap_at": 85.0,
+  "over_6s": [],
+  "places": [
+   "glab",
+   "gsky",
+   "gbench"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 9,
+  "longest_without_question": 18.8,
+  "first_words_at": 0.42,
+  "shot_mean": 4.95,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "186/186",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 24.0,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the picture board (blueprint) hook: which lands first"
+  ],
+  [
+   0.48,
+   "action",
+   "a part lights up"
+  ],
+  [
+   1.56,
+   "action",
+   "a part lights up"
+  ],
+  [
+   3.59,
+   "word",
+   "?"
+  ],
+  [
+   4.69,
+   "new shot",
+   "the picture board (blueprint) two balls"
+  ],
+  [
+   5.26,
+   "action",
+   "a part lights up"
+  ],
+  [
+   5.26,
+   "word",
+   "HEAVY"
+  ],
+  [
+   6.49,
+   "action",
+   "a part lights up"
+  ],
+  [
+   6.49,
+   "word",
+   "LIGHT"
+  ],
+  [
+   7.5,
+   "new shot",
+   "the picture board (blueprint) question 4"
+  ],
+  [
+   11.0,
+   "sign",
+   "HEAVY"
+  ],
+  [
+   11.35,
+   "sign",
+   "TOGETHER"
+  ],
+  [
+   13.69,
+   "thinking dot",
+   "1"
+  ],
+  [
+   14.36,
+   "thinking dot",
+   "2"
+  ],
+  [
+   15.03,
+   "thinking dot",
+   "3"
+  ],
+  [
+   15.52,
+   "answer",
+   "TOGETHER"
+  ],
+  [
+   16.88,
+   "new shot",
+   "the picture board (blueprint) together"
+  ],
+  [
+   16.94,
+   "word",
+   "TOGETHER!"
+  ],
+  [
+   18.32,
+   "action",
+   "both balls fall"
+  ],
+  [
+   21.56,
+   "new place",
+   "Gizmo's lab the same way"
+  ],
+  [
+   21.63,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   25.27,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   25.27,
+   "word",
+   "THE SAME!"
+  ],
+  [
+   26.25,
+   "new place",
+   "the picture board (blueprint) again"
+  ],
+  [
+   28.48,
+   "action",
+   "both balls fall"
+  ],
+  [
+   28.48,
+   "word",
+   "DROP!"
+  ],
+  [
+   29.38,
+   "new place",
+   "high in the sky the feather floats"
+  ],
+  [
+   29.48,
+   "action",
+   "the feather floats down slowly"
+  ],
+  [
+   32.12,
+   "word",
+   "SLOWLY..."
+  ],
+  [
+   33.12,
+   "new place",
+   "the picture board (blueprint) question 5"
+  ],
+  [
+   35.56,
+   "sign",
+   "BALL"
+  ],
+  [
+   35.91,
+   "sign",
+   "FEATHER"
+  ],
+  [
+   36.64,
+   "thinking dot",
+   "1"
+  ],
+  [
+   37.32,
+   "thinking dot",
+   "2"
+  ],
+  [
+   37.99,
+   "thinking dot",
+   "3"
+  ],
+  [
+   38.48,
+   "answer",
+   "BALL"
+  ],
+  [
+   39.69,
+   "new place",
+   "Gizmo's lab think 2"
+  ],
+  [
+   40.24,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   41.3,
+   "word",
+   "WHY?"
+  ],
+  [
+   42.57,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   44.06,
+   "new place",
+   "the picture board (blueprint) the air slows it"
+  ],
+  [
+   44.26,
+   "action",
+   "the ball falls fast"
+  ],
+  [
+   44.26,
+   "action",
+   "the feather floats down slowly"
+  ],
+  [
+   45.13,
+   "action",
+   "a part lights up"
+  ],
+  [
+   45.13,
+   "word",
+   "AIR!"
+  ],
+  [
+   47.19,
+   "new place",
+   "high in the sky the air pushes"
+  ],
+  [
+   47.29,
+   "action",
+   "the feather floats down slowly"
+  ],
+  [
+   50.36,
+   "word",
+   "SIDE TO SIDE!"
+  ],
+  [
+   51.88,
+   "new place",
+   "the picture board (blueprint) question 5b"
+  ],
+  [
+   52.17,
+   "action",
+   "a part lights up"
+  ],
+  [
+   54.22,
+   "sign",
+   "THE AIR"
+  ],
+  [
+   54.57,
+   "sign",
+   "GROUND"
+  ],
+  [
+   56.13,
+   "thinking dot",
+   "1"
+  ],
+  [
+   56.81,
+   "thinking dot",
+   "2"
+  ],
+  [
+   57.48,
+   "thinking dot",
+   "3"
+  ],
+  [
+   57.97,
+   "answer",
+   "THE AIR"
+  ],
+  [
+   59.06,
+   "new place",
+   "Gizmo's lab feather hands"
+  ],
+  [
+   59.4,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   61.92,
+   "word",
+   "SLOWLY!"
+  ],
+  [
+   64.38,
+   "new place",
+   "the picture board (blueprint) no air"
+  ],
+  [
+   65.86,
+   "word",
+   "NO AIR!"
+  ],
+  [
+   67.5,
+   "new shot",
+   "the picture board (blueprint) question 6"
+  ],
+  [
+   71.07,
+   "sign",
+   "THE ROCK"
+  ],
+  [
+   71.42,
+   "sign",
+   "SAME TIME"
+  ],
+  [
+   72.18,
+   "thinking dot",
+   "1"
+  ],
+  [
+   72.85,
+   "thinking dot",
+   "2"
+  ],
+  [
+   73.53,
+   "thinking dot",
+   "3"
+  ],
+  [
+   74.01,
+   "answer",
+   "SAME TIME"
+  ],
+  [
+   75.31,
+   "new shot",
+   "the picture board (blueprint) same time"
+  ],
+  [
+   75.6,
+   "action",
+   "the rock and the feather fall together"
+  ],
+  [
+   76.86,
+   "word",
+   "SAME TIME!"
+  ],
+  [
+   80.31,
+   "new place",
+   "Gizmo's work bench say it 2"
+  ],
+  [
+   81.86,
+   "word",
+   "AIR SLOWS IT!"
+  ],
+  [
+   82.78,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   83.75,
+   "new place",
+   "the picture board (blueprint) part 2 recap"
+  ],
+  [
+   85.02,
+   "action",
+   "both balls fall"
+  ],
+  [
+   85.02,
+   "word",
+   "TOGETHER!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "paper_gz",
+   "say": "A heavy ball and a light ball. Which one lands first?",
+   "t0": 0.0,
+   "t1": 4.6875,
+   "v0": 0.42,
+   "dur": 3.77325,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "heavy",
+     0.06,
+     0.45
+    ],
+    [
+     "ball",
+     0.45,
+     0.99
+    ],
+    [
+     "and",
+     0.99,
+     1.09
+    ],
+    [
+     "a",
+     1.09,
+     1.14
+    ],
+    [
+     "light",
+     1.14,
+     1.45
+    ],
+    [
+     "ball.",
+     1.45,
+     1.95
+    ],
+    [
+     "Which",
+     2.32,
+     2.53
+    ],
+    [
+     "one",
+     2.53,
+     2.75
+    ],
+    [
+     "lands",
+     2.75,
+     3.17
+    ],
+    [
+     "first?",
+     3.17,
+     3.77
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: which lands first",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Here is a heavy ball, and a light ball.",
+   "t0": 4.6875,
+   "t1": 7.5,
+   "v0": 4.73325,
+   "dur": 2.5512916666666667,
+   "words": [
+    [
+     "Here",
+     0.09,
+     0.38
+    ],
+    [
+     "is",
+     0.38,
+     0.49
+    ],
+    [
+     "a",
+     0.49,
+     0.53
+    ],
+    [
+     "heavy",
+     0.53,
+     0.88
+    ],
+    [
+     "ball,",
+     0.88,
+     1.6
+    ],
+    [
+     "and",
+     1.6,
+     1.71
+    ],
+    [
+     "a",
+     1.71,
+     1.76
+    ],
+    [
+     "light",
+     1.76,
+     2.06
+    ],
+    [
+     "ball.",
+     2.06,
+     2.55
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "two balls",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "We drop them together. Which lands first? The heavy one, or do they land together?",
+   "t0": 7.5,
+   "t1": 16.875,
+   "v0": 7.824541666666667,
+   "dur": 5.3745,
+   "words": [
+    [
+     "We",
+     0.0,
+     0.12
+    ],
+    [
+     "drop",
+     0.12,
+     0.49
+    ],
+    [
+     "them",
+     0.49,
+     0.69
+    ],
+    [
+     "together.",
+     0.69,
+     1.3
+    ],
+    [
+     "Which",
+     1.3,
+     1.63
+    ],
+    [
+     "lands",
+     1.63,
+     2.11
+    ],
+    [
+     "first?",
+     2.11,
+     2.72
+    ],
+    [
+     "The",
+     3.08,
+     3.18
+    ],
+    [
+     "heavy",
+     3.18,
+     3.54
+    ],
+    [
+     "one,",
+     3.54,
+     3.89
+    ],
+    [
+     "or",
+     3.89,
+     4.18
+    ],
+    [
+     "do",
+     4.18,
+     4.35
+    ],
+    [
+     "they",
+     4.35,
+     4.5
+    ],
+    [
+     "land",
+     4.5,
+     4.86
+    ],
+    [
+     "together?",
+     4.86,
+     5.37
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 4",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Together! Dropped from the same height, they land at the same time.",
+   "t0": 16.875,
+   "t1": 21.5625,
+   "v0": 16.939041666666668,
+   "dur": 4.146208333333333,
+   "words": [
+    [
+     "Together!",
+     0.0,
+     0.57
+    ],
+    [
+     "Dropped",
+     0.69,
+     1.11
+    ],
+    [
+     "from",
+     1.11,
+     1.31
+    ],
+    [
+     "the",
+     1.31,
+     1.38
+    ],
+    [
+     "same",
+     1.38,
+     1.71
+    ],
+    [
+     "height,",
+     1.71,
+     2.15
+    ],
+    [
+     "they",
+     2.47,
+     2.62
+    ],
+    [
+     "land",
+     2.62,
+     3.05
+    ],
+    [
+     "at",
+     3.05,
+     3.12
+    ],
+    [
+     "the",
+     3.12,
+     3.21
+    ],
+    [
+     "same",
+     3.21,
+     3.58
+    ],
+    [
+     "time.",
+     3.58,
+     4.146
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "together",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Wow! Gravity speeds up heavy things and light things the same way.",
+   "t0": 21.5625,
+   "t1": 26.25,
+   "v0": 21.625250000000005,
+   "dur": 4.402375,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.8
+    ],
+    [
+     "Gravity",
+     0.8,
+     1.27
+    ],
+    [
+     "speeds",
+     1.27,
+     1.78
+    ],
+    [
+     "up",
+     1.78,
+     1.92
+    ],
+    [
+     "heavy",
+     1.92,
+     2.22
+    ],
+    [
+     "things",
+     2.22,
+     2.78
+    ],
+    [
+     "and",
+     2.78,
+     2.88
+    ],
+    [
+     "light",
+     2.88,
+     3.16
+    ],
+    [
+     "things",
+     3.16,
+     3.54
+    ],
+    [
+     "the",
+     3.54,
+     3.64
+    ],
+    [
+     "same",
+     3.64,
+     4.07
+    ],
+    [
+     "way.",
+     4.07,
+     4.4
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the same way",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Let's try it again. Ready? Drop!",
+   "t0": 26.25,
+   "t1": 29.375,
+   "v0": 26.567625000000007,
+   "dur": 2.5082916666666666,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.3
+    ],
+    [
+     "try",
+     0.3,
+     0.64
+    ],
+    [
+     "it",
+     0.64,
+     0.79
+    ],
+    [
+     "again.",
+     0.79,
+     1.27
+    ],
+    [
+     "Ready?",
+     1.5,
+     1.91
+    ],
+    [
+     "Drop!",
+     1.91,
+     2.508
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "again",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "But look at this feather. It floats down, slowly.",
+   "t0": 29.375,
+   "t1": 33.125,
+   "v0": 29.615916666666674,
+   "dur": 3.2910833333333334,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.12
+    ],
+    [
+     "look",
+     0.12,
+     0.35
+    ],
+    [
+     "at",
+     0.35,
+     0.44
+    ],
+    [
+     "this",
+     0.44,
+     0.64
+    ],
+    [
+     "feather.",
+     0.64,
+     1.13
+    ],
+    [
+     "It",
+     1.47,
+     1.58
+    ],
+    [
+     "floats",
+     1.58,
+     1.99
+    ],
+    [
+     "down,",
+     1.99,
+     2.5
+    ],
+    [
+     "slowly.",
+     2.5,
+     3.29
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the feather floats",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A ball and a feather. Which lands first?",
+   "t0": 33.125,
+   "t1": 39.6875,
+   "v0": 33.44700000000001,
+   "dur": 2.7110416666666666,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.08
+    ],
+    [
+     "ball",
+     0.08,
+     0.59
+    ],
+    [
+     "and",
+     0.59,
+     0.68
+    ],
+    [
+     "a",
+     0.68,
+     0.72
+    ],
+    [
+     "feather.",
+     0.72,
+     1.26
+    ],
+    [
+     "Which",
+     1.5,
+     1.7
+    ],
+    [
+     "lands",
+     1.7,
+     2.11
+    ],
+    [
+     "first?",
+     2.11,
+     2.71
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Hmm, why is the feather so slow? Let's think!",
+   "t0": 39.6875,
+   "t1": 44.0625,
+   "v0": 39.89804166666668,
+   "dur": 3.117875,
+   "words": [
+    [
+     "Hmm,",
+     0.01,
+     0.34
+    ],
+    [
+     "why",
+     0.34,
+     0.54
+    ],
+    [
+     "is",
+     0.54,
+     0.71
+    ],
+    [
+     "the",
+     0.71,
+     0.79
+    ],
+    [
+     "feather",
+     0.79,
+     1.14
+    ],
+    [
+     "so",
+     1.14,
+     1.4
+    ],
+    [
+     "slow?",
+     1.4,
+     2.04
+    ],
+    [
+     "Let's",
+     2.34,
+     2.67
+    ],
+    [
+     "think!",
+     2.67,
+     3.118
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "think 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The ball! The air slows the feather down.",
+   "t0": 44.0625,
+   "t1": 47.1875,
+   "v0": 44.15591666666668,
+   "dur": 2.689583333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "ball!",
+     0.1,
+     0.81
+    ],
+    [
+     "The",
+     0.81,
+     0.97
+    ],
+    [
+     "air",
+     0.97,
+     1.22
+    ],
+    [
+     "slows",
+     1.22,
+     1.73
+    ],
+    [
+     "the",
+     1.73,
+     1.81
+    ],
+    [
+     "feather",
+     1.81,
+     2.17
+    ],
+    [
+     "down.",
+     2.17,
+     2.69
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the air slows it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "The air pushes on the feather, so it drifts down, side to side.",
+   "t0": 47.1875,
+   "t1": 51.875,
+   "v0": 47.38550000000001,
+   "dur": 4.133,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "air",
+     0.18,
+     0.39
+    ],
+    [
+     "pushes",
+     0.39,
+     0.82
+    ],
+    [
+     "on",
+     0.82,
+     0.97
+    ],
+    [
+     "the",
+     0.97,
+     1.03
+    ],
+    [
+     "feather,",
+     1.03,
+     1.51
+    ],
+    [
+     "so",
+     1.51,
+     1.7
+    ],
+    [
+     "it",
+     1.7,
+     1.76
+    ],
+    [
+     "drifts",
+     1.76,
+     2.13
+    ],
+    [
+     "down,",
+     2.13,
+     2.73
+    ],
+    [
+     "side",
+     2.97,
+     3.39
+    ],
+    [
+     "to",
+     3.39,
+     3.48
+    ],
+    [
+     "side.",
+     3.48,
+     4.13
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the air pushes",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What slows the feather down? The air, or the ground?",
+   "t0": 51.875,
+   "t1": 59.0625,
+   "v0": 52.05850000000001,
+   "dur": 3.5865833333333335,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.2
+    ],
+    [
+     "slows",
+     0.2,
+     0.69
+    ],
+    [
+     "the",
+     0.69,
+     0.77
+    ],
+    [
+     "feather",
+     0.77,
+     1.11
+    ],
+    [
+     "down?",
+     1.11,
+     1.64
+    ],
+    [
+     "The",
+     1.99,
+     2.16
+    ],
+    [
+     "air,",
+     2.16,
+     2.61
+    ],
+    [
+     "or",
+     2.61,
+     2.77
+    ],
+    [
+     "the",
+     2.77,
+     2.87
+    ],
+    [
+     "ground?",
+     2.87,
+     3.587
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Float your hands down slowly, like a feather!",
+   "t0": 59.0625,
+   "t1": 64.375,
+   "v0": 59.38508333333335,
+   "dur": 3.1315,
+   "words": [
+    [
+     "Float",
+     0.01,
+     0.35
+    ],
+    [
+     "your",
+     0.35,
+     0.52
+    ],
+    [
+     "hands",
+     0.52,
+     0.96
+    ],
+    [
+     "down",
+     0.96,
+     1.28
+    ],
+    [
+     "slowly,",
+     1.28,
+     2.01
+    ],
+    [
+     "like",
+     2.29,
+     2.49
+    ],
+    [
+     "a",
+     2.49,
+     2.53
+    ],
+    [
+     "feather!",
+     2.53,
+     3.13
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "feather hands",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Now, think of a place with no air at all.",
+   "t0": 64.375,
+   "t1": 67.5,
+   "v0": 64.45658333333336,
+   "dur": 2.576208333333333,
+   "words": [
+    [
+     "Now,",
+     0.01,
+     0.42
+    ],
+    [
+     "think",
+     0.42,
+     0.67
+    ],
+    [
+     "of",
+     0.67,
+     0.76
+    ],
+    [
+     "a",
+     0.76,
+     0.8
+    ],
+    [
+     "place",
+     0.8,
+     1.19
+    ],
+    [
+     "with",
+     1.19,
+     1.4
+    ],
+    [
+     "no",
+     1.4,
+     1.65
+    ],
+    [
+     "air",
+     1.81,
+     2.02
+    ],
+    [
+     "at",
+     2.02,
+     2.15
+    ],
+    [
+     "all.",
+     2.15,
+     2.576
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "no air",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "With no air, we drop a rock and a feather. Which lands first?",
+   "t0": 67.5,
+   "t1": 75.3125,
+   "v0": 67.57279166666669,
+   "dur": 4.121375,
+   "words": [
+    [
+     "With",
+     0.0,
+     0.18
+    ],
+    [
+     "no",
+     0.18,
+     0.44
+    ],
+    [
+     "air,",
+     0.44,
+     0.72
+    ],
+    [
+     "we",
+     0.72,
+     0.88
+    ],
+    [
+     "drop",
+     0.88,
+     1.19
+    ],
+    [
+     "a",
+     1.19,
+     1.25
+    ],
+    [
+     "rock",
+     1.25,
+     1.77
+    ],
+    [
+     "and",
+     1.77,
+     1.87
+    ],
+    [
+     "a",
+     1.87,
+     1.9
+    ],
+    [
+     "feather.",
+     1.9,
+     2.45
+    ],
+    [
+     "Which",
+     2.84,
+     3.04
+    ],
+    [
+     "lands",
+     3.04,
+     3.5
+    ],
+    [
+     "first?",
+     3.5,
+     4.12
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 6",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "They land at exactly the same time! No air slows the feather.",
+   "t0": 75.3125,
+   "t1": 80.3125,
+   "v0": 75.4341666666667,
+   "dur": 4.55475,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.17
+    ],
+    [
+     "land",
+     0.17,
+     0.59
+    ],
+    [
+     "at",
+     0.59,
+     0.7
+    ],
+    [
+     "exactly",
+     0.7,
+     1.33
+    ],
+    [
+     "the",
+     1.33,
+     1.43
+    ],
+    [
+     "same",
+     1.43,
+     1.77
+    ],
+    [
+     "time!",
+     1.77,
+     2.34
+    ],
+    [
+     "No",
+     2.79,
+     3.09
+    ],
+    [
+     "air",
+     3.18,
+     3.43
+    ],
+    [
+     "slows",
+     3.43,
+     3.97
+    ],
+    [
+     "the",
+     3.97,
+     4.05
+    ],
+    [
+     "feather.",
+     4.05,
+     4.55
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "same time",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. The air slows the feather!",
+   "t0": 80.3125,
+   "t1": 83.75,
+   "v0": 80.5289166666667,
+   "dur": 2.824875,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.37
+    ],
+    [
+     "with",
+     0.37,
+     0.57
+    ],
+    [
+     "me.",
+     0.57,
+     0.87
+    ],
+    [
+     "The",
+     1.18,
+     1.33
+    ],
+    [
+     "air",
+     1.33,
+     1.63
+    ],
+    [
+     "slows",
+     1.63,
+     2.16
+    ],
+    [
+     "the",
+     2.16,
+     2.25
+    ],
+    [
+     "feather!",
+     2.25,
+     2.82
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Heavy and light fall together. Only the air slows a feather down.",
+   "t0": 83.75,
+   "t1": 88.78670833333338,
+   "v0": 83.89379166666671,
+   "dur": 4.472916666666666,
+   "words": [
+    [
+     "Heavy",
+     0.01,
+     0.42
+    ],
+    [
+     "and",
+     0.42,
+     0.53
+    ],
+    [
+     "light",
+     0.53,
+     0.8
+    ],
+    [
+     "fall",
+     0.8,
+     1.13
+    ],
+    [
+     "together.",
+     1.13,
+     1.69
+    ],
+    [
+     "Only",
+     2.16,
+     2.49
+    ],
+    [
+     "the",
+     2.49,
+     2.68
+    ],
+    [
+     "air",
+     2.68,
+     3.01
+    ],
+    [
+     "slows",
+     3.01,
+     3.47
+    ],
+    [
+     "a",
+     3.47,
+     3.51
+    ],
+    [
+     "feather",
+     3.51,
+     3.9
+    ],
+    [
+     "down.",
+     3.9,
+     4.47
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "part 2 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

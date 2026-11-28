@@ -3754,5 +3754,18 @@
   "watermark": "tl",
   "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet.",
   "theme_title": "How Do Sea Turtles Breathe?"
+ },
+ {
+  "file": "cartoon/za_ep17.mp4",
+  "title": "How Does Hazel Find Snacks at Night?",
+  "date": "2026-11-29",
+  "time": "1:30 PM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 about 7:27 PM ET by the scheduled 7:23 PM adventure build (https://claude.ai/code/session_014CFVfXX1ET44dwkntqUY3i); run note docs/cartoon/runs/za_ep17.md. In production: not built yet.",
+  "theme_title": "Hazel's Night-Time Snack Hunt"
  }
 ]

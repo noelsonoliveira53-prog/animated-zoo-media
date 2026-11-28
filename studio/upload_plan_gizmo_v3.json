@@ -732,7 +732,7 @@
   "time": "8:10 AM",
   "channel": "gizmo",
   "topic": "How Does Your Heart Work?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -751,7 +751,8 @@
    "shorts"
   ],
   "description": "What makes the lub-dub sound of your heartbeat? Gizmo the robot looks inside the heart: little doors called valves close and make the sound. Your heart has four rooms, and it pumps faster when you run and play, so your muscles get more oxygen.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: KidsHealth from Nemours (Your Heart and Circulatory System, for kids; Heart and Circulatory System, for parents).",
-  "seconds": 90.5
+  "seconds": 90.5,
+  "video_id": "Q8bjVFBd50w"
  },
  {
   "file": "cartoon/gc_ep05.mp4",

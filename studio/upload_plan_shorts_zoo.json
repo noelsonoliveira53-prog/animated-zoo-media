@@ -2288,5 +2288,41 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ]
+ },
+ {
+  "file": "cartoon/zc_ep17_short1.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep17",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-05",
+  "time": "7:30 AM",
+  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production."
+ },
+ {
+  "file": "cartoon/zc_ep17_short2.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep17",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-06",
+  "time": "7:30 AM",
+  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production."
+ },
+ {
+  "file": "cartoon/zc_ep17_short3.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep17",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-07",
+  "time": "7:30 AM",
+  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production."
  }
 ]

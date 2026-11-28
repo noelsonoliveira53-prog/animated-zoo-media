@@ -3803,5 +3803,18 @@
   "thumb": "brand/zoo/thumb_za_ep17.jpg",
   "thumb_text": "SNIFF, SNIFF!",
   "seconds": 339.1
+ },
+ {
+  "file": "cartoon/zc_ep17.mp4",
+  "title": "Can a Turtle Leave Its Shell?",
+  "date": "2026-11-30",
+  "time": "9:30 AM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production.",
+  "theme_title": "Can a Turtle Leave Its Shell?"
  }
 ]

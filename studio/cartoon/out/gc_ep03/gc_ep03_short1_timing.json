@@ -1,0 +1,1825 @@
+{
+ "id": "gc_ep03_short1",
+ "total": 90.87112500000006,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625
+ ],
+ "plan": {
+  "length": 90.9,
+  "shots": 19,
+  "visual_changes": 79,
+  "mean_gap": 1.15,
+  "longest_gap": 4.33,
+  "longest_gap_at": 53.5,
+  "over_6s": [],
+  "places": [
+   "gpark",
+   "ghills",
+   "gsky",
+   "glab",
+   "gbench"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 9,
+  "longest_without_question": 15.9,
+  "first_words_at": 0.42,
+  "shot_mean": 4.78,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "186/186",
+  "sync": {
+   "pauses_checked": 11,
+   "onset_err_mean_ms": 26.4,
+   "onset_err_max_ms": 110.0,
+   "suspect_words": [],
+   "cuts": 18,
+   "cuts_on_the_half_beat": 18,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sunny park after the rain hook: where does it go"
+  ],
+  [
+   0.8,
+   "action",
+   "the puddle gets smaller"
+  ],
+  [
+   2.57,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new shot",
+   "the sunny park after the rain the puddle"
+  ],
+  [
+   5.04,
+   "action",
+   "a part lights up"
+  ],
+  [
+   5.04,
+   "word",
+   "A PUDDLE!"
+  ],
+  [
+   6.56,
+   "new shot",
+   "the sunny park after the rain the sun warms it"
+  ],
+  [
+   7.58,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   8.65,
+   "action",
+   "warm lines rise from the puddle"
+  ],
+  [
+   8.65,
+   "word",
+   "WARM!"
+  ],
+  [
+   10.94,
+   "new place",
+   "the hills with a river the ocean too"
+  ],
+  [
+   12.68,
+   "word",
+   "THE OCEAN!"
+  ],
+  [
+   14.1,
+   "action",
+   "the vapor floats up"
+  ],
+  [
+   15.94,
+   "new place",
+   "the picture board (blueprint) question 1"
+  ],
+  [
+   16.14,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   18.33,
+   "sign",
+   "HEAT"
+  ],
+  [
+   18.68,
+   "sign",
+   "SNOW"
+  ],
+  [
+   20.17,
+   "thinking dot",
+   "1"
+  ],
+  [
+   20.84,
+   "thinking dot",
+   "2"
+  ],
+  [
+   21.52,
+   "thinking dot",
+   "3"
+  ],
+  [
+   22.0,
+   "answer",
+   "HEAT"
+  ],
+  [
+   23.12,
+   "new shot",
+   "the picture board (blueprint) heat"
+  ],
+  [
+   23.43,
+   "action",
+   "warm lines rise from the water"
+  ],
+  [
+   23.43,
+   "word",
+   "HEAT!"
+  ],
+  [
+   24.1,
+   "action",
+   "a part lights up"
+  ],
+  [
+   26.88,
+   "new place",
+   "the sunny park after the rain the puddle shrinks"
+  ],
+  [
+   27.15,
+   "action",
+   "the puddle gets smaller"
+  ],
+  [
+   28.33,
+   "word",
+   "SMALLER!"
+  ],
+  [
+   30.31,
+   "new shot",
+   "the sunny park after the rain think"
+  ],
+  [
+   30.43,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   31.18,
+   "word",
+   "WHERE?"
+  ],
+  [
+   32.17,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   33.44,
+   "new shot",
+   "the sunny park after the rain water vapor"
+  ],
+  [
+   35.49,
+   "action",
+   "the vapor floats up"
+  ],
+  [
+   37.63,
+   "word",
+   "WATER VAPOR"
+  ],
+  [
+   38.44,
+   "new place",
+   "the picture board (blueprint) question 2"
+  ],
+  [
+   40.31,
+   "sign",
+   "YES"
+  ],
+  [
+   40.66,
+   "sign",
+   "NO"
+  ],
+  [
+   41.92,
+   "thinking dot",
+   "1"
+  ],
+  [
+   42.6,
+   "thinking dot",
+   "2"
+  ],
+  [
+   43.27,
+   "thinking dot",
+   "3"
+  ],
+  [
+   43.76,
+   "answer",
+   "NO"
+  ],
+  [
+   45.0,
+   "new shot",
+   "the picture board (blueprint) invisible"
+  ],
+  [
+   46.27,
+   "word",
+   "INVISIBLE!"
+  ],
+  [
+   48.53,
+   "action",
+   "little dots show the vapor"
+  ],
+  [
+   50.31,
+   "new place",
+   "high in the sky vapor floats high"
+  ],
+  [
+   50.41,
+   "action",
+   "the vapor floats up"
+  ],
+  [
+   51.58,
+   "word",
+   "HIGH!"
+  ],
+  [
+   53.12,
+   "new place",
+   "Gizmo's lab point up"
+  ],
+  [
+   53.48,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   53.48,
+   "word",
+   "POINT UP!"
+  ],
+  [
+   57.81,
+   "new place",
+   "high in the sky question 2b"
+  ],
+  [
+   57.91,
+   "action",
+   "the vapor floats up"
+  ],
+  [
+   59.78,
+   "sign",
+   "THE SKY"
+  ],
+  [
+   60.13,
+   "sign",
+   "GROUND"
+  ],
+  [
+   62.56,
+   "thinking dot",
+   "1"
+  ],
+  [
+   63.23,
+   "thinking dot",
+   "2"
+  ],
+  [
+   63.91,
+   "thinking dot",
+   "3"
+  ],
+  [
+   64.39,
+   "answer",
+   "THE SKY"
+  ],
+  [
+   65.62,
+   "new place",
+   "the picture board (blueprint) evaporation"
+  ],
+  [
+   66.79,
+   "action",
+   "the vapor floats up"
+  ],
+  [
+   68.68,
+   "word",
+   "EVAPORATION"
+  ],
+  [
+   70.0,
+   "new place",
+   "Gizmo's lab wiggle up"
+  ],
+  [
+   70.24,
+   "word",
+   "WIGGLE UP!"
+  ],
+  [
+   71.57,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   75.0,
+   "new place",
+   "Gizmo's work bench say it"
+  ],
+  [
+   76.5,
+   "word",
+   "SUN WARMS WATER!"
+  ],
+  [
+   76.93,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   78.44,
+   "new place",
+   "the picture board (blueprint) question 3"
+  ],
+  [
+   81.0,
+   "sign",
+   "VAPOR"
+  ],
+  [
+   81.35,
+   "sign",
+   "SAND"
+  ],
+  [
+   82.92,
+   "thinking dot",
+   "1"
+  ],
+  [
+   83.59,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.26,
+   "thinking dot",
+   "3"
+  ],
+  [
+   84.75,
+   "answer",
+   "VAPOR"
+  ],
+  [
+   85.94,
+   "new shot",
+   "the picture board (blueprint) part 1 recap"
+  ],
+  [
+   87.5,
+   "action",
+   "it appears"
+  ],
+  [
+   89.25,
+   "action",
+   "the vapor floats up"
+  ],
+  [
+   89.73,
+   "word",
+   "UP!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gpark",
+   "say": "Where does a puddle go when the sun comes out?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.515,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.13
+    ],
+    [
+     "does",
+     0.13,
+     0.33
+    ],
+    [
+     "a",
+     0.33,
+     0.38
+    ],
+    [
+     "puddle",
+     0.38,
+     0.78
+    ],
+    [
+     "go",
+     0.78,
+     1.11
+    ],
+    [
+     "when",
+     1.11,
+     1.38
+    ],
+    [
+     "the",
+     1.38,
+     1.45
+    ],
+    [
+     "sun",
+     1.45,
+     1.81
+    ],
+    [
+     "comes",
+     1.81,
+     2.15
+    ],
+    [
+     "out?",
+     2.15,
+     2.51
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: where does it go",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "After the rain, there is a puddle in the park.",
+   "t0": 3.125,
+   "t1": 6.5625,
+   "v0": 3.475,
+   "dur": 2.8473333333333333,
+   "words": [
+    [
+     "After",
+     0.0,
+     0.32
+    ],
+    [
+     "the",
+     0.32,
+     0.43
+    ],
+    [
+     "rain,",
+     0.43,
+     1.04
+    ],
+    [
+     "there",
+     1.04,
+     1.37
+    ],
+    [
+     "is",
+     1.37,
+     1.5
+    ],
+    [
+     "a",
+     1.5,
+     1.56
+    ],
+    [
+     "puddle",
+     1.56,
+     2.04
+    ],
+    [
+     "in",
+     2.04,
+     2.15
+    ],
+    [
+     "the",
+     2.15,
+     2.21
+    ],
+    [
+     "park.",
+     2.21,
+     2.847
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the puddle",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Out comes the sun. It warms the water in the puddle.",
+   "t0": 6.5625,
+   "t1": 10.9375,
+   "v0": 6.862333333333333,
+   "dur": 3.684041666666667,
+   "words": [
+    [
+     "Out",
+     0.01,
+     0.25
+    ],
+    [
+     "comes",
+     0.25,
+     0.63
+    ],
+    [
+     "the",
+     0.63,
+     0.72
+    ],
+    [
+     "sun.",
+     0.72,
+     1.26
+    ],
+    [
+     "It",
+     1.67,
+     1.79
+    ],
+    [
+     "warms",
+     1.79,
+     2.36
+    ],
+    [
+     "the",
+     2.36,
+     2.43
+    ],
+    [
+     "water",
+     2.43,
+     2.98
+    ],
+    [
+     "in",
+     2.98,
+     3.09
+    ],
+    [
+     "the",
+     3.09,
+     3.16
+    ],
+    [
+     "puddle.",
+     3.16,
+     3.68
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the sun warms it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ghills",
+   "say": "The sun warms lakes, and the ocean too. Vapor rises from them!",
+   "t0": 10.9375,
+   "t1": 15.9375,
+   "v0": 11.086374999999999,
+   "dur": 4.657166666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "sun",
+     0.08,
+     0.45
+    ],
+    [
+     "warms",
+     0.45,
+     0.98
+    ],
+    [
+     "lakes,",
+     0.98,
+     1.34
+    ],
+    [
+     "and",
+     1.34,
+     1.46
+    ],
+    [
+     "the",
+     1.46,
+     1.59
+    ],
+    [
+     "ocean",
+     1.59,
+     2.0
+    ],
+    [
+     "too.",
+     2.0,
+     2.55
+    ],
+    [
+     "Vapor",
+     3.01,
+     3.51
+    ],
+    [
+     "rises",
+     3.51,
+     4.19
+    ],
+    [
+     "from",
+     4.19,
+     4.41
+    ],
+    [
+     "them!",
+     4.41,
+     4.61
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the ocean too",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does the sun give the water? Heat, or snow?",
+   "t0": 15.9375,
+   "t1": 23.125,
+   "v0": 16.283541666666668,
+   "dur": 3.399958333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.37
+    ],
+    [
+     "the",
+     0.37,
+     0.47
+    ],
+    [
+     "sun",
+     0.47,
+     0.82
+    ],
+    [
+     "give",
+     0.82,
+     1.05
+    ],
+    [
+     "the",
+     1.05,
+     1.11
+    ],
+    [
+     "water?",
+     1.11,
+     1.72
+    ],
+    [
+     "Heat,",
+     2.05,
+     2.46
+    ],
+    [
+     "or",
+     2.46,
+     2.72
+    ],
+    [
+     "snow?",
+     2.72,
+     3.4
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Heat! The sun's heat makes the water cycle work.",
+   "t0": 23.125,
+   "t1": 26.875,
+   "v0": 23.423500000000004,
+   "dur": 3.1727916666666665,
+   "words": [
+    [
+     "Heat!",
+     0.01,
+     0.58
+    ],
+    [
+     "The",
+     0.58,
+     0.68
+    ],
+    [
+     "sun's",
+     0.68,
+     1.17
+    ],
+    [
+     "heat",
+     1.17,
+     1.48
+    ],
+    [
+     "makes",
+     1.48,
+     1.8
+    ],
+    [
+     "the",
+     1.8,
+     1.88
+    ],
+    [
+     "water",
+     1.88,
+     2.28
+    ],
+    [
+     "cycle",
+     2.28,
+     2.73
+    ],
+    [
+     "work.",
+     2.73,
+     3.17
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "heat",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Look! The puddle gets smaller, and smaller.",
+   "t0": 26.875,
+   "t1": 30.3125,
+   "v0": 27.136291666666672,
+   "dur": 2.753125,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.43
+    ],
+    [
+     "The",
+     0.43,
+     0.55
+    ],
+    [
+     "puddle",
+     0.55,
+     0.9
+    ],
+    [
+     "gets",
+     0.9,
+     1.19
+    ],
+    [
+     "smaller,",
+     1.19,
+     1.84
+    ],
+    [
+     "and",
+     1.84,
+     2.02
+    ],
+    [
+     "smaller.",
+     2.02,
+     2.75
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the puddle shrinks",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Where did the water go? Let's think!",
+   "t0": 30.3125,
+   "t1": 33.4375,
+   "v0": 30.429416666666675,
+   "dur": 2.214,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.16
+    ],
+    [
+     "did",
+     0.16,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.35
+    ],
+    [
+     "water",
+     0.35,
+     0.75
+    ],
+    [
+     "go?",
+     0.75,
+     1.22
+    ],
+    [
+     "Let's",
+     1.41,
+     1.74
+    ],
+    [
+     "think!",
+     1.74,
+     2.21
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "think",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "The warm water turns into a gas. It is called water vapor.",
+   "t0": 33.4375,
+   "t1": 38.4375,
+   "v0": 33.783416666666675,
+   "dur": 4.3998333333333335,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "warm",
+     0.09,
+     0.66
+    ],
+    [
+     "water",
+     0.66,
+     1.01
+    ],
+    [
+     "turns",
+     1.01,
+     1.44
+    ],
+    [
+     "into",
+     1.44,
+     1.68
+    ],
+    [
+     "a",
+     1.68,
+     1.71
+    ],
+    [
+     "gas.",
+     1.71,
+     2.41
+    ],
+    [
+     "It",
+     2.82,
+     2.94
+    ],
+    [
+     "is",
+     2.94,
+     3.08
+    ],
+    [
+     "called",
+     3.08,
+     3.46
+    ],
+    [
+     "water",
+     3.46,
+     3.85
+    ],
+    [
+     "vapor.",
+     3.85,
+     4.4
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "water vapor",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Can we see water vapor? Yes, or no?",
+   "t0": 38.4375,
+   "t1": 45.0,
+   "v0": 38.72325000000001,
+   "dur": 2.714125,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.16
+    ],
+    [
+     "we",
+     0.16,
+     0.26
+    ],
+    [
+     "see",
+     0.26,
+     0.48
+    ],
+    [
+     "water",
+     0.48,
+     0.79
+    ],
+    [
+     "vapor?",
+     0.79,
+     1.33
+    ],
+    [
+     "Yes,",
+     1.59,
+     2.02
+    ],
+    [
+     "or",
+     2.02,
+     2.24
+    ],
+    [
+     "no?",
+     2.24,
+     2.71
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Water vapor is invisible! We drew it as little dots, so you can see it.",
+   "t0": 45.0,
+   "t1": 50.3125,
+   "v0": 45.17737500000001,
+   "dur": 4.878625,
+   "words": [
+    [
+     "Water",
+     0.01,
+     0.33
+    ],
+    [
+     "vapor",
+     0.33,
+     0.89
+    ],
+    [
+     "is",
+     0.89,
+     1.09
+    ],
+    [
+     "invisible!",
+     1.09,
+     1.91
+    ],
+    [
+     "We",
+     2.37,
+     2.49
+    ],
+    [
+     "drew",
+     2.49,
+     2.83
+    ],
+    [
+     "it",
+     2.83,
+     2.9
+    ],
+    [
+     "as",
+     2.9,
+     3.07
+    ],
+    [
+     "little",
+     3.07,
+     3.35
+    ],
+    [
+     "dots,",
+     3.35,
+     3.9
+    ],
+    [
+     "so",
+     3.9,
+     4.07
+    ],
+    [
+     "you",
+     4.07,
+     4.21
+    ],
+    [
+     "can",
+     4.21,
+     4.39
+    ],
+    [
+     "see",
+     4.39,
+     4.76
+    ],
+    [
+     "it.",
+     4.76,
+     4.83
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "invisible",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "The vapor floats high into the sky.",
+   "t0": 50.3125,
+   "t1": 53.125,
+   "v0": 50.59600000000001,
+   "dur": 2.34,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "vapor",
+     0.08,
+     0.55
+    ],
+    [
+     "floats",
+     0.55,
+     0.98
+    ],
+    [
+     "high",
+     0.98,
+     1.42
+    ],
+    [
+     "into",
+     1.42,
+     1.63
+    ],
+    [
+     "the",
+     1.63,
+     1.73
+    ],
+    [
+     "sky.",
+     1.73,
+     2.34
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "vapor floats high",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Point up to the sky, where the vapor goes!",
+   "t0": 53.125,
+   "t1": 57.8125,
+   "v0": 53.476000000000006,
+   "dur": 2.8093333333333335,
+   "words": [
+    [
+     "Point",
+     0.0,
+     0.3
+    ],
+    [
+     "up",
+     0.3,
+     0.45
+    ],
+    [
+     "to",
+     0.45,
+     0.56
+    ],
+    [
+     "the",
+     0.56,
+     0.65
+    ],
+    [
+     "sky,",
+     0.65,
+     1.38
+    ],
+    [
+     "where",
+     1.38,
+     1.61
+    ],
+    [
+     "the",
+     1.61,
+     1.68
+    ],
+    [
+     "vapor",
+     1.68,
+     2.09
+    ],
+    [
+     "goes!",
+     2.09,
+     2.809
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "point up",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "Where does the vapor go? Up to the sky, or under the ground?",
+   "t0": 57.8125,
+   "t1": 65.625,
+   "v0": 58.02533333333334,
+   "dur": 4.046833333333334,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.14
+    ],
+    [
+     "does",
+     0.14,
+     0.35
+    ],
+    [
+     "the",
+     0.35,
+     0.42
+    ],
+    [
+     "vapor",
+     0.42,
+     0.83
+    ],
+    [
+     "go?",
+     0.83,
+     1.35
+    ],
+    [
+     "Up",
+     1.75,
+     1.89
+    ],
+    [
+     "to",
+     1.89,
+     2.01
+    ],
+    [
+     "the",
+     2.01,
+     2.11
+    ],
+    [
+     "sky,",
+     2.11,
+     2.73
+    ],
+    [
+     "or",
+     2.73,
+     2.98
+    ],
+    [
+     "under",
+     2.98,
+     3.2
+    ],
+    [
+     "the",
+     3.2,
+     3.31
+    ],
+    [
+     "ground?",
+     3.31,
+     4.047
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Water turns into vapor. This is called evaporation!",
+   "t0": 65.625,
+   "t1": 70.0,
+   "v0": 65.81216666666668,
+   "dur": 3.8732083333333334,
+   "words": [
+    [
+     "Water",
+     0.01,
+     0.38
+    ],
+    [
+     "turns",
+     0.38,
+     0.79
+    ],
+    [
+     "into",
+     0.79,
+     0.98
+    ],
+    [
+     "vapor.",
+     0.98,
+     1.59
+    ],
+    [
+     "This",
+     1.99,
+     2.25
+    ],
+    [
+     "is",
+     2.25,
+     2.38
+    ],
+    [
+     "called",
+     2.38,
+     2.87
+    ],
+    [
+     "evaporation!",
+     2.87,
+     3.87
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "evaporation",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Wiggle your fingers and float them up, like vapor!",
+   "t0": 70.0,
+   "t1": 75.0,
+   "v0": 70.22537500000003,
+   "dur": 3.2283333333333335,
+   "words": [
+    [
+     "Wiggle",
+     0.01,
+     0.36
+    ],
+    [
+     "your",
+     0.36,
+     0.52
+    ],
+    [
+     "fingers",
+     0.52,
+     1.22
+    ],
+    [
+     "and",
+     1.22,
+     1.34
+    ],
+    [
+     "float",
+     1.34,
+     1.7
+    ],
+    [
+     "them",
+     1.7,
+     1.96
+    ],
+    [
+     "up,",
+     1.96,
+     2.41
+    ],
+    [
+     "like",
+     2.41,
+     2.65
+    ],
+    [
+     "vapor!",
+     2.65,
+     3.228
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "wiggle up",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. The sun warms the water!",
+   "t0": 75.0,
+   "t1": 78.4375,
+   "v0": 75.19370833333338,
+   "dur": 2.946833333333333,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.38
+    ],
+    [
+     "with",
+     0.38,
+     0.57
+    ],
+    [
+     "me.",
+     0.57,
+     0.87
+    ],
+    [
+     "The",
+     1.21,
+     1.31
+    ],
+    [
+     "sun",
+     1.31,
+     1.74
+    ],
+    [
+     "warms",
+     1.74,
+     2.26
+    ],
+    [
+     "the",
+     2.26,
+     2.33
+    ],
+    [
+     "water!",
+     2.33,
+     2.947
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does warm water turn into? Vapor, or sand?",
+   "t0": 78.4375,
+   "t1": 85.9375,
+   "v0": 78.68054166666671,
+   "dur": 3.749833333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.21
+    ],
+    [
+     "does",
+     0.21,
+     0.41
+    ],
+    [
+     "warm",
+     0.41,
+     0.86
+    ],
+    [
+     "water",
+     0.86,
+     1.13
+    ],
+    [
+     "turn",
+     1.13,
+     1.46
+    ],
+    [
+     "into?",
+     1.46,
+     1.89
+    ],
+    [
+     "Vapor,",
+     2.32,
+     2.88
+    ],
+    [
+     "or",
+     2.88,
+     3.09
+    ],
+    [
+     "sand?",
+     3.09,
+     3.75
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Vapor! The sun warms the water, and the vapor floats up.",
+   "t0": 85.9375,
+   "t1": 90.47112500000006,
+   "v0": 86.17037500000005,
+   "dur": 3.88075,
+   "words": [
+    [
+     "Vapor!",
+     0.01,
+     0.81
+    ],
+    [
+     "The",
+     0.81,
+     0.89
+    ],
+    [
+     "sun",
+     0.89,
+     1.33
+    ],
+    [
+     "warms",
+     1.33,
+     1.85
+    ],
+    [
+     "the",
+     1.85,
+     1.92
+    ],
+    [
+     "water,",
+     1.92,
+     2.53
+    ],
+    [
+     "and",
+     2.53,
+     2.64
+    ],
+    [
+     "the",
+     2.64,
+     2.7
+    ],
+    [
+     "vapor",
+     2.7,
+     3.08
+    ],
+    [
+     "floats",
+     3.08,
+     3.56
+    ],
+    [
+     "up.",
+     3.56,
+     3.88
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "part 1 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

@@ -1,0 +1,1835 @@
+{
+ "id": "gc_ep03_short2",
+ "total": 92.27841666666671,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875
+ ],
+ "plan": {
+  "length": 92.3,
+  "shots": 18,
+  "visual_changes": 75,
+  "mean_gap": 1.23,
+  "longest_gap": 3.66,
+  "longest_gap_at": 49.7,
+  "over_6s": [],
+  "places": [
+   "gsky",
+   "glab",
+   "gwindow",
+   "gbench"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 8,
+  "longest_without_question": 29.1,
+  "first_words_at": 0.42,
+  "shot_mean": 5.13,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "195/195",
+  "sync": {
+   "pauses_checked": 12,
+   "onset_err_mean_ms": 25.8,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "high in the sky hook: how is a cloud made"
+  ],
+  [
+   1.78,
+   "action",
+   "the tiny drops make a cloud"
+  ],
+  [
+   2.68,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new shot",
+   "high in the sky cold up high"
+  ],
+  [
+   6.1,
+   "action",
+   "a snowflake turns"
+  ],
+  [
+   6.1,
+   "word",
+   "COLD!"
+  ],
+  [
+   7.19,
+   "new shot",
+   "high in the sky back into drops"
+  ],
+  [
+   9.57,
+   "action",
+   "tiny drops appear"
+  ],
+  [
+   10.17,
+   "word",
+   "TINY DROPS"
+  ],
+  [
+   11.56,
+   "new place",
+   "Gizmo's lab look closer"
+  ],
+  [
+   11.78,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   13.57,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   13.57,
+   "word",
+   "CLOSER!"
+  ],
+  [
+   15.0,
+   "new place",
+   "the picture board (blueprint) speck of dust"
+  ],
+  [
+   16.23,
+   "action",
+   "a drop forms around the speck"
+  ],
+  [
+   17.27,
+   "word",
+   "A SPECK!"
+  ],
+  [
+   20.62,
+   "new shot",
+   "the picture board (blueprint) question 4"
+  ],
+  [
+   23.26,
+   "sign",
+   "DUST"
+  ],
+  [
+   23.61,
+   "sign",
+   "A SHOE"
+  ],
+  [
+   25.71,
+   "thinking dot",
+   "1"
+  ],
+  [
+   26.39,
+   "thinking dot",
+   "2"
+  ],
+  [
+   27.06,
+   "thinking dot",
+   "3"
+  ],
+  [
+   27.55,
+   "answer",
+   "DUST"
+  ],
+  [
+   28.75,
+   "new shot",
+   "the picture board (blueprint) dust"
+  ],
+  [
+   29.54,
+   "action",
+   "a drop forms around the speck"
+  ],
+  [
+   29.54,
+   "word",
+   "DUST!"
+  ],
+  [
+   30.67,
+   "action",
+   "a part lights up"
+  ],
+  [
+   32.5,
+   "new shot",
+   "the picture board (blueprint) drops make a cloud"
+  ],
+  [
+   32.8,
+   "word",
+   "LOTS!"
+  ],
+  [
+   34.88,
+   "action",
+   "the tiny drops make a cloud"
+  ],
+  [
+   35.12,
+   "word",
+   "A CLOUD!"
+  ],
+  [
+   36.25,
+   "new place",
+   "high in the sky condensation"
+  ],
+  [
+   37.72,
+   "action",
+   "the tiny drops make a cloud"
+  ],
+  [
+   39.56,
+   "word",
+   "CONDENSATION"
+  ],
+  [
+   41.25,
+   "new place",
+   "the sunny lab window winter window"
+  ],
+  [
+   43.91,
+   "word",
+   "WINTER"
+  ],
+  [
+   44.95,
+   "action",
+   "a part lights up"
+  ],
+  [
+   45.94,
+   "new shot",
+   "the sunny lab window drops on the glass"
+  ],
+  [
+   46.18,
+   "action",
+   "drops form on the glass"
+  ],
+  [
+   47.96,
+   "word",
+   "INSIDE!"
+  ],
+  [
+   49.69,
+   "new shot",
+   "the sunny lab window question 5b"
+  ],
+  [
+   53.35,
+   "sign",
+   "WINDOW"
+  ],
+  [
+   53.7,
+   "sign",
+   "PILLOW"
+  ],
+  [
+   55.61,
+   "thinking dot",
+   "1"
+  ],
+  [
+   56.28,
+   "thinking dot",
+   "2"
+  ],
+  [
+   56.96,
+   "thinking dot",
+   "3"
+  ],
+  [
+   57.44,
+   "answer",
+   "WINDOW"
+  ],
+  [
+   58.75,
+   "new place",
+   "the picture board (blueprint) question 5"
+  ],
+  [
+   60.12,
+   "sign",
+   "SAME"
+  ],
+  [
+   60.47,
+   "sign",
+   "OPPOSITE"
+  ],
+  [
+   63.58,
+   "thinking dot",
+   "1"
+  ],
+  [
+   64.26,
+   "thinking dot",
+   "2"
+  ],
+  [
+   64.93,
+   "thinking dot",
+   "3"
+  ],
+  [
+   65.42,
+   "answer",
+   "OPPOSITE"
+  ],
+  [
+   66.56,
+   "new shot",
+   "the picture board (blueprint) the opposite"
+  ],
+  [
+   68.85,
+   "action",
+   "an arrow points up"
+  ],
+  [
+   68.85,
+   "word",
+   "UP!"
+  ],
+  [
+   70.23,
+   "action",
+   "an arrow points down"
+  ],
+  [
+   70.73,
+   "word",
+   "DROPS!"
+  ],
+  [
+   71.88,
+   "new place",
+   "Gizmo's lab cloud arms"
+  ],
+  [
+   72.55,
+   "action",
+   "Gizmo opens his arms wide"
+  ],
+  [
+   72.86,
+   "word",
+   "BIG CLOUD!"
+  ],
+  [
+   75.94,
+   "new place",
+   "Gizmo's work bench say it 2"
+  ],
+  [
+   77.43,
+   "word",
+   "COLD AIR, CLOUDS!"
+  ],
+  [
+   78.28,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   79.38,
+   "new place",
+   "high in the sky question 6"
+  ],
+  [
+   81.43,
+   "sign",
+   "TINY DROPS"
+  ],
+  [
+   81.78,
+   "sign",
+   "CANDY"
+  ],
+  [
+   84.76,
+   "thinking dot",
+   "1"
+  ],
+  [
+   85.43,
+   "thinking dot",
+   "2"
+  ],
+  [
+   86.11,
+   "thinking dot",
+   "3"
+  ],
+  [
+   86.59,
+   "answer",
+   "TINY DROPS"
+  ],
+  [
+   87.81,
+   "new shot",
+   "high in the sky part 2 recap"
+  ],
+  [
+   88.01,
+   "word",
+   "TINY DROPS!"
+  ],
+  [
+   89.79,
+   "action",
+   "the tiny drops make a cloud"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gsky",
+   "say": "How is a fluffy cloud made, up in the sky?",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 2.928875,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.29
+    ],
+    [
+     "is",
+     0.29,
+     0.39
+    ],
+    [
+     "a",
+     0.39,
+     0.43
+    ],
+    [
+     "fluffy",
+     0.43,
+     0.89
+    ],
+    [
+     "cloud",
+     0.89,
+     1.36
+    ],
+    [
+     "made,",
+     1.36,
+     1.7
+    ],
+    [
+     "up",
+     1.93,
+     2.08
+    ],
+    [
+     "in",
+     2.08,
+     2.19
+    ],
+    [
+     "the",
+     2.19,
+     2.26
+    ],
+    [
+     "sky?",
+     2.26,
+     2.929
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: how is a cloud made",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "High up in the sky, the air is very cold.",
+   "t0": 3.75,
+   "t1": 7.1875,
+   "v0": 3.888875,
+   "dur": 2.916625,
+   "words": [
+    [
+     "High",
+     0.01,
+     0.27
+    ],
+    [
+     "up",
+     0.27,
+     0.44
+    ],
+    [
+     "in",
+     0.44,
+     0.54
+    ],
+    [
+     "the",
+     0.54,
+     0.61
+    ],
+    [
+     "sky,",
+     0.61,
+     1.1
+    ],
+    [
+     "the",
+     1.1,
+     1.46
+    ],
+    [
+     "air",
+     1.46,
+     1.74
+    ],
+    [
+     "is",
+     1.74,
+     1.88
+    ],
+    [
+     "very",
+     1.88,
+     2.21
+    ],
+    [
+     "cold.",
+     2.21,
+     2.917
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "cold up high",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "The cold turns the vapor back into tiny drops of water.",
+   "t0": 7.1875,
+   "t1": 11.5625,
+   "v0": 7.3455,
+   "dur": 3.892708333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "cold",
+     0.08,
+     0.67
+    ],
+    [
+     "turns",
+     0.67,
+     1.11
+    ],
+    [
+     "the",
+     1.11,
+     1.19
+    ],
+    [
+     "vapor",
+     1.19,
+     1.58
+    ],
+    [
+     "back",
+     1.58,
+     2.01
+    ],
+    [
+     "into",
+     2.01,
+     2.22
+    ],
+    [
+     "tiny",
+     2.22,
+     2.82
+    ],
+    [
+     "drops",
+     2.82,
+     3.3
+    ],
+    [
+     "of",
+     3.3,
+     3.43
+    ],
+    [
+     "water.",
+     3.43,
+     3.89
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "back into drops",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Back into water? Let's look closer!",
+   "t0": 11.5625,
+   "t1": 15.0,
+   "v0": 11.778208333333332,
+   "dur": 2.4564166666666667,
+   "words": [
+    [
+     "Back",
+     0.0,
+     0.34
+    ],
+    [
+     "into",
+     0.34,
+     0.53
+    ],
+    [
+     "water?",
+     0.53,
+     1.33
+    ],
+    [
+     "Let's",
+     1.33,
+     1.62
+    ],
+    [
+     "look",
+     1.62,
+     1.79
+    ],
+    [
+     "closer!",
+     1.79,
+     2.456
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "look closer",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Each tiny drop forms on a tiny speck of dust, smoke, or salt.",
+   "t0": 15.0,
+   "t1": 20.625,
+   "v0": 15.174624999999997,
+   "dur": 5.055208333333334,
+   "words": [
+    [
+     "Each",
+     0.01,
+     0.26
+    ],
+    [
+     "tiny",
+     0.26,
+     0.69
+    ],
+    [
+     "drop",
+     0.69,
+     1.06
+    ],
+    [
+     "forms",
+     1.06,
+     1.55
+    ],
+    [
+     "on",
+     1.55,
+     1.64
+    ],
+    [
+     "a",
+     1.64,
+     1.69
+    ],
+    [
+     "tiny",
+     1.69,
+     2.1
+    ],
+    [
+     "speck",
+     2.1,
+     2.42
+    ],
+    [
+     "of",
+     2.42,
+     2.55
+    ],
+    [
+     "dust,",
+     2.55,
+     3.08
+    ],
+    [
+     "smoke,",
+     3.39,
+     4.21
+    ],
+    [
+     "or",
+     4.21,
+     4.41
+    ],
+    [
+     "salt.",
+     4.41,
+     5.05
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "speck of dust",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does a tiny drop form on? A speck of dust, or a shoe?",
+   "t0": 20.625,
+   "t1": 28.75,
+   "v0": 20.769833333333334,
+   "dur": 4.4575,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.33
+    ],
+    [
+     "a",
+     0.33,
+     0.4
+    ],
+    [
+     "tiny",
+     0.4,
+     0.85
+    ],
+    [
+     "drop",
+     0.85,
+     1.23
+    ],
+    [
+     "form",
+     1.23,
+     1.66
+    ],
+    [
+     "on?",
+     1.66,
+     2.03
+    ],
+    [
+     "A",
+     2.43,
+     2.49
+    ],
+    [
+     "speck",
+     2.49,
+     2.85
+    ],
+    [
+     "of",
+     2.85,
+     2.97
+    ],
+    [
+     "dust,",
+     2.97,
+     3.54
+    ],
+    [
+     "or",
+     3.54,
+     3.81
+    ],
+    [
+     "a",
+     3.81,
+     3.84
+    ],
+    [
+     "shoe?",
+     3.84,
+     4.457
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 4",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A speck of dust! So tiny, you can not see it.",
+   "t0": 28.75,
+   "t1": 32.5,
+   "v0": 28.967333333333336,
+   "dur": 3.281875,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.09
+    ],
+    [
+     "speck",
+     0.09,
+     0.45
+    ],
+    [
+     "of",
+     0.45,
+     0.57
+    ],
+    [
+     "dust!",
+     0.57,
+     1.18
+    ],
+    [
+     "So",
+     1.48,
+     1.7
+    ],
+    [
+     "tiny,",
+     1.7,
+     2.25
+    ],
+    [
+     "you",
+     2.25,
+     2.39
+    ],
+    [
+     "can",
+     2.39,
+     2.53
+    ],
+    [
+     "not",
+     2.53,
+     2.8
+    ],
+    [
+     "see",
+     2.8,
+     3.15
+    ],
+    [
+     "it.",
+     3.15,
+     3.26
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "dust",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Lots and lots of tiny drops make a cloud!",
+   "t0": 32.5,
+   "t1": 36.25,
+   "v0": 32.789208333333335,
+   "dur": 3.0223333333333335,
+   "words": [
+    [
+     "Lots",
+     0.01,
+     0.47
+    ],
+    [
+     "and",
+     0.47,
+     0.58
+    ],
+    [
+     "lots",
+     0.58,
+     0.98
+    ],
+    [
+     "of",
+     0.98,
+     1.11
+    ],
+    [
+     "tiny",
+     1.11,
+     1.61
+    ],
+    [
+     "drops",
+     1.61,
+     2.09
+    ],
+    [
+     "make",
+     2.09,
+     2.28
+    ],
+    [
+     "a",
+     2.28,
+     2.33
+    ],
+    [
+     "cloud!",
+     2.33,
+     3.02
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "drops make a cloud",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "Vapor turns back into water. This is called condensation!",
+   "t0": 36.25,
+   "t1": 41.25,
+   "v0": 36.35154166666667,
+   "dur": 4.412,
+   "words": [
+    [
+     "Vapor",
+     0.01,
+     0.52
+    ],
+    [
+     "turns",
+     0.52,
+     0.89
+    ],
+    [
+     "back",
+     0.89,
+     1.2
+    ],
+    [
+     "into",
+     1.2,
+     1.37
+    ],
+    [
+     "water.",
+     1.37,
+     1.96
+    ],
+    [
+     "This",
+     2.39,
+     2.64
+    ],
+    [
+     "is",
+     2.64,
+     2.78
+    ],
+    [
+     "called",
+     2.78,
+     3.21
+    ],
+    [
+     "condensation!",
+     3.21,
+     4.41
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "condensation",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "You can see this at home! On a cold winter day, look at a window.",
+   "t0": 41.25,
+   "t1": 45.9375,
+   "v0": 41.30354166666667,
+   "dur": 4.326041666666667,
+   "words": [
+    [
+     "You",
+     0.0,
+     0.13
+    ],
+    [
+     "can",
+     0.13,
+     0.3
+    ],
+    [
+     "see",
+     0.3,
+     0.63
+    ],
+    [
+     "this",
+     0.63,
+     0.87
+    ],
+    [
+     "at",
+     0.87,
+     0.97
+    ],
+    [
+     "home!",
+     0.97,
+     1.55
+    ],
+    [
+     "On",
+     2.04,
+     2.16
+    ],
+    [
+     "a",
+     2.16,
+     2.22
+    ],
+    [
+     "cold",
+     2.22,
+     2.61
+    ],
+    [
+     "winter",
+     2.61,
+     3.01
+    ],
+    [
+     "day,",
+     3.01,
+     3.33
+    ],
+    [
+     "look",
+     3.33,
+     3.54
+    ],
+    [
+     "at",
+     3.54,
+     3.61
+    ],
+    [
+     "a",
+     3.61,
+     3.65
+    ],
+    [
+     "window.",
+     3.65,
+     4.326
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "winter window",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Drops of water form on the inside of the glass!",
+   "t0": 45.9375,
+   "t1": 49.6875,
+   "v0": 46.169583333333335,
+   "dur": 3.222166666666667,
+   "words": [
+    [
+     "Drops",
+     0.01,
+     0.44
+    ],
+    [
+     "of",
+     0.44,
+     0.59
+    ],
+    [
+     "water",
+     0.59,
+     0.94
+    ],
+    [
+     "form",
+     0.94,
+     1.4
+    ],
+    [
+     "on",
+     1.4,
+     1.63
+    ],
+    [
+     "the",
+     1.63,
+     1.79
+    ],
+    [
+     "inside",
+     1.79,
+     2.44
+    ],
+    [
+     "of",
+     2.44,
+     2.53
+    ],
+    [
+     "the",
+     2.53,
+     2.61
+    ],
+    [
+     "glass!",
+     2.61,
+     3.22
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "drops on the glass",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Where do drops form at home on a cold day? On a window, or on a pillow?",
+   "t0": 49.6875,
+   "t1": 58.75,
+   "v0": 49.93175,
+   "dur": 5.190041666666667,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.12
+    ],
+    [
+     "do",
+     0.12,
+     0.38
+    ],
+    [
+     "drops",
+     0.38,
+     0.84
+    ],
+    [
+     "form",
+     0.84,
+     1.24
+    ],
+    [
+     "at",
+     1.24,
+     1.32
+    ],
+    [
+     "home",
+     1.32,
+     1.71
+    ],
+    [
+     "on",
+     1.71,
+     1.82
+    ],
+    [
+     "a",
+     1.82,
+     1.86
+    ],
+    [
+     "cold",
+     1.86,
+     2.32
+    ],
+    [
+     "day?",
+     2.32,
+     2.7
+    ],
+    [
+     "On",
+     3.21,
+     3.38
+    ],
+    [
+     "a",
+     3.38,
+     3.42
+    ],
+    [
+     "window,",
+     3.42,
+     4.09
+    ],
+    [
+     "or",
+     4.09,
+     4.44
+    ],
+    [
+     "on",
+     4.44,
+     4.57
+    ],
+    [
+     "a",
+     4.57,
+     4.62
+    ],
+    [
+     "pillow?",
+     4.62,
+     5.19
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Is condensation the same as evaporation, or the opposite?",
+   "t0": 58.75,
+   "t1": 66.5625,
+   "v0": 58.86179166666667,
+   "dur": 4.2335416666666665,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.16
+    ],
+    [
+     "condensation",
+     0.16,
+     1.17
+    ],
+    [
+     "the",
+     1.17,
+     1.26
+    ],
+    [
+     "same",
+     1.26,
+     1.65
+    ],
+    [
+     "as",
+     1.65,
+     1.79
+    ],
+    [
+     "evaporation,",
+     1.79,
+     2.83
+    ],
+    [
+     "or",
+     3.23,
+     3.42
+    ],
+    [
+     "the",
+     3.42,
+     3.59
+    ],
+    [
+     "opposite?",
+     3.59,
+     4.23
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The opposite! Water goes up as vapor, and comes back as drops.",
+   "t0": 66.5625,
+   "t1": 71.875,
+   "v0": 66.83533333333334,
+   "dur": 4.588291666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.15
+    ],
+    [
+     "opposite!",
+     0.15,
+     0.93
+    ],
+    [
+     "Water",
+     1.36,
+     1.71
+    ],
+    [
+     "goes",
+     1.71,
+     2.01
+    ],
+    [
+     "up",
+     2.01,
+     2.18
+    ],
+    [
+     "as",
+     2.18,
+     2.35
+    ],
+    [
+     "vapor,",
+     2.35,
+     2.92
+    ],
+    [
+     "and",
+     2.92,
+     3.1
+    ],
+    [
+     "comes",
+     3.1,
+     3.39
+    ],
+    [
+     "back",
+     3.39,
+     3.75
+    ],
+    [
+     "as",
+     3.75,
+     3.89
+    ],
+    [
+     "drops.",
+     3.89,
+     4.588
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the opposite",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Make a big round cloud with your arms!",
+   "t0": 71.875,
+   "t1": 75.9375,
+   "v0": 71.96362500000001,
+   "dur": 2.526666666666667,
+   "words": [
+    [
+     "Make",
+     0.0,
+     0.19
+    ],
+    [
+     "a",
+     0.19,
+     0.24
+    ],
+    [
+     "big",
+     0.24,
+     0.59
+    ],
+    [
+     "round",
+     0.59,
+     0.9
+    ],
+    [
+     "cloud",
+     0.9,
+     1.47
+    ],
+    [
+     "with",
+     1.47,
+     1.63
+    ],
+    [
+     "your",
+     1.63,
+     1.81
+    ],
+    [
+     "arms!",
+     1.81,
+     2.527
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "cloud arms",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. Cold air makes clouds!",
+   "t0": 75.9375,
+   "t1": 79.375,
+   "v0": 76.23029166666669,
+   "dur": 2.8597916666666667,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.38
+    ],
+    [
+     "with",
+     0.38,
+     0.56
+    ],
+    [
+     "me.",
+     0.56,
+     0.87
+    ],
+    [
+     "Cold",
+     1.2,
+     1.59
+    ],
+    [
+     "air",
+     1.59,
+     1.76
+    ],
+    [
+     "makes",
+     1.76,
+     2.05
+    ],
+    [
+     "clouds!",
+     2.05,
+     2.86
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "What is a cloud made of? Tiny drops of water, or cotton candy?",
+   "t0": 79.375,
+   "t1": 87.8125,
+   "v0": 79.63008333333336,
+   "dur": 4.6429583333333335,
+   "words": [
+    [
+     "What",
+     0.02,
+     0.17
+    ],
+    [
+     "is",
+     0.17,
+     0.3
+    ],
+    [
+     "a",
+     0.3,
+     0.34
+    ],
+    [
+     "cloud",
+     0.34,
+     0.88
+    ],
+    [
+     "made",
+     0.88,
+     1.15
+    ],
+    [
+     "of?",
+     1.15,
+     1.38
+    ],
+    [
+     "Tiny",
+     1.8,
+     2.23
+    ],
+    [
+     "drops",
+     2.23,
+     2.69
+    ],
+    [
+     "of",
+     2.69,
+     2.82
+    ],
+    [
+     "water,",
+     2.82,
+     3.39
+    ],
+    [
+     "or",
+     3.39,
+     3.55
+    ],
+    [
+     "cotton",
+     3.55,
+     4.08
+    ],
+    [
+     "candy?",
+     4.08,
+     4.64
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 6",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "Tiny drops of water, high up in the cold sky!",
+   "t0": 87.8125,
+   "t1": 91.87841666666671,
+   "v0": 88.01304166666671,
+   "dur": 3.445375,
+   "words": [
+    [
+     "Tiny",
+     0.0,
+     0.39
+    ],
+    [
+     "drops",
+     0.39,
+     0.81
+    ],
+    [
+     "of",
+     0.81,
+     0.95
+    ],
+    [
+     "water,",
+     0.95,
+     1.48
+    ],
+    [
+     "high",
+     1.78,
+     2.08
+    ],
+    [
+     "up",
+     2.08,
+     2.28
+    ],
+    [
+     "in",
+     2.28,
+     2.37
+    ],
+    [
+     "the",
+     2.37,
+     2.44
+    ],
+    [
+     "cold",
+     2.44,
+     2.86
+    ],
+    [
+     "sky!",
+     2.86,
+     3.44
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "part 2 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

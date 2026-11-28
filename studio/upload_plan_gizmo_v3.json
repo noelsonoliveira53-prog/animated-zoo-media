@@ -610,7 +610,7 @@
   "time": "8:10 AM",
   "channel": "gizmo",
   "topic": "Where Does Rain Come From?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -630,6 +630,7 @@
    "Gizmo the robot",
    "shorts"
   ],
-  "description": "Why does rain fall down from the clouds? Gizmo the robot looks inside a cloud: tiny drops join into bigger drops, and when they are heavy enough they fall as rain, or snow. The rain flows downhill into rivers, lakes and the ocean, and the water cycle goes round again.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: USGS Water Science School (The Water Cycle for Kids, Condensation, Follow a Drip Through the Water Cycle)."
+  "description": "Why does rain fall down from the clouds? Gizmo the robot looks inside a cloud: tiny drops join into bigger drops, and when they are heavy enough they fall as rain, or snow. The rain flows downhill into rivers, lakes and the ocean, and the water cycle goes round again.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: USGS Water Science School (The Water Cycle for Kids, Condensation, Follow a Drip Through the Water Cycle).",
+  "video_id": "yk3LYHptdk0"
  }
 ]

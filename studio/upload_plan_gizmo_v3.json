@@ -579,7 +579,7 @@
   "time": "8:10 AM",
   "channel": "gizmo",
   "topic": "Where Does Rain Come From?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -599,7 +599,8 @@
    "Gizmo the robot",
    "shorts"
   ],
-  "description": "How is a cloud made? Gizmo the robot floats up into the cold sky: the cold turns water vapor back into tiny drops of water, each one on a tiny speck of dust, and lots of tiny drops make a cloud. This is called condensation, and you can see it on a window on a cold winter day.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: USGS Water Science School (The Water Cycle for Kids, Condensation, Follow a Drip Through the Water Cycle)."
+  "description": "How is a cloud made? Gizmo the robot floats up into the cold sky: the cold turns water vapor back into tiny drops of water, each one on a tiny speck of dust, and lots of tiny drops make a cloud. This is called condensation, and you can see it on a window on a cold winter day.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: USGS Water Science School (The Water Cycle for Kids, Condensation, Follow a Drip Through the Water Cycle).",
+  "video_id": "rs9iB3ElF0E"
  },
  {
   "file": "cartoon/gc_ep03_short3.mp4",

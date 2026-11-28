@@ -1,0 +1,24 @@
+START Sat Nov 28 06:32:27 UTC 2026
+START Sat Nov 28 06:48:52 UTC 2026
+L EXIT 0 Sat Nov 28 07:17:59 UTC 2026
+S0 EXIT 0 Sat Nov 28 07:25:04 UTC 2026
+S1 EXIT 0 Sat Nov 28 07:33:56 UTC 2026
+S2 EXIT 0 Sat Nov 28 07:42:16 UTC 2026
+-rw-r--r-- 1 root root 212631975 Nov 28 07:17 out/gc_ep04/gc_ep04.mp4
+-rw-r--r-- 1 root root  49722513 Nov 28 07:25 out/gc_ep04/gc_ep04_short1.mp4
+-rw-r--r-- 1 root root  47628211 Nov 28 07:24 out/gc_ep04/gc_ep04_short1_silent.mp4
+-rw-r--r-- 1 root root  47068824 Nov 28 07:33 out/gc_ep04/gc_ep04_short2.mp4
+-rw-r--r-- 1 root root  45055052 Nov 28 07:33 out/gc_ep04/gc_ep04_short2_silent.mp4
+-rw-r--r-- 1 root root  49025821 Nov 28 07:42 out/gc_ep04/gc_ep04_short3.mp4
+-rw-r--r-- 1 root root  46972463 Nov 28 07:42 out/gc_ep04/gc_ep04_short3_silent.mp4
+-rw-r--r-- 1 root root 204640044 Nov 28 07:17 out/gc_ep04/gc_ep04_silent.mp4
+RENDERS DONE
+L2 EXIT 0 Sat Nov 28 08:14:06 UTC 2026
+ENC gc_ep04 EXIT 0 Sat Nov 28 08:34:50 UTC 2026
+ENC gc_ep04_short1 EXIT 0 Sat Nov 28 08:40:13 UTC 2026
+ENC gc_ep04_short2 EXIT 0 Sat Nov 28 08:45:02 UTC 2026
+ENC gc_ep04_short3 EXIT 0 Sat Nov 28 08:50:14 UTC 2026
+ALL DONE
+L3 EXIT 0 Sat Nov 28 09:32:17 UTC 2026
+ENC3 gc_ep04 EXIT 0 Sat Nov 28 09:52:48 UTC 2026
+L3 ALL DONE

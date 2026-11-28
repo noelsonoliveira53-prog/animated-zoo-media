@@ -1,0 +1,1844 @@
+{
+ "id": "gc_ep04_short2",
+ "total": 89.1887916666667,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75
+ ],
+ "plan": {
+  "length": 89.2,
+  "shots": 18,
+  "visual_changes": 95,
+  "mean_gap": 0.94,
+  "longest_gap": 4.55,
+  "longest_gap_at": 30.1,
+  "over_6s": [],
+  "places": [
+   "glab",
+   "gmeadow",
+   "gbench"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 9,
+  "longest_without_question": 17.5,
+  "first_words_at": 0.42,
+  "shot_mean": 4.95,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "178/178",
+  "sync": {
+   "pauses_checked": 12,
+   "onset_err_mean_ms": 24.2,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the picture board (blueprint) hook: where does blood go"
+  ],
+  [
+   0.1,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   0.4,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   0.4,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   2.19,
+   "word",
+   "?"
+  ],
+  [
+   2.81,
+   "new shot",
+   "the picture board (blueprint) blood"
+  ],
+  [
+   3.01,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   5.61,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   5.61,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   5.61,
+   "word",
+   "BLOOD!"
+  ],
+  [
+   6.56,
+   "new shot",
+   "the picture board (blueprint) oxygen and food"
+  ],
+  [
+   6.66,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   8.1,
+   "action",
+   "the blood carries oxygen to every part"
+  ],
+  [
+   8.1,
+   "word",
+   "OXYGEN!"
+  ],
+  [
+   11.56,
+   "new shot",
+   "the picture board (blueprint) head to toes"
+  ],
+  [
+   15.09,
+   "action",
+   "up to the head"
+  ],
+  [
+   15.09,
+   "word",
+   "HEAD"
+  ],
+  [
+   15.69,
+   "action",
+   "down to the toes"
+  ],
+  [
+   15.69,
+   "word",
+   "TOES!"
+  ],
+  [
+   16.88,
+   "new place",
+   "Gizmo's lab head and toes"
+  ],
+  [
+   17.4,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   18.68,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   18.68,
+   "word",
+   "HEAD, TOES!"
+  ],
+  [
+   21.25,
+   "new place",
+   "the picture board (blueprint) question 5"
+  ],
+  [
+   21.45,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   23.02,
+   "sign",
+   "OXYGEN"
+  ],
+  [
+   23.37,
+   "sign",
+   "SAND"
+  ],
+  [
+   24.95,
+   "thinking dot",
+   "1"
+  ],
+  [
+   25.62,
+   "thinking dot",
+   "2"
+  ],
+  [
+   26.29,
+   "thinking dot",
+   "3"
+  ],
+  [
+   26.78,
+   "answer",
+   "OXYGEN"
+  ],
+  [
+   28.12,
+   "new place",
+   "Gizmo's lab breathe"
+  ],
+  [
+   29.03,
+   "action",
+   "air goes in and out"
+  ],
+  [
+   30.14,
+   "action",
+   "Gizmo opens his arms wide"
+  ],
+  [
+   30.14,
+   "word",
+   "BREATHE IN!"
+  ],
+  [
+   34.69,
+   "new place",
+   "the picture board (blueprint) to the lungs"
+  ],
+  [
+   35.35,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   36.4,
+   "action",
+   "a part lights up"
+  ],
+  [
+   36.4,
+   "word",
+   "LUNGS!"
+  ],
+  [
+   37.5,
+   "new shot",
+   "the picture board (blueprint) picks up oxygen"
+  ],
+  [
+   38.52,
+   "action",
+   "the blood in the lungs picks up oxygen"
+  ],
+  [
+   38.96,
+   "word",
+   "OXYGEN!"
+  ],
+  [
+   40.0,
+   "new shot",
+   "the picture board (blueprint) question 6"
+  ],
+  [
+   40.2,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   42.91,
+   "sign",
+   "LUNGS"
+  ],
+  [
+   43.26,
+   "sign",
+   "TOES"
+  ],
+  [
+   45.33,
+   "thinking dot",
+   "1"
+  ],
+  [
+   46.0,
+   "thinking dot",
+   "2"
+  ],
+  [
+   46.67,
+   "thinking dot",
+   "3"
+  ],
+  [
+   47.16,
+   "answer",
+   "LUNGS"
+  ],
+  [
+   48.44,
+   "new shot",
+   "the picture board (blueprint) all around"
+  ],
+  [
+   50.16,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   50.57,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   50.57,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   51.79,
+   "word",
+   "ALL AROUND!"
+  ],
+  [
+   53.12,
+   "new shot",
+   "the picture board (blueprint) out and back"
+  ],
+  [
+   55.36,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   55.36,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   55.36,
+   "word",
+   "AWAY"
+  ],
+  [
+   56.78,
+   "action",
+   "blue lines: the way back to the heart"
+  ],
+  [
+   56.78,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   56.78,
+   "word",
+   "BACK!"
+  ],
+  [
+   57.5,
+   "new shot",
+   "the picture board (blueprint) question 7"
+  ],
+  [
+   57.7,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   60.12,
+   "sign",
+   "YES"
+  ],
+  [
+   60.47,
+   "sign",
+   "NO"
+  ],
+  [
+   61.92,
+   "thinking dot",
+   "1"
+  ],
+  [
+   62.59,
+   "thinking dot",
+   "2"
+  ],
+  [
+   63.26,
+   "thinking dot",
+   "3"
+  ],
+  [
+   63.75,
+   "answer",
+   "YES"
+  ],
+  [
+   65.0,
+   "new shot",
+   "the picture board (blueprint) over and over"
+  ],
+  [
+   65.76,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   66.23,
+   "action",
+   "the blood comes back"
+  ],
+  [
+   66.89,
+   "word",
+   "AGAIN AND AGAIN!"
+  ],
+  [
+   68.44,
+   "new place",
+   "the flower meadow draw a circle"
+  ],
+  [
+   69.17,
+   "action",
+   "Gizmo opens his arms wide"
+  ],
+  [
+   69.17,
+   "action",
+   "Gizmo sways"
+  ],
+  [
+   69.17,
+   "word",
+   "ROUND!"
+  ],
+  [
+   73.12,
+   "new place",
+   "Gizmo's work bench say it 2"
+  ],
+  [
+   74.95,
+   "word",
+   "PUMP THE BLOOD!"
+  ],
+  [
+   75.31,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   76.25,
+   "new place",
+   "the picture board (blueprint) question 7b"
+  ],
+  [
+   76.55,
+   "action",
+   "the blood in the lungs picks up oxygen"
+  ],
+  [
+   78.85,
+   "sign",
+   "LUNGS"
+  ],
+  [
+   79.2,
+   "sign",
+   "HAIR"
+  ],
+  [
+   81.0,
+   "thinking dot",
+   "1"
+  ],
+  [
+   81.68,
+   "thinking dot",
+   "2"
+  ],
+  [
+   82.35,
+   "thinking dot",
+   "3"
+  ],
+  [
+   82.84,
+   "answer",
+   "LUNGS"
+  ],
+  [
+   84.06,
+   "new shot",
+   "the picture board (blueprint) part 2 recap"
+  ],
+  [
+   86.12,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   86.12,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   86.87,
+   "word",
+   "ROUND AND BACK!"
+  ],
+  [
+   87.59,
+   "action",
+   "blue lines: the way back to the heart"
+  ],
+  [
+   87.59,
+   "action",
+   "the blood goes along"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "paper_gz",
+   "say": "Where does your blood go, all day long?",
+   "t0": 0.0,
+   "t1": 2.8125,
+   "v0": 0.42,
+   "dur": 2.1925833333333333,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.12
+    ],
+    [
+     "does",
+     0.12,
+     0.25
+    ],
+    [
+     "your",
+     0.25,
+     0.37
+    ],
+    [
+     "blood",
+     0.37,
+     0.69
+    ],
+    [
+     "go,",
+     0.69,
+     1.3
+    ],
+    [
+     "all",
+     1.3,
+     1.56
+    ],
+    [
+     "day",
+     1.56,
+     1.77
+    ],
+    [
+     "long?",
+     1.77,
+     2.19
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: where does blood go",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does your heart pump around your body? Blood!",
+   "t0": 2.8125,
+   "t1": 6.5625,
+   "v0": 3.1525833333333333,
+   "dur": 3.0995,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.3
+    ],
+    [
+     "your",
+     0.3,
+     0.41
+    ],
+    [
+     "heart",
+     0.41,
+     0.78
+    ],
+    [
+     "pump",
+     0.78,
+     1.1
+    ],
+    [
+     "around",
+     1.1,
+     1.41
+    ],
+    [
+     "your",
+     1.41,
+     1.51
+    ],
+    [
+     "body?",
+     1.51,
+     2.08
+    ],
+    [
+     "Blood!",
+     2.46,
+     3.099
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "blood",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Blood gives your body oxygen, and good things from your food.",
+   "t0": 6.5625,
+   "t1": 11.5625,
+   "v0": 6.792083333333333,
+   "dur": 4.41825,
+   "words": [
+    [
+     "Blood",
+     0.0,
+     0.41
+    ],
+    [
+     "gives",
+     0.41,
+     0.7
+    ],
+    [
+     "your",
+     0.7,
+     0.81
+    ],
+    [
+     "body",
+     0.81,
+     1.31
+    ],
+    [
+     "oxygen,",
+     1.31,
+     2.15
+    ],
+    [
+     "and",
+     2.52,
+     2.73
+    ],
+    [
+     "good",
+     2.73,
+     3.0
+    ],
+    [
+     "things",
+     3.0,
+     3.52
+    ],
+    [
+     "from",
+     3.52,
+     3.69
+    ],
+    [
+     "your",
+     3.69,
+     3.8
+    ],
+    [
+     "food.",
+     3.8,
+     4.418
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "oxygen and food",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "It carries oxygen to every part of you, from your head to your toes!",
+   "t0": 11.5625,
+   "t1": 16.875,
+   "v0": 11.750333333333332,
+   "dur": 4.704208333333334,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.12
+    ],
+    [
+     "carries",
+     0.12,
+     0.6
+    ],
+    [
+     "oxygen",
+     0.6,
+     1.32
+    ],
+    [
+     "to",
+     1.32,
+     1.42
+    ],
+    [
+     "every",
+     1.42,
+     1.77
+    ],
+    [
+     "part",
+     1.77,
+     2.12
+    ],
+    [
+     "of",
+     2.12,
+     2.24
+    ],
+    [
+     "you,",
+     2.24,
+     2.56
+    ],
+    [
+     "from",
+     2.93,
+     3.18
+    ],
+    [
+     "your",
+     3.18,
+     3.34
+    ],
+    [
+     "head",
+     3.34,
+     3.69
+    ],
+    [
+     "to",
+     3.69,
+     3.79
+    ],
+    [
+     "your",
+     3.79,
+     3.94
+    ],
+    [
+     "toes!",
+     3.94,
+     4.7
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "head to toes",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Touch your head, and then touch your toes!",
+   "t0": 16.875,
+   "t1": 21.25,
+   "v0": 16.994541666666667,
+   "dur": 2.422083333333333,
+   "words": [
+    [
+     "Touch",
+     0.0,
+     0.26
+    ],
+    [
+     "your",
+     0.26,
+     0.41
+    ],
+    [
+     "head,",
+     0.41,
+     0.95
+    ],
+    [
+     "and",
+     0.95,
+     1.1
+    ],
+    [
+     "then",
+     1.1,
+     1.27
+    ],
+    [
+     "touch",
+     1.27,
+     1.56
+    ],
+    [
+     "your",
+     1.56,
+     1.69
+    ],
+    [
+     "toes!",
+     1.69,
+     2.42
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "head and toes",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does blood carry? Oxygen, or sand?",
+   "t0": 21.25,
+   "t1": 28.125,
+   "v0": 21.556625000000004,
+   "dur": 2.9036666666666666,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.36
+    ],
+    [
+     "blood",
+     0.36,
+     0.67
+    ],
+    [
+     "carry?",
+     0.67,
+     1.15
+    ],
+    [
+     "Oxygen,",
+     1.46,
+     2.12
+    ],
+    [
+     "or",
+     2.12,
+     2.25
+    ],
+    [
+     "sand?",
+     2.25,
+     2.9
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Oxygen is in the air. Breathe in slowly, and breathe out.",
+   "t0": 28.125,
+   "t1": 34.6875,
+   "v0": 28.200291666666672,
+   "dur": 4.091166666666667,
+   "words": [
+    [
+     "Oxygen",
+     0.01,
+     0.68
+    ],
+    [
+     "is",
+     0.68,
+     0.83
+    ],
+    [
+     "in",
+     0.83,
+     0.93
+    ],
+    [
+     "the",
+     0.93,
+     1.08
+    ],
+    [
+     "air.",
+     1.08,
+     1.52
+    ],
+    [
+     "Breathe",
+     1.94,
+     2.28
+    ],
+    [
+     "in",
+     2.28,
+     2.41
+    ],
+    [
+     "slowly,",
+     2.41,
+     3.18
+    ],
+    [
+     "and",
+     3.18,
+     3.34
+    ],
+    [
+     "breathe",
+     3.34,
+     3.66
+    ],
+    [
+     "out.",
+     3.66,
+     4.09
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "breathe",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart sends blood to your lungs.",
+   "t0": 34.6875,
+   "t1": 37.5,
+   "v0": 34.83145833333334,
+   "dur": 2.203291666666667,
+   "words": [
+    [
+     "Your",
+     0.01,
+     0.16
+    ],
+    [
+     "heart",
+     0.16,
+     0.52
+    ],
+    [
+     "sends",
+     0.52,
+     0.89
+    ],
+    [
+     "blood",
+     0.89,
+     1.33
+    ],
+    [
+     "to",
+     1.33,
+     1.44
+    ],
+    [
+     "your",
+     1.44,
+     1.57
+    ],
+    [
+     "lungs.",
+     1.57,
+     2.2
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "to the lungs",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "There, the blood picks up oxygen!",
+   "t0": 37.5,
+   "t1": 40.0,
+   "v0": 37.57475,
+   "dur": 2.2280416666666665,
+   "words": [
+    [
+     "There,",
+     0.0,
+     0.39
+    ],
+    [
+     "the",
+     0.39,
+     0.51
+    ],
+    [
+     "blood",
+     0.51,
+     0.95
+    ],
+    [
+     "picks",
+     0.95,
+     1.23
+    ],
+    [
+     "up",
+     1.23,
+     1.39
+    ],
+    [
+     "oxygen!",
+     1.39,
+     2.228
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "picks up oxygen",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Where does blood pick up oxygen? In your lungs, or in your toes?",
+   "t0": 40.0,
+   "t1": 48.4375,
+   "v0": 40.34279166666667,
+   "dur": 4.497083333333333,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.13
+    ],
+    [
+     "does",
+     0.13,
+     0.35
+    ],
+    [
+     "blood",
+     0.35,
+     0.71
+    ],
+    [
+     "pick",
+     0.71,
+     0.93
+    ],
+    [
+     "up",
+     0.93,
+     1.09
+    ],
+    [
+     "oxygen?",
+     1.09,
+     1.85
+    ],
+    [
+     "In",
+     2.29,
+     2.41
+    ],
+    [
+     "your",
+     2.41,
+     2.57
+    ],
+    [
+     "lungs,",
+     2.57,
+     3.22
+    ],
+    [
+     "or",
+     3.22,
+     3.42
+    ],
+    [
+     "in",
+     3.42,
+     3.58
+    ],
+    [
+     "your",
+     3.58,
+     3.73
+    ],
+    [
+     "toes?",
+     3.73,
+     4.497
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 6",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The lungs! Then your heart pumps the blood all around your body.",
+   "t0": 48.4375,
+   "t1": 53.125,
+   "v0": 48.57987500000001,
+   "dur": 4.207666666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "lungs!",
+     0.09,
+     0.83
+    ],
+    [
+     "Then",
+     1.21,
+     1.44
+    ],
+    [
+     "your",
+     1.44,
+     1.58
+    ],
+    [
+     "heart",
+     1.58,
+     1.99
+    ],
+    [
+     "pumps",
+     1.99,
+     2.37
+    ],
+    [
+     "the",
+     2.37,
+     2.46
+    ],
+    [
+     "blood",
+     2.46,
+     2.84
+    ],
+    [
+     "all",
+     2.84,
+     3.21
+    ],
+    [
+     "around",
+     3.21,
+     3.56
+    ],
+    [
+     "your",
+     3.56,
+     3.66
+    ],
+    [
+     "body.",
+     3.66,
+     4.208
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "all around",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Tubes called blood vessels carry it away, and bring it back!",
+   "t0": 53.125,
+   "t1": 57.5,
+   "v0": 53.327541666666676,
+   "dur": 3.9665,
+   "words": [
+    [
+     "Tubes",
+     0.0,
+     0.46
+    ],
+    [
+     "called",
+     0.46,
+     0.76
+    ],
+    [
+     "blood",
+     0.76,
+     1.1
+    ],
+    [
+     "vessels",
+     1.1,
+     1.59
+    ],
+    [
+     "carry",
+     1.59,
+     1.95
+    ],
+    [
+     "it",
+     1.95,
+     2.03
+    ],
+    [
+     "away,",
+     2.03,
+     2.61
+    ],
+    [
+     "and",
+     2.94,
+     3.11
+    ],
+    [
+     "bring",
+     3.11,
+     3.34
+    ],
+    [
+     "it",
+     3.34,
+     3.45
+    ],
+    [
+     "back!",
+     3.45,
+     3.966
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "out and back",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Does the blood come back to your heart? Yes, or no?",
+   "t0": 57.5,
+   "t1": 65.0,
+   "v0": 57.83404166666667,
+   "dur": 3.594291666666667,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.25
+    ],
+    [
+     "the",
+     0.25,
+     0.33
+    ],
+    [
+     "blood",
+     0.33,
+     0.7
+    ],
+    [
+     "come",
+     0.7,
+     0.97
+    ],
+    [
+     "back",
+     0.97,
+     1.23
+    ],
+    [
+     "to",
+     1.23,
+     1.34
+    ],
+    [
+     "your",
+     1.34,
+     1.45
+    ],
+    [
+     "heart?",
+     1.45,
+     1.94
+    ],
+    [
+     "Yes,",
+     2.29,
+     2.79
+    ],
+    [
+     "or",
+     2.79,
+     3.08
+    ],
+    [
+     "no?",
+     3.08,
+     3.59
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 7",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Yes! Away and back, over and over again.",
+   "t0": 65.0,
+   "t1": 68.4375,
+   "v0": 65.16833333333335,
+   "dur": 2.867125,
+   "words": [
+    [
+     "Yes!",
+     0.0,
+     0.59
+    ],
+    [
+     "Away",
+     0.59,
+     0.93
+    ],
+    [
+     "and",
+     0.93,
+     1.06
+    ],
+    [
+     "back,",
+     1.06,
+     1.72
+    ],
+    [
+     "over",
+     1.72,
+     2.06
+    ],
+    [
+     "and",
+     2.06,
+     2.16
+    ],
+    [
+     "over",
+     2.16,
+     2.43
+    ],
+    [
+     "again.",
+     2.43,
+     2.867
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "over and over",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Draw a big circle in the air with your finger!",
+   "t0": 68.4375,
+   "t1": 73.125,
+   "v0": 68.57545833333336,
+   "dur": 2.5079166666666666,
+   "words": [
+    [
+     "Draw",
+     0.01,
+     0.27
+    ],
+    [
+     "a",
+     0.27,
+     0.31
+    ],
+    [
+     "big",
+     0.31,
+     0.59
+    ],
+    [
+     "circle",
+     0.59,
+     1.11
+    ],
+    [
+     "in",
+     1.11,
+     1.21
+    ],
+    [
+     "the",
+     1.21,
+     1.39
+    ],
+    [
+     "air",
+     1.39,
+     1.65
+    ],
+    [
+     "with",
+     1.65,
+     1.85
+    ],
+    [
+     "your",
+     1.85,
+     1.95
+    ],
+    [
+     "finger!",
+     1.95,
+     2.508
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "draw a circle",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. My heart pumps blood!",
+   "t0": 73.125,
+   "t1": 76.25,
+   "v0": 73.22337500000002,
+   "dur": 2.7121666666666666,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.38
+    ],
+    [
+     "with",
+     0.38,
+     0.6
+    ],
+    [
+     "me.",
+     0.6,
+     0.9
+    ],
+    [
+     "My",
+     1.19,
+     1.34
+    ],
+    [
+     "heart",
+     1.34,
+     1.73
+    ],
+    [
+     "pumps",
+     1.73,
+     2.09
+    ],
+    [
+     "blood!",
+     2.09,
+     2.71
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Where does blood get oxygen? In your lungs, or in your hair?",
+   "t0": 76.25,
+   "t1": 84.0625,
+   "v0": 76.47554166666669,
+   "dur": 4.0412083333333335,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.13
+    ],
+    [
+     "does",
+     0.13,
+     0.35
+    ],
+    [
+     "blood",
+     0.35,
+     0.71
+    ],
+    [
+     "get",
+     0.71,
+     0.91
+    ],
+    [
+     "oxygen?",
+     0.91,
+     1.67
+    ],
+    [
+     "In",
+     2.11,
+     2.23
+    ],
+    [
+     "your",
+     2.23,
+     2.37
+    ],
+    [
+     "lungs,",
+     2.37,
+     3.02
+    ],
+    [
+     "or",
+     3.02,
+     3.23
+    ],
+    [
+     "in",
+     3.23,
+     3.35
+    ],
+    [
+     "your",
+     3.35,
+     3.53
+    ],
+    [
+     "hair?",
+     3.53,
+     4.04
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 7b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The lungs! Then the heart sends it all around, and back again.",
+   "t0": 84.0625,
+   "t1": 88.7887916666667,
+   "v0": 84.25675000000003,
+   "dur": 4.112041666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "lungs!",
+     0.08,
+     0.82
+    ],
+    [
+     "Then",
+     1.22,
+     1.42
+    ],
+    [
+     "the",
+     1.42,
+     1.49
+    ],
+    [
+     "heart",
+     1.49,
+     1.86
+    ],
+    [
+     "sends",
+     1.86,
+     2.21
+    ],
+    [
+     "it",
+     2.21,
+     2.28
+    ],
+    [
+     "all",
+     2.28,
+     2.61
+    ],
+    [
+     "around,",
+     2.61,
+     3.18
+    ],
+    [
+     "and",
+     3.18,
+     3.33
+    ],
+    [
+     "back",
+     3.33,
+     3.64
+    ],
+    [
+     "again.",
+     3.64,
+     4.11
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "part 2 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

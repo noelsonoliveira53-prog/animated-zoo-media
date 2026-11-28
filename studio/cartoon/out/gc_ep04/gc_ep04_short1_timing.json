@@ -1,0 +1,1885 @@
+{
+ "id": "gc_ep04_short1",
+ "total": 91.91379166666671,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875
+ ],
+ "plan": {
+  "length": 91.9,
+  "shots": 18,
+  "visual_changes": 83,
+  "mean_gap": 1.11,
+  "longest_gap": 4.05,
+  "longest_gap_at": 36.6,
+  "over_6s": [],
+  "places": [
+   "glab",
+   "gwindow",
+   "gpark",
+   "gbench"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 9,
+  "longest_without_question": 24.4,
+  "first_words_at": 0.42,
+  "shot_mean": 5.11,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "197/197",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 25.3,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the picture board (blueprint) hook: how big"
+  ],
+  [
+   0.1,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   2.31,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new shot",
+   "the picture board (blueprint) where it is"
+  ],
+  [
+   4.73,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   4.73,
+   "word",
+   "IN YOUR CHEST!"
+  ],
+  [
+   7.81,
+   "new place",
+   "Gizmo's lab hand on chest"
+  ],
+  [
+   8.33,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   8.33,
+   "word",
+   "HAND ON CHEST"
+  ],
+  [
+   10.23,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   13.12,
+   "new place",
+   "the picture board (blueprint) question 1"
+  ],
+  [
+   13.32,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   15.0,
+   "sign",
+   "CHEST"
+  ],
+  [
+   15.35,
+   "sign",
+   "FOOT"
+  ],
+  [
+   17.06,
+   "thinking dot",
+   "1"
+  ],
+  [
+   17.73,
+   "thinking dot",
+   "2"
+  ],
+  [
+   18.41,
+   "thinking dot",
+   "3"
+  ],
+  [
+   18.89,
+   "answer",
+   "CHEST"
+  ],
+  [
+   20.0,
+   "new shot",
+   "the picture board (blueprint) a muscle"
+  ],
+  [
+   20.62,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   22.88,
+   "action",
+   "a soft light around the heart"
+  ],
+  [
+   22.88,
+   "word",
+   "A MUSCLE!"
+  ],
+  [
+   23.75,
+   "new shot",
+   "the picture board (blueprint) question 2"
+  ],
+  [
+   23.95,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   24.67,
+   "sign",
+   "MUSCLE"
+  ],
+  [
+   25.02,
+   "sign",
+   "BALLOON"
+  ],
+  [
+   26.72,
+   "thinking dot",
+   "1"
+  ],
+  [
+   27.4,
+   "thinking dot",
+   "2"
+  ],
+  [
+   28.07,
+   "thinking dot",
+   "3"
+  ],
+  [
+   28.56,
+   "answer",
+   "MUSCLE"
+  ],
+  [
+   29.69,
+   "new shot",
+   "the picture board (blueprint) it pumps"
+  ],
+  [
+   30.95,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   32.23,
+   "word",
+   "PUMP!"
+  ],
+  [
+   34.38,
+   "new place",
+   "Gizmo's lab squeeze a fist"
+  ],
+  [
+   35.78,
+   "action",
+   "Gizmo curls up small"
+  ],
+  [
+   35.78,
+   "word",
+   "SQUEEZE!"
+  ],
+  [
+   36.57,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   40.62,
+   "new place",
+   "the picture board (blueprint) fist size"
+  ],
+  [
+   41.32,
+   "action",
+   "a part lights up"
+  ],
+  [
+   42.54,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   43.53,
+   "word",
+   "SAME SIZE!"
+  ],
+  [
+   45.31,
+   "new place",
+   "Gizmo's lab hold up a fist"
+  ],
+  [
+   45.53,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   46.13,
+   "word",
+   "FIST UP!"
+  ],
+  [
+   48.64,
+   "action",
+   "a part lights up"
+  ],
+  [
+   51.88,
+   "new place",
+   "the picture board (blueprint) question 3"
+  ],
+  [
+   52.08,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   54.54,
+   "sign",
+   "A FIST"
+  ],
+  [
+   54.89,
+   "sign",
+   "A CAR"
+  ],
+  [
+   57.16,
+   "thinking dot",
+   "1"
+  ],
+  [
+   57.84,
+   "thinking dot",
+   "2"
+  ],
+  [
+   58.51,
+   "thinking dot",
+   "3"
+  ],
+  [
+   59.0,
+   "answer",
+   "A FIST"
+  ],
+  [
+   60.31,
+   "new shot",
+   "the picture board (blueprint) day and night"
+  ],
+  [
+   61.56,
+   "action",
+   "a part lights up"
+  ],
+  [
+   62.66,
+   "action",
+   "a part lights up"
+  ],
+  [
+   63.35,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   63.35,
+   "word",
+   "ALL THE TIME!"
+  ],
+  [
+   64.38,
+   "new place",
+   "the sunny lab window night window"
+  ],
+  [
+   65.08,
+   "word",
+   "SLEEP TIGHT!"
+  ],
+  [
+   65.61,
+   "action",
+   "a part lights up"
+  ],
+  [
+   68.12,
+   "new place",
+   "the picture board (blueprint) asleep"
+  ],
+  [
+   68.42,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   70.86,
+   "word",
+   "NICE AND CALM"
+  ],
+  [
+   71.88,
+   "new place",
+   "the sunny park after the rain always working"
+  ],
+  [
+   73.27,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   75.0,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   75.0,
+   "word",
+   "ALWAYS!"
+  ],
+  [
+   76.25,
+   "new place",
+   "the picture board (blueprint) question 4"
+  ],
+  [
+   76.45,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   78.81,
+   "sign",
+   "DAY ONLY"
+  ],
+  [
+   79.16,
+   "sign",
+   "ALL THE TIME"
+  ],
+  [
+   80.88,
+   "thinking dot",
+   "1"
+  ],
+  [
+   81.55,
+   "thinking dot",
+   "2"
+  ],
+  [
+   82.22,
+   "thinking dot",
+   "3"
+  ],
+  [
+   82.71,
+   "answer",
+   "ALL THE TIME"
+  ],
+  [
+   84.06,
+   "new place",
+   "Gizmo's work bench say it"
+  ],
+  [
+   85.64,
+   "word",
+   "HEART = MUSCLE!"
+  ],
+  [
+   86.29,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   87.19,
+   "new place",
+   "the picture board (blueprint) part 1 recap"
+  ],
+  [
+   87.5,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   88.81,
+   "action",
+   "a part lights up"
+  ],
+  [
+   89.68,
+   "word",
+   "PUMP, PUMP!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "paper_gz",
+   "say": "How big is the heart inside your chest?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.5085416666666664,
+   "words": [
+    [
+     "How",
+     0.0,
+     0.22
+    ],
+    [
+     "big",
+     0.22,
+     0.58
+    ],
+    [
+     "is",
+     0.58,
+     0.73
+    ],
+    [
+     "the",
+     0.73,
+     0.81
+    ],
+    [
+     "heart",
+     0.81,
+     1.28
+    ],
+    [
+     "inside",
+     1.28,
+     1.79
+    ],
+    [
+     "your",
+     1.79,
+     1.89
+    ],
+    [
+     "chest?",
+     1.89,
+     2.509
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: how big",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart is in your chest, a little to the left of the middle.",
+   "t0": 3.125,
+   "t1": 7.8125,
+   "v0": 3.4685416666666664,
+   "dur": 3.97775,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.19
+    ],
+    [
+     "heart",
+     0.19,
+     0.67
+    ],
+    [
+     "is",
+     0.67,
+     0.88
+    ],
+    [
+     "in",
+     0.88,
+     1.07
+    ],
+    [
+     "your",
+     1.07,
+     1.26
+    ],
+    [
+     "chest,",
+     1.26,
+     1.92
+    ],
+    [
+     "a",
+     2.29,
+     2.33
+    ],
+    [
+     "little",
+     2.33,
+     2.69
+    ],
+    [
+     "to",
+     2.69,
+     2.82
+    ],
+    [
+     "the",
+     2.82,
+     2.92
+    ],
+    [
+     "left",
+     2.92,
+     3.32
+    ],
+    [
+     "of",
+     3.32,
+     3.45
+    ],
+    [
+     "the",
+     3.45,
+     3.52
+    ],
+    [
+     "middle.",
+     3.52,
+     3.978
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "where it is",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Put your hand on your chest. Can you feel a beat?",
+   "t0": 7.8125,
+   "t1": 13.125,
+   "v0": 7.986291666666666,
+   "dur": 3.236125,
+   "words": [
+    [
+     "Put",
+     0.0,
+     0.18
+    ],
+    [
+     "your",
+     0.18,
+     0.34
+    ],
+    [
+     "hand",
+     0.34,
+     0.73
+    ],
+    [
+     "on",
+     0.73,
+     0.85
+    ],
+    [
+     "your",
+     0.85,
+     0.96
+    ],
+    [
+     "chest.",
+     0.96,
+     1.62
+    ],
+    [
+     "Can",
+     1.98,
+     2.14
+    ],
+    [
+     "you",
+     2.14,
+     2.24
+    ],
+    [
+     "feel",
+     2.24,
+     2.62
+    ],
+    [
+     "a",
+     2.62,
+     2.67
+    ],
+    [
+     "beat?",
+     2.67,
+     3.236
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hand on chest",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Where is your heart? In your chest, or in your foot?",
+   "t0": 13.125,
+   "t1": 20.0,
+   "v0": 13.362416666666665,
+   "dur": 3.211125,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.27
+    ],
+    [
+     "is",
+     0.27,
+     0.39
+    ],
+    [
+     "your",
+     0.39,
+     0.52
+    ],
+    [
+     "heart?",
+     0.52,
+     1.09
+    ],
+    [
+     "In",
+     1.42,
+     1.53
+    ],
+    [
+     "your",
+     1.53,
+     1.64
+    ],
+    [
+     "chest,",
+     1.64,
+     2.22
+    ],
+    [
+     "or",
+     2.22,
+     2.44
+    ],
+    [
+     "in",
+     2.44,
+     2.57
+    ],
+    [
+     "your",
+     2.57,
+     2.7
+    ],
+    [
+     "foot?",
+     2.7,
+     3.21
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "In your chest! Your heart is really a muscle.",
+   "t0": 20.0,
+   "t1": 23.75,
+   "v0": 20.313541666666666,
+   "dur": 3.1344583333333333,
+   "words": [
+    [
+     "In",
+     0.0,
+     0.14
+    ],
+    [
+     "your",
+     0.14,
+     0.31
+    ],
+    [
+     "chest!",
+     0.31,
+     1.0
+    ],
+    [
+     "Your",
+     1.29,
+     1.49
+    ],
+    [
+     "heart",
+     1.49,
+     1.95
+    ],
+    [
+     "is",
+     1.95,
+     2.08
+    ],
+    [
+     "really",
+     2.08,
+     2.51
+    ],
+    [
+     "a",
+     2.51,
+     2.57
+    ],
+    [
+     "muscle.",
+     2.57,
+     3.13
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "a muscle",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Is your heart a muscle, or a balloon?",
+   "t0": 23.75,
+   "t1": 29.6875,
+   "v0": 23.988000000000003,
+   "dur": 2.248375,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.16
+    ],
+    [
+     "your",
+     0.16,
+     0.32
+    ],
+    [
+     "heart",
+     0.32,
+     0.64
+    ],
+    [
+     "a",
+     0.64,
+     0.68
+    ],
+    [
+     "muscle,",
+     0.68,
+     1.2
+    ],
+    [
+     "or",
+     1.37,
+     1.59
+    ],
+    [
+     "a",
+     1.59,
+     1.64
+    ],
+    [
+     "balloon?",
+     1.64,
+     2.248
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A muscle! It squeezes, and pumps blood around your body.",
+   "t0": 29.6875,
+   "t1": 34.375,
+   "v0": 29.976375000000004,
+   "dur": 3.989,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "muscle!",
+     0.06,
+     0.67
+    ],
+    [
+     "It",
+     0.86,
+     0.97
+    ],
+    [
+     "squeezes,",
+     0.97,
+     1.81
+    ],
+    [
+     "and",
+     2.08,
+     2.25
+    ],
+    [
+     "pumps",
+     2.25,
+     2.59
+    ],
+    [
+     "blood",
+     2.59,
+     3.02
+    ],
+    [
+     "around",
+     3.02,
+     3.35
+    ],
+    [
+     "your",
+     3.35,
+     3.45
+    ],
+    [
+     "body.",
+     3.45,
+     3.989
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "it pumps",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Make a fist. Squeeze it, and open it, like a heart pumping!",
+   "t0": 34.375,
+   "t1": 40.625,
+   "v0": 34.505375,
+   "dur": 3.922833333333333,
+   "words": [
+    [
+     "Make",
+     0.0,
+     0.21
+    ],
+    [
+     "a",
+     0.21,
+     0.25
+    ],
+    [
+     "fist.",
+     0.25,
+     0.88
+    ],
+    [
+     "Squeeze",
+     1.27,
+     1.8
+    ],
+    [
+     "it,",
+     1.8,
+     1.94
+    ],
+    [
+     "and",
+     1.94,
+     2.06
+    ],
+    [
+     "open",
+     2.06,
+     2.54
+    ],
+    [
+     "it,",
+     2.54,
+     2.7
+    ],
+    [
+     "like",
+     2.7,
+     2.9
+    ],
+    [
+     "a",
+     2.9,
+     2.96
+    ],
+    [
+     "heart",
+     2.96,
+     3.32
+    ],
+    [
+     "pumping!",
+     3.32,
+     3.92
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "squeeze a fist",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Look at your fist. Your heart is about the size of your fist!",
+   "t0": 40.625,
+   "t1": 45.3125,
+   "v0": 40.76820833333333,
+   "dur": 4.2164166666666665,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.29
+    ],
+    [
+     "at",
+     0.29,
+     0.38
+    ],
+    [
+     "your",
+     0.38,
+     0.55
+    ],
+    [
+     "fist.",
+     0.55,
+     1.19
+    ],
+    [
+     "Your",
+     1.57,
+     1.77
+    ],
+    [
+     "heart",
+     1.77,
+     2.25
+    ],
+    [
+     "is",
+     2.25,
+     2.38
+    ],
+    [
+     "about",
+     2.38,
+     2.67
+    ],
+    [
+     "the",
+     2.67,
+     2.76
+    ],
+    [
+     "size",
+     2.76,
+     3.36
+    ],
+    [
+     "of",
+     3.36,
+     3.44
+    ],
+    [
+     "your",
+     3.44,
+     3.58
+    ],
+    [
+     "fist!",
+     3.58,
+     4.216
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "fist size",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Hold up your fist, and look. That is about how big your heart is!",
+   "t0": 45.3125,
+   "t1": 51.875,
+   "v0": 45.52462499999999,
+   "dur": 4.450875,
+   "words": [
+    [
+     "Hold",
+     0.01,
+     0.33
+    ],
+    [
+     "up",
+     0.33,
+     0.49
+    ],
+    [
+     "your",
+     0.49,
+     0.61
+    ],
+    [
+     "fist,",
+     0.61,
+     1.26
+    ],
+    [
+     "and",
+     1.26,
+     1.38
+    ],
+    [
+     "look.",
+     1.38,
+     1.86
+    ],
+    [
+     "That",
+     2.3,
+     2.53
+    ],
+    [
+     "is",
+     2.53,
+     2.65
+    ],
+    [
+     "about",
+     2.65,
+     2.92
+    ],
+    [
+     "how",
+     2.92,
+     3.12
+    ],
+    [
+     "big",
+     3.12,
+     3.45
+    ],
+    [
+     "your",
+     3.45,
+     3.6
+    ],
+    [
+     "heart",
+     3.6,
+     3.99
+    ],
+    [
+     "is!",
+     3.99,
+     4.45
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hold up a fist",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "How big is your heart? As big as your fist, or as big as a car?",
+   "t0": 51.875,
+   "t1": 60.3125,
+   "v0": 51.915499999999994,
+   "dur": 4.761083333333334,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.24
+    ],
+    [
+     "big",
+     0.24,
+     0.58
+    ],
+    [
+     "is",
+     0.58,
+     0.71
+    ],
+    [
+     "your",
+     0.71,
+     0.87
+    ],
+    [
+     "heart?",
+     0.87,
+     1.43
+    ],
+    [
+     "As",
+     1.86,
+     2.07
+    ],
+    [
+     "big",
+     2.07,
+     2.36
+    ],
+    [
+     "as",
+     2.36,
+     2.49
+    ],
+    [
+     "your",
+     2.49,
+     2.62
+    ],
+    [
+     "fist,",
+     2.62,
+     3.2
+    ],
+    [
+     "or",
+     3.2,
+     3.45
+    ],
+    [
+     "as",
+     3.45,
+     3.6
+    ],
+    [
+     "big",
+     3.6,
+     3.9
+    ],
+    [
+     "as",
+     3.9,
+     4.04
+    ],
+    [
+     "a",
+     4.04,
+     4.1
+    ],
+    [
+     "car?",
+     4.1,
+     4.76
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart pumps all day, and all night, all the time!",
+   "t0": 60.3125,
+   "t1": 64.375,
+   "v0": 60.41658333333333,
+   "dur": 3.4840416666666667,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.15
+    ],
+    [
+     "heart",
+     0.15,
+     0.46
+    ],
+    [
+     "pumps",
+     0.46,
+     0.82
+    ],
+    [
+     "all",
+     0.82,
+     1.14
+    ],
+    [
+     "day,",
+     1.14,
+     1.61
+    ],
+    [
+     "and",
+     1.91,
+     2.04
+    ],
+    [
+     "all",
+     2.04,
+     2.24
+    ],
+    [
+     "night,",
+     2.24,
+     2.58
+    ],
+    [
+     "all",
+     2.58,
+     2.82
+    ],
+    [
+     "the",
+     2.82,
+     2.93
+    ],
+    [
+     "time!",
+     2.93,
+     3.48
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "day and night",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Even when you sleep at night, your heart keeps pumping.",
+   "t0": 64.375,
+   "t1": 68.125,
+   "v0": 64.440625,
+   "dur": 3.449625,
+   "words": [
+    [
+     "Even",
+     0.0,
+     0.32
+    ],
+    [
+     "when",
+     0.32,
+     0.51
+    ],
+    [
+     "you",
+     0.51,
+     0.64
+    ],
+    [
+     "sleep",
+     0.64,
+     1.06
+    ],
+    [
+     "at",
+     1.06,
+     1.17
+    ],
+    [
+     "night,",
+     1.17,
+     1.65
+    ],
+    [
+     "your",
+     1.96,
+     2.16
+    ],
+    [
+     "heart",
+     2.16,
+     2.54
+    ],
+    [
+     "keeps",
+     2.54,
+     2.85
+    ],
+    [
+     "pumping.",
+     2.85,
+     3.45
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "night window",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart keeps on going, nice and calm.",
+   "t0": 68.125,
+   "t1": 71.875,
+   "v0": 68.43025,
+   "dur": 2.977708333333333,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.16
+    ],
+    [
+     "heart",
+     0.16,
+     0.47
+    ],
+    [
+     "keeps",
+     0.47,
+     0.83
+    ],
+    [
+     "on",
+     0.83,
+     0.99
+    ],
+    [
+     "going,",
+     0.99,
+     1.53
+    ],
+    [
+     "nice",
+     1.77,
+     2.29
+    ],
+    [
+     "and",
+     2.29,
+     2.43
+    ],
+    [
+     "calm.",
+     2.43,
+     2.978
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "asleep",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Sitting, walking, or playing, your heart is always working!",
+   "t0": 71.875,
+   "t1": 76.25,
+   "v0": 71.94795833333335,
+   "dur": 4.086458333333334,
+   "words": [
+    [
+     "Sitting,",
+     0.01,
+     0.6
+    ],
+    [
+     "walking,",
+     0.6,
+     1.16
+    ],
+    [
+     "or",
+     1.16,
+     1.32
+    ],
+    [
+     "playing,",
+     1.32,
+     1.95
+    ],
+    [
+     "your",
+     2.34,
+     2.49
+    ],
+    [
+     "heart",
+     2.49,
+     2.91
+    ],
+    [
+     "is",
+     2.91,
+     3.05
+    ],
+    [
+     "always",
+     3.05,
+     3.56
+    ],
+    [
+     "working!",
+     3.56,
+     4.086
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "always working",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "When does your heart pump? Only in the day, or all the time?",
+   "t0": 76.25,
+   "t1": 84.0625,
+   "v0": 76.57441666666669,
+   "dur": 3.81625,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.14
+    ],
+    [
+     "does",
+     0.14,
+     0.3
+    ],
+    [
+     "your",
+     0.3,
+     0.42
+    ],
+    [
+     "heart",
+     0.42,
+     0.82
+    ],
+    [
+     "pump?",
+     0.82,
+     1.29
+    ],
+    [
+     "Only",
+     1.7,
+     2.05
+    ],
+    [
+     "in",
+     2.05,
+     2.16
+    ],
+    [
+     "the",
+     2.16,
+     2.24
+    ],
+    [
+     "day,",
+     2.24,
+     2.69
+    ],
+    [
+     "or",
+     2.69,
+     2.92
+    ],
+    [
+     "all",
+     2.92,
+     3.17
+    ],
+    [
+     "the",
+     3.17,
+     3.27
+    ],
+    [
+     "time?",
+     3.27,
+     3.816
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 4",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. My heart is a muscle!",
+   "t0": 84.0625,
+   "t1": 87.1875,
+   "v0": 84.1306666666667,
+   "dur": 2.7625416666666665,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.32
+    ],
+    [
+     "it",
+     0.32,
+     0.42
+    ],
+    [
+     "with",
+     0.42,
+     0.65
+    ],
+    [
+     "me.",
+     0.65,
+     0.95
+    ],
+    [
+     "My",
+     1.31,
+     1.51
+    ],
+    [
+     "heart",
+     1.51,
+     1.97
+    ],
+    [
+     "is",
+     1.97,
+     2.1
+    ],
+    [
+     "a",
+     2.1,
+     2.16
+    ],
+    [
+     "muscle!",
+     2.16,
+     2.76
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A muscle, as big as your fist, pumping all the time!",
+   "t0": 87.1875,
+   "t1": 91.5137916666667,
+   "v0": 87.43320833333337,
+   "dur": 3.6605833333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.07
+    ],
+    [
+     "muscle,",
+     0.07,
+     0.69
+    ],
+    [
+     "as",
+     0.69,
+     0.85
+    ],
+    [
+     "big",
+     0.85,
+     1.13
+    ],
+    [
+     "as",
+     1.13,
+     1.25
+    ],
+    [
+     "your",
+     1.25,
+     1.38
+    ],
+    [
+     "fist,",
+     1.38,
+     1.97
+    ],
+    [
+     "pumping",
+     2.25,
+     2.69
+    ],
+    [
+     "all",
+     2.69,
+     2.92
+    ],
+    [
+     "the",
+     2.92,
+     3.02
+    ],
+    [
+     "time!",
+     3.02,
+     3.66
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "part 1 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

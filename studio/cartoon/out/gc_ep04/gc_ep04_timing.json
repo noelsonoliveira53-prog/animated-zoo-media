@@ -1,0 +1,7030 @@
+{
+ "id": "gc_ep04",
+ "total": 354.5866666666667,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75,
+  349.375,
+  350.0,
+  350.625,
+  351.25,
+  351.875,
+  352.5,
+  353.125,
+  353.75,
+  354.375
+ ],
+ "plan": {
+  "length": 354.6,
+  "shots": 72,
+  "visual_changes": 393,
+  "mean_gap": 0.9,
+  "longest_gap": 4.52,
+  "longest_gap_at": 149.2,
+  "over_6s": [],
+  "places": [
+   "glab",
+   "gz_intro",
+   "gz_logo",
+   "gbench",
+   "gwindow",
+   "gpark",
+   "gmeadow",
+   "ghills"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 29,
+  "longest_without_question": 38.4,
+  "first_words_at": 0.42,
+  "shot_mean": 4.92,
+  "main_intro": {
+   "at": [
+    12.2,
+    339.1
+   ],
+   "seconds": 29.9
+  },
+  "fails": [],
+  "words_placed": "659/659",
+  "sync": {
+   "pauses_checked": 55,
+   "onset_err_mean_ms": 25.6,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 71,
+   "cuts_on_the_half_beat": 71,
+   "songs_entering_on_a_beat": "6/6",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the picture board (blueprint) hook: the heart beats"
+  ],
+  [
+   0.1,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   3.22,
+   "word",
+   "?"
+  ],
+  [
+   4.06,
+   "new shot",
+   "the picture board (blueprint) hook: the heart in the chest"
+  ],
+  [
+   4.11,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   4.28,
+   "word",
+   "THUMP, THUMP!"
+  ],
+  [
+   7.81,
+   "new place",
+   "Gizmo's lab hook: Gizmo"
+  ],
+  [
+   7.88,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   8.59,
+   "word",
+   "GIZMO"
+  ],
+  [
+   9.9,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   12.19,
+   "action",
+   "the gears turn"
+  ],
+  [
+   12.19,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   12.24,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   13.01,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   13.32,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   13.63,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   14.38,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   14.38,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   14.38,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   15.31,
+   "action",
+   "the gears turn"
+  ],
+  [
+   15.31,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   15.5,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   17.19,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   17.81,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   18.12,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   18.44,
+   "action",
+   "out of the flash"
+  ],
+  [
+   18.44,
+   "action",
+   "the rays turn"
+  ],
+  [
+   18.44,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   18.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.2,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.82,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   20.13,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   20.33,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   20.94,
+   "action",
+   "confetti"
+  ],
+  [
+   20.94,
+   "action",
+   "the line draws on"
+  ],
+  [
+   21.25,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   21.44,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   21.56,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   22.25,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   22.38,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   23.13,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   23.75,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   23.88,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   24.38,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   25.29,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   25.29,
+   "action",
+   "confetti"
+  ],
+  [
+   25.29,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   25.59,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   26.56,
+   "new place",
+   "Gizmo's lab lab wide"
+  ],
+  [
+   26.84,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   27.6,
+   "word",
+   "HELLO!"
+  ],
+  [
+   30.0,
+   "new place",
+   "Gizmo's work bench no heart"
+  ],
+  [
+   31.63,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   32.9,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   32.9,
+   "word",
+   "YOU DO!"
+  ],
+  [
+   33.75,
+   "new place",
+   "the picture board (blueprint) where it is"
+  ],
+  [
+   35.34,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   35.34,
+   "word",
+   "IN YOUR CHEST!"
+  ],
+  [
+   38.44,
+   "new place",
+   "Gizmo's lab hand on chest"
+  ],
+  [
+   38.94,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   38.94,
+   "word",
+   "HAND ON CHEST"
+  ],
+  [
+   40.84,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   43.75,
+   "new place",
+   "the picture board (blueprint) question 1"
+  ],
+  [
+   43.95,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   45.61,
+   "sign",
+   "CHEST"
+  ],
+  [
+   45.96,
+   "sign",
+   "FOOT"
+  ],
+  [
+   47.67,
+   "thinking dot",
+   "1"
+  ],
+  [
+   48.34,
+   "thinking dot",
+   "2"
+  ],
+  [
+   49.02,
+   "thinking dot",
+   "3"
+  ],
+  [
+   49.5,
+   "answer",
+   "CHEST"
+  ],
+  [
+   50.62,
+   "new shot",
+   "the picture board (blueprint) a muscle"
+  ],
+  [
+   51.23,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   53.49,
+   "action",
+   "a soft light around the heart"
+  ],
+  [
+   53.49,
+   "word",
+   "A MUSCLE!"
+  ],
+  [
+   54.38,
+   "new shot",
+   "the picture board (blueprint) question 2"
+  ],
+  [
+   54.58,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   55.28,
+   "sign",
+   "MUSCLE"
+  ],
+  [
+   55.63,
+   "sign",
+   "BALLOON"
+  ],
+  [
+   57.33,
+   "thinking dot",
+   "1"
+  ],
+  [
+   58.01,
+   "thinking dot",
+   "2"
+  ],
+  [
+   58.68,
+   "thinking dot",
+   "3"
+  ],
+  [
+   59.17,
+   "answer",
+   "MUSCLE"
+  ],
+  [
+   60.31,
+   "new shot",
+   "the picture board (blueprint) it pumps"
+  ],
+  [
+   61.56,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   62.84,
+   "word",
+   "PUMP!"
+  ],
+  [
+   65.0,
+   "new place",
+   "Gizmo's lab squeeze a fist"
+  ],
+  [
+   66.39,
+   "action",
+   "Gizmo curls up small"
+  ],
+  [
+   66.39,
+   "word",
+   "SQUEEZE!"
+  ],
+  [
+   67.18,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   71.25,
+   "new place",
+   "the picture board (blueprint) fist size"
+  ],
+  [
+   71.93,
+   "action",
+   "a part lights up"
+  ],
+  [
+   73.15,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   74.14,
+   "word",
+   "SAME SIZE!"
+  ],
+  [
+   75.94,
+   "new place",
+   "Gizmo's lab hold up a fist"
+  ],
+  [
+   76.15,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   76.75,
+   "word",
+   "FIST UP!"
+  ],
+  [
+   79.26,
+   "action",
+   "a part lights up"
+  ],
+  [
+   82.19,
+   "new place",
+   "the picture board (blueprint) question 3"
+  ],
+  [
+   82.39,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   85.15,
+   "sign",
+   "A FIST"
+  ],
+  [
+   85.5,
+   "sign",
+   "A CAR"
+  ],
+  [
+   87.77,
+   "thinking dot",
+   "1"
+  ],
+  [
+   88.45,
+   "thinking dot",
+   "2"
+  ],
+  [
+   89.12,
+   "thinking dot",
+   "3"
+  ],
+  [
+   89.61,
+   "answer",
+   "A FIST"
+  ],
+  [
+   90.94,
+   "new shot",
+   "the picture board (blueprint) day and night"
+  ],
+  [
+   92.17,
+   "action",
+   "a part lights up"
+  ],
+  [
+   93.27,
+   "action",
+   "a part lights up"
+  ],
+  [
+   93.96,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   93.96,
+   "word",
+   "ALL THE TIME!"
+  ],
+  [
+   95.0,
+   "new place",
+   "the sunny lab window night window"
+  ],
+  [
+   95.69,
+   "word",
+   "SLEEP TIGHT!"
+  ],
+  [
+   96.22,
+   "action",
+   "a part lights up"
+  ],
+  [
+   98.75,
+   "new place",
+   "the picture board (blueprint) asleep"
+  ],
+  [
+   99.05,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   101.47,
+   "word",
+   "NICE AND CALM"
+  ],
+  [
+   102.5,
+   "new place",
+   "the sunny park after the rain always working"
+  ],
+  [
+   103.88,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   105.61,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   105.61,
+   "word",
+   "ALWAYS!"
+  ],
+  [
+   106.88,
+   "new place",
+   "the picture board (blueprint) question 4"
+  ],
+  [
+   107.08,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   109.43,
+   "sign",
+   "DAY ONLY"
+  ],
+  [
+   109.78,
+   "sign",
+   "ALL THE TIME"
+  ],
+  [
+   111.49,
+   "thinking dot",
+   "1"
+  ],
+  [
+   112.16,
+   "thinking dot",
+   "2"
+  ],
+  [
+   112.83,
+   "thinking dot",
+   "3"
+  ],
+  [
+   113.32,
+   "answer",
+   "ALL THE TIME"
+  ],
+  [
+   114.69,
+   "new place",
+   "Gizmo's work bench say it"
+  ],
+  [
+   116.25,
+   "word",
+   "HEART = MUSCLE!"
+  ],
+  [
+   116.9,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   117.81,
+   "new place",
+   "the picture board (blueprint) part 1 recap"
+  ],
+  [
+   118.11,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   119.42,
+   "action",
+   "a part lights up"
+  ],
+  [
+   120.29,
+   "word",
+   "PUMP, PUMP!"
+  ],
+  [
+   122.19,
+   "new shot",
+   "the picture board (blueprint) blood"
+  ],
+  [
+   122.39,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   124.7,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   124.7,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   124.7,
+   "word",
+   "BLOOD!"
+  ],
+  [
+   125.62,
+   "new shot",
+   "the picture board (blueprint) oxygen and food"
+  ],
+  [
+   125.72,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   127.19,
+   "action",
+   "the blood carries oxygen to every part"
+  ],
+  [
+   127.19,
+   "word",
+   "OXYGEN!"
+  ],
+  [
+   130.62,
+   "new shot",
+   "the picture board (blueprint) head to toes"
+  ],
+  [
+   134.18,
+   "action",
+   "up to the head"
+  ],
+  [
+   134.18,
+   "word",
+   "HEAD"
+  ],
+  [
+   134.78,
+   "action",
+   "down to the toes"
+  ],
+  [
+   134.78,
+   "word",
+   "TOES!"
+  ],
+  [
+   135.94,
+   "new place",
+   "Gizmo's lab head and toes"
+  ],
+  [
+   136.5,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   137.78,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   137.78,
+   "word",
+   "HEAD, TOES!"
+  ],
+  [
+   140.31,
+   "new place",
+   "the picture board (blueprint) question 5"
+  ],
+  [
+   140.51,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   142.11,
+   "sign",
+   "OXYGEN"
+  ],
+  [
+   142.46,
+   "sign",
+   "SAND"
+  ],
+  [
+   144.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   144.71,
+   "thinking dot",
+   "2"
+  ],
+  [
+   145.39,
+   "thinking dot",
+   "3"
+  ],
+  [
+   145.87,
+   "answer",
+   "OXYGEN"
+  ],
+  [
+   147.19,
+   "new place",
+   "Gizmo's lab breathe"
+  ],
+  [
+   148.12,
+   "action",
+   "air goes in and out"
+  ],
+  [
+   149.23,
+   "action",
+   "Gizmo opens his arms wide"
+  ],
+  [
+   149.23,
+   "word",
+   "BREATHE IN!"
+  ],
+  [
+   153.75,
+   "new place",
+   "the picture board (blueprint) to the lungs"
+  ],
+  [
+   154.44,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   155.49,
+   "action",
+   "a part lights up"
+  ],
+  [
+   155.49,
+   "word",
+   "LUNGS!"
+  ],
+  [
+   156.56,
+   "new shot",
+   "the picture board (blueprint) picks up oxygen"
+  ],
+  [
+   157.62,
+   "action",
+   "the blood in the lungs picks up oxygen"
+  ],
+  [
+   158.06,
+   "word",
+   "OXYGEN!"
+  ],
+  [
+   159.38,
+   "new shot",
+   "the picture board (blueprint) question 6"
+  ],
+  [
+   159.57,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   162.0,
+   "sign",
+   "LUNGS"
+  ],
+  [
+   162.35,
+   "sign",
+   "TOES"
+  ],
+  [
+   164.42,
+   "thinking dot",
+   "1"
+  ],
+  [
+   165.09,
+   "thinking dot",
+   "2"
+  ],
+  [
+   165.77,
+   "thinking dot",
+   "3"
+  ],
+  [
+   166.25,
+   "answer",
+   "LUNGS"
+  ],
+  [
+   167.5,
+   "new shot",
+   "the picture board (blueprint) all around"
+  ],
+  [
+   169.25,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   169.66,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   169.66,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   170.88,
+   "word",
+   "ALL AROUND!"
+  ],
+  [
+   172.19,
+   "new shot",
+   "the picture board (blueprint) out and back"
+  ],
+  [
+   174.45,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   174.45,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   174.45,
+   "word",
+   "AWAY"
+  ],
+  [
+   175.87,
+   "action",
+   "blue lines: the way back to the heart"
+  ],
+  [
+   175.87,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   175.87,
+   "word",
+   "BACK!"
+  ],
+  [
+   176.88,
+   "new shot",
+   "the picture board (blueprint) question 7"
+  ],
+  [
+   177.07,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   179.22,
+   "sign",
+   "YES"
+  ],
+  [
+   179.57,
+   "sign",
+   "NO"
+  ],
+  [
+   181.01,
+   "thinking dot",
+   "1"
+  ],
+  [
+   181.68,
+   "thinking dot",
+   "2"
+  ],
+  [
+   182.35,
+   "thinking dot",
+   "3"
+  ],
+  [
+   182.84,
+   "answer",
+   "YES"
+  ],
+  [
+   184.06,
+   "new shot",
+   "the picture board (blueprint) over and over"
+  ],
+  [
+   184.85,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   185.32,
+   "action",
+   "the blood comes back"
+  ],
+  [
+   185.98,
+   "word",
+   "AGAIN AND AGAIN!"
+  ],
+  [
+   187.5,
+   "new place",
+   "the flower meadow draw a circle"
+  ],
+  [
+   188.26,
+   "action",
+   "Gizmo opens his arms wide"
+  ],
+  [
+   188.26,
+   "action",
+   "Gizmo sways"
+  ],
+  [
+   188.26,
+   "word",
+   "ROUND!"
+  ],
+  [
+   192.19,
+   "new place",
+   "Gizmo's work bench say it 2"
+  ],
+  [
+   194.05,
+   "word",
+   "PUMP THE BLOOD!"
+  ],
+  [
+   194.41,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   195.31,
+   "new place",
+   "the picture board (blueprint) question 7b"
+  ],
+  [
+   195.61,
+   "action",
+   "the blood in the lungs picks up oxygen"
+  ],
+  [
+   197.94,
+   "sign",
+   "LUNGS"
+  ],
+  [
+   198.29,
+   "sign",
+   "HAIR"
+  ],
+  [
+   200.1,
+   "thinking dot",
+   "1"
+  ],
+  [
+   200.77,
+   "thinking dot",
+   "2"
+  ],
+  [
+   201.44,
+   "thinking dot",
+   "3"
+  ],
+  [
+   201.93,
+   "answer",
+   "LUNGS"
+  ],
+  [
+   203.12,
+   "new shot",
+   "the picture board (blueprint) part 2 recap"
+  ],
+  [
+   205.21,
+   "action",
+   "red lines: the way away from the heart"
+  ],
+  [
+   205.21,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   205.96,
+   "word",
+   "ROUND AND BACK!"
+  ],
+  [
+   206.68,
+   "action",
+   "blue lines: the way back to the heart"
+  ],
+  [
+   206.68,
+   "action",
+   "the blood goes along"
+  ],
+  [
+   207.81,
+   "new shot",
+   "the picture board (blueprint) lub dub"
+  ],
+  [
+   208.01,
+   "action",
+   "the dot runs along the heartbeat line"
+  ],
+  [
+   210.48,
+   "word",
+   "LUB, DUB!"
+  ],
+  [
+   211.88,
+   "new place",
+   "Gizmo's lab clap lub dub"
+  ],
+  [
+   212.0,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   212.0,
+   "word",
+   "CLAP, CLAP!"
+  ],
+  [
+   213.96,
+   "action",
+   "Gizmo moves his arms"
+  ],
+  [
+   215.01,
+   "action",
+   "Gizmo moves his arms"
+  ],
+  [
+   217.81,
+   "new place",
+   "the picture board (blueprint) valves"
+  ],
+  [
+   219.37,
+   "action",
+   "a part lights up"
+  ],
+  [
+   219.37,
+   "action",
+   "a part lights up"
+  ],
+  [
+   220.39,
+   "word",
+   "VALVES"
+  ],
+  [
+   221.56,
+   "new shot",
+   "the picture board (blueprint) doors close"
+  ],
+  [
+   222.33,
+   "action",
+   "the little doors close, lub, dub"
+  ],
+  [
+   224.26,
+   "word",
+   "LUB, DUB!"
+  ],
+  [
+   225.62,
+   "new shot",
+   "the picture board (blueprint) question 8"
+  ],
+  [
+   225.82,
+   "action",
+   "the little doors close, lub, dub"
+  ],
+  [
+   228.21,
+   "sign",
+   "DOORS"
+  ],
+  [
+   228.56,
+   "sign",
+   "A DRUM"
+  ],
+  [
+   231.35,
+   "thinking dot",
+   "1"
+  ],
+  [
+   232.03,
+   "thinking dot",
+   "2"
+  ],
+  [
+   232.7,
+   "thinking dot",
+   "3"
+  ],
+  [
+   233.19,
+   "answer",
+   "DOORS"
+  ],
+  [
+   234.38,
+   "new shot",
+   "the picture board (blueprint) four rooms"
+  ],
+  [
+   235.41,
+   "word",
+   "4 ROOMS!"
+  ],
+  [
+   237.17,
+   "action",
+   "the top rooms light up"
+  ],
+  [
+   238.29,
+   "action",
+   "the bottom rooms light up"
+  ],
+  [
+   239.38,
+   "new shot",
+   "the picture board (blueprint) question 9"
+  ],
+  [
+   239.57,
+   "action",
+   "the little doors close, lub, dub"
+  ],
+  [
+   241.32,
+   "sign",
+   "TWO"
+  ],
+  [
+   241.67,
+   "sign",
+   "FOUR"
+  ],
+  [
+   243.11,
+   "thinking dot",
+   "1"
+  ],
+  [
+   243.79,
+   "thinking dot",
+   "2"
+  ],
+  [
+   244.46,
+   "thinking dot",
+   "3"
+  ],
+  [
+   244.95,
+   "answer",
+   "FOUR"
+  ],
+  [
+   246.25,
+   "new shot",
+   "the picture board (blueprint) count rooms"
+  ],
+  [
+   248.14,
+   "action",
+   "room 1"
+  ],
+  [
+   248.14,
+   "word",
+   "1"
+  ],
+  [
+   248.36,
+   "action",
+   "room 2"
+  ],
+  [
+   248.36,
+   "word",
+   "2"
+  ],
+  [
+   248.64,
+   "action",
+   "room 3"
+  ],
+  [
+   248.64,
+   "word",
+   "3"
+  ],
+  [
+   248.98,
+   "action",
+   "room 4"
+  ],
+  [
+   248.98,
+   "word",
+   "4"
+  ],
+  [
+   250.0,
+   "new shot",
+   "the picture board (blueprint) listen again"
+  ],
+  [
+   250.15,
+   "action",
+   "the dot runs along the heartbeat line"
+  ],
+  [
+   253.52,
+   "word",
+   "NEVER STOPS!"
+  ],
+  [
+   255.0,
+   "new place",
+   "the sunny park after the rain run and play"
+  ],
+  [
+   255.36,
+   "action",
+   "the ball bounces"
+  ],
+  [
+   255.75,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   257.27,
+   "word",
+   "FASTER!"
+  ],
+  [
+   258.44,
+   "new place",
+   "the picture board (blueprint) why faster"
+  ],
+  [
+   258.54,
+   "action",
+   "the dot runs along the heartbeat line"
+  ],
+  [
+   260.46,
+   "word",
+   "MORE OXYGEN!"
+  ],
+  [
+   262.81,
+   "new place",
+   "the sunny park after the rain march"
+  ],
+  [
+   263.28,
+   "word",
+   "MARCH!"
+  ],
+  [
+   264.81,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   265.24,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   265.24,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   265.55,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   267.81,
+   "new place",
+   "the flower meadow hop five"
+  ],
+  [
+   268.16,
+   "word",
+   "HOP, HOP!"
+  ],
+  [
+   268.41,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   269.84,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   270.05,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   270.32,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   270.63,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   272.5,
+   "new place",
+   "Gizmo's lab feel it faster"
+  ],
+  [
+   273.16,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   275.88,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   275.88,
+   "word",
+   "FASTER?"
+  ],
+  [
+   279.06,
+   "new place",
+   "the picture board (blueprint) question 10"
+  ],
+  [
+   279.26,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   281.42,
+   "sign",
+   "FASTER"
+  ],
+  [
+   281.77,
+   "sign",
+   "SLOWER"
+  ],
+  [
+   283.49,
+   "thinking dot",
+   "1"
+  ],
+  [
+   284.16,
+   "thinking dot",
+   "2"
+  ],
+  [
+   284.83,
+   "thinking dot",
+   "3"
+  ],
+  [
+   285.32,
+   "answer",
+   "FASTER"
+  ],
+  [
+   286.56,
+   "new place",
+   "the hills with a river keep it healthy"
+  ],
+  [
+   286.76,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   288.92,
+   "action",
+   "a soft light around the heart"
+  ],
+  [
+   288.92,
+   "word",
+   "STRONG HEART!"
+  ],
+  [
+   289.69,
+   "new place",
+   "Gizmo's work bench say it 3"
+  ],
+  [
+   291.21,
+   "word",
+   "LUB, DUB!"
+  ],
+  [
+   292.84,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   293.75,
+   "new place",
+   "Gizmo's lab quiz time"
+  ],
+  [
+   293.96,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   293.96,
+   "word",
+   "QUIZ TIME!"
+  ],
+  [
+   296.88,
+   "new place",
+   "the picture board (blueprint) quiz 1"
+  ],
+  [
+   297.07,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   299.65,
+   "sign",
+   "A FIST"
+  ],
+  [
+   300.0,
+   "sign",
+   "A BUS"
+  ],
+  [
+   302.21,
+   "thinking dot",
+   "1"
+  ],
+  [
+   302.88,
+   "thinking dot",
+   "2"
+  ],
+  [
+   303.56,
+   "thinking dot",
+   "3"
+  ],
+  [
+   304.04,
+   "answer",
+   "A FIST"
+  ],
+  [
+   305.31,
+   "new shot",
+   "the picture board (blueprint) quiz 1 answer"
+  ],
+  [
+   305.64,
+   "action",
+   "a part lights up"
+  ],
+  [
+   305.64,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   305.64,
+   "word",
+   "YOUR FIST!"
+  ],
+  [
+   306.5,
+   "action",
+   "a soft light around the heart"
+  ],
+  [
+   309.06,
+   "new shot",
+   "the picture board (blueprint) quiz 2"
+  ],
+  [
+   309.26,
+   "action",
+   "the heart squeezes and relaxes"
+  ],
+  [
+   311.88,
+   "sign",
+   "LUNGS"
+  ],
+  [
+   312.23,
+   "sign",
+   "EARS"
+  ],
+  [
+   314.24,
+   "thinking dot",
+   "1"
+  ],
+  [
+   314.91,
+   "thinking dot",
+   "2"
+  ],
+  [
+   315.59,
+   "thinking dot",
+   "3"
+  ],
+  [
+   316.07,
+   "answer",
+   "LUNGS"
+  ],
+  [
+   317.19,
+   "new shot",
+   "the picture board (blueprint) quiz 2 answer"
+  ],
+  [
+   317.8,
+   "action",
+   "the blood in the lungs picks up oxygen"
+  ],
+  [
+   317.8,
+   "word",
+   "LUNGS!"
+  ],
+  [
+   320.94,
+   "new shot",
+   "the picture board (blueprint) quiz 3"
+  ],
+  [
+   321.14,
+   "action",
+   "the little doors close, lub, dub"
+  ],
+  [
+   323.87,
+   "sign",
+   "DOORS"
+  ],
+  [
+   324.22,
+   "sign",
+   "BELLS"
+  ],
+  [
+   326.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   326.71,
+   "thinking dot",
+   "2"
+  ],
+  [
+   327.38,
+   "thinking dot",
+   "3"
+  ],
+  [
+   327.87,
+   "answer",
+   "DOORS"
+  ],
+  [
+   329.06,
+   "new shot",
+   "the picture board (blueprint) quiz 3 answer"
+  ],
+  [
+   331.03,
+   "action",
+   "the little doors close, lub, dub"
+  ],
+  [
+   332.12,
+   "word",
+   "LUB, DUB!"
+  ],
+  [
+   333.44,
+   "new place",
+   "the sunny park after the rain goodbye"
+  ],
+  [
+   336.95,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   336.95,
+   "word",
+   "BYE-BYE!"
+  ],
+  [
+   337.45,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   339.06,
+   "action",
+   "the gears turn"
+  ],
+  [
+   339.06,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   339.11,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   339.88,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   340.19,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   340.5,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   341.25,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   341.25,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   341.25,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   342.19,
+   "action",
+   "the gears turn"
+  ],
+  [
+   342.19,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   342.38,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   344.06,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   344.69,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   345.0,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   345.31,
+   "action",
+   "out of the flash"
+  ],
+  [
+   345.31,
+   "action",
+   "the rays turn"
+  ],
+  [
+   345.31,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   345.76,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   346.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   346.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   346.69,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   347.01,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   347.2,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   347.81,
+   "action",
+   "confetti"
+  ],
+  [
+   347.81,
+   "action",
+   "the line draws on"
+  ],
+  [
+   348.12,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   348.32,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   348.44,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   349.12,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   349.25,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   350.0,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   350.62,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   350.75,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   351.25,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   352.17,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   352.17,
+   "action",
+   "confetti"
+  ],
+  [
+   352.17,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   352.47,
+   "action",
+   "the letters do a wave"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "paper_gz",
+   "say": "How does your heart work? What makes that thump, thump?",
+   "t0": 0.0,
+   "t1": 4.0625,
+   "v0": 0.42,
+   "dur": 3.3076666666666665,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.27
+    ],
+    [
+     "does",
+     0.27,
+     0.42
+    ],
+    [
+     "your",
+     0.42,
+     0.54
+    ],
+    [
+     "heart",
+     0.54,
+     0.93
+    ],
+    [
+     "work?",
+     0.93,
+     1.46
+    ],
+    [
+     "What",
+     1.77,
+     1.94
+    ],
+    [
+     "makes",
+     1.94,
+     2.25
+    ],
+    [
+     "that",
+     2.25,
+     2.46
+    ],
+    [
+     "thump,",
+     2.46,
+     2.8
+    ],
+    [
+     "thump?",
+     2.8,
+     3.308
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "hook: the heart beats",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Thump, thump! Your heart beats inside your chest.",
+   "t0": 4.0625,
+   "t1": 7.8125,
+   "v0": 4.267666666666667,
+   "dur": 3.0509583333333334,
+   "words": [
+    [
+     "Thump,",
+     0.01,
+     0.35
+    ],
+    [
+     "thump!",
+     0.35,
+     0.8
+    ],
+    [
+     "Your",
+     1.09,
+     1.22
+    ],
+    [
+     "heart",
+     1.22,
+     1.53
+    ],
+    [
+     "beats",
+     1.53,
+     1.92
+    ],
+    [
+     "inside",
+     1.92,
+     2.34
+    ],
+    [
+     "your",
+     2.34,
+     2.44
+    ],
+    [
+     "chest.",
+     2.44,
+     3.05
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: the heart in the chest",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Hi! I'm Gizmo. Let's find out how your heart works!",
+   "t0": 7.8125,
+   "t1": 12.1875,
+   "v0": 7.858625000000001,
+   "dur": 3.8041666666666667,
+   "words": [
+    [
+     "Hi!",
+     0.02,
+     0.49
+    ],
+    [
+     "I'm",
+     0.49,
+     0.73
+    ],
+    [
+     "Gizmo.",
+     0.73,
+     1.39
+    ],
+    [
+     "Let's",
+     1.8,
+     2.04
+    ],
+    [
+     "find",
+     2.04,
+     2.38
+    ],
+    [
+     "out",
+     2.38,
+     2.51
+    ],
+    [
+     "how",
+     2.51,
+     2.69
+    ],
+    [
+     "your",
+     2.69,
+     2.84
+    ],
+    [
+     "heart",
+     2.84,
+     3.19
+    ],
+    [
+     "works!",
+     3.19,
+     3.8
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Gizmo",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 12.1875,
+   "t1": 15.3125,
+   "v0": 12.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 15.3125,
+   "t1": 18.4375,
+   "v0": 15.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 18.4375,
+   "t1": 23.75,
+   "v0": 18.75,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 23.75,
+   "t1": 26.5625,
+   "v0": 23.87,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Welcome to my lab, body explorers!",
+   "t0": 26.5625,
+   "t1": 30.0,
+   "v0": 26.83166666666667,
+   "dur": 2.739125,
+   "words": [
+    [
+     "Welcome",
+     0.01,
+     0.46
+    ],
+    [
+     "to",
+     0.46,
+     0.56
+    ],
+    [
+     "my",
+     0.56,
+     0.77
+    ],
+    [
+     "lab,",
+     0.77,
+     1.28
+    ],
+    [
+     "body",
+     1.28,
+     1.78
+    ],
+    [
+     "explorers!",
+     1.78,
+     2.739
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "lab wide",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "I am a robot, so I have no heart. But you do!",
+   "t0": 30.0,
+   "t1": 33.75,
+   "v0": 30.110791666666675,
+   "dur": 3.4284166666666667,
+   "words": [
+    [
+     "I",
+     0.04,
+     0.21
+    ],
+    [
+     "am",
+     0.21,
+     0.38
+    ],
+    [
+     "a",
+     0.38,
+     0.41
+    ],
+    [
+     "robot,",
+     0.41,
+     1.08
+    ],
+    [
+     "so",
+     1.08,
+     1.28
+    ],
+    [
+     "I",
+     1.28,
+     1.34
+    ],
+    [
+     "have",
+     1.34,
+     1.52
+    ],
+    [
+     "no",
+     1.52,
+     1.73
+    ],
+    [
+     "heart.",
+     1.73,
+     2.27
+    ],
+    [
+     "But",
+     2.58,
+     2.79
+    ],
+    [
+     "you",
+     2.79,
+     2.96
+    ],
+    [
+     "do!",
+     2.96,
+     3.428
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "no heart",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart is in your chest, a little to the left of the middle.",
+   "t0": 33.75,
+   "t1": 38.4375,
+   "v0": 34.07920833333334,
+   "dur": 3.97775,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.19
+    ],
+    [
+     "heart",
+     0.19,
+     0.67
+    ],
+    [
+     "is",
+     0.67,
+     0.88
+    ],
+    [
+     "in",
+     0.88,
+     1.07
+    ],
+    [
+     "your",
+     1.07,
+     1.26
+    ],
+    [
+     "chest,",
+     1.26,
+     1.92
+    ],
+    [
+     "a",
+     2.29,
+     2.33
+    ],
+    [
+     "little",
+     2.33,
+     2.69
+    ],
+    [
+     "to",
+     2.69,
+     2.82
+    ],
+    [
+     "the",
+     2.82,
+     2.92
+    ],
+    [
+     "left",
+     2.92,
+     3.32
+    ],
+    [
+     "of",
+     3.32,
+     3.45
+    ],
+    [
+     "the",
+     3.45,
+     3.52
+    ],
+    [
+     "middle.",
+     3.52,
+     3.978
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "where it is",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Put your hand on your chest. Can you feel a beat?",
+   "t0": 38.4375,
+   "t1": 43.75,
+   "v0": 38.59695833333334,
+   "dur": 3.236125,
+   "words": [
+    [
+     "Put",
+     0.0,
+     0.18
+    ],
+    [
+     "your",
+     0.18,
+     0.34
+    ],
+    [
+     "hand",
+     0.34,
+     0.73
+    ],
+    [
+     "on",
+     0.73,
+     0.85
+    ],
+    [
+     "your",
+     0.85,
+     0.96
+    ],
+    [
+     "chest.",
+     0.96,
+     1.62
+    ],
+    [
+     "Can",
+     1.98,
+     2.14
+    ],
+    [
+     "you",
+     2.14,
+     2.24
+    ],
+    [
+     "feel",
+     2.24,
+     2.62
+    ],
+    [
+     "a",
+     2.62,
+     2.67
+    ],
+    [
+     "beat?",
+     2.67,
+     3.236
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hand on chest",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Where is your heart? In your chest, or in your foot?",
+   "t0": 43.75,
+   "t1": 50.625,
+   "v0": 43.97308333333334,
+   "dur": 3.211125,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.27
+    ],
+    [
+     "is",
+     0.27,
+     0.39
+    ],
+    [
+     "your",
+     0.39,
+     0.52
+    ],
+    [
+     "heart?",
+     0.52,
+     1.09
+    ],
+    [
+     "In",
+     1.42,
+     1.53
+    ],
+    [
+     "your",
+     1.53,
+     1.64
+    ],
+    [
+     "chest,",
+     1.64,
+     2.22
+    ],
+    [
+     "or",
+     2.22,
+     2.44
+    ],
+    [
+     "in",
+     2.44,
+     2.57
+    ],
+    [
+     "your",
+     2.57,
+     2.7
+    ],
+    [
+     "foot?",
+     2.7,
+     3.21
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "In your chest! Your heart is really a muscle.",
+   "t0": 50.625,
+   "t1": 54.375,
+   "v0": 50.92420833333335,
+   "dur": 3.1344583333333333,
+   "words": [
+    [
+     "In",
+     0.0,
+     0.14
+    ],
+    [
+     "your",
+     0.14,
+     0.31
+    ],
+    [
+     "chest!",
+     0.31,
+     1.0
+    ],
+    [
+     "Your",
+     1.29,
+     1.49
+    ],
+    [
+     "heart",
+     1.49,
+     1.95
+    ],
+    [
+     "is",
+     1.95,
+     2.08
+    ],
+    [
+     "really",
+     2.08,
+     2.51
+    ],
+    [
+     "a",
+     2.51,
+     2.57
+    ],
+    [
+     "muscle.",
+     2.57,
+     3.13
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "a muscle",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Is your heart a muscle, or a balloon?",
+   "t0": 54.375,
+   "t1": 60.3125,
+   "v0": 54.59866666666668,
+   "dur": 2.248375,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.16
+    ],
+    [
+     "your",
+     0.16,
+     0.32
+    ],
+    [
+     "heart",
+     0.32,
+     0.64
+    ],
+    [
+     "a",
+     0.64,
+     0.68
+    ],
+    [
+     "muscle,",
+     0.68,
+     1.2
+    ],
+    [
+     "or",
+     1.37,
+     1.59
+    ],
+    [
+     "a",
+     1.59,
+     1.64
+    ],
+    [
+     "balloon?",
+     1.64,
+     2.248
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A muscle! It squeezes, and pumps blood around your body.",
+   "t0": 60.3125,
+   "t1": 65.0,
+   "v0": 60.587041666666686,
+   "dur": 3.989,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "muscle!",
+     0.06,
+     0.67
+    ],
+    [
+     "It",
+     0.86,
+     0.97
+    ],
+    [
+     "squeezes,",
+     0.97,
+     1.81
+    ],
+    [
+     "and",
+     2.08,
+     2.25
+    ],
+    [
+     "pumps",
+     2.25,
+     2.59
+    ],
+    [
+     "blood",
+     2.59,
+     3.02
+    ],
+    [
+     "around",
+     3.02,
+     3.35
+    ],
+    [
+     "your",
+     3.35,
+     3.45
+    ],
+    [
+     "body.",
+     3.45,
+     3.989
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "it pumps",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Make a fist. Squeeze it, and open it, like a heart pumping!",
+   "t0": 65.0,
+   "t1": 71.25,
+   "v0": 65.11604166666669,
+   "dur": 3.922833333333333,
+   "words": [
+    [
+     "Make",
+     0.0,
+     0.21
+    ],
+    [
+     "a",
+     0.21,
+     0.25
+    ],
+    [
+     "fist.",
+     0.25,
+     0.88
+    ],
+    [
+     "Squeeze",
+     1.27,
+     1.8
+    ],
+    [
+     "it,",
+     1.8,
+     1.94
+    ],
+    [
+     "and",
+     1.94,
+     2.06
+    ],
+    [
+     "open",
+     2.06,
+     2.54
+    ],
+    [
+     "it,",
+     2.54,
+     2.7
+    ],
+    [
+     "like",
+     2.7,
+     2.9
+    ],
+    [
+     "a",
+     2.9,
+     2.96
+    ],
+    [
+     "heart",
+     2.96,
+     3.32
+    ],
+    [
+     "pumping!",
+     3.32,
+     3.92
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "squeeze a fist",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Look at your fist. Your heart is about the size of your fist!",
+   "t0": 71.25,
+   "t1": 75.9375,
+   "v0": 71.37887500000002,
+   "dur": 4.2164166666666665,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.29
+    ],
+    [
+     "at",
+     0.29,
+     0.38
+    ],
+    [
+     "your",
+     0.38,
+     0.55
+    ],
+    [
+     "fist.",
+     0.55,
+     1.19
+    ],
+    [
+     "Your",
+     1.57,
+     1.77
+    ],
+    [
+     "heart",
+     1.77,
+     2.25
+    ],
+    [
+     "is",
+     2.25,
+     2.38
+    ],
+    [
+     "about",
+     2.38,
+     2.67
+    ],
+    [
+     "the",
+     2.67,
+     2.76
+    ],
+    [
+     "size",
+     2.76,
+     3.36
+    ],
+    [
+     "of",
+     3.36,
+     3.44
+    ],
+    [
+     "your",
+     3.44,
+     3.58
+    ],
+    [
+     "fist!",
+     3.58,
+     4.216
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "fist size",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Hold up your fist, and look. That is about how big your heart is!",
+   "t0": 75.9375,
+   "t1": 82.1875,
+   "v0": 76.13529166666669,
+   "dur": 4.450875,
+   "words": [
+    [
+     "Hold",
+     0.01,
+     0.33
+    ],
+    [
+     "up",
+     0.33,
+     0.49
+    ],
+    [
+     "your",
+     0.49,
+     0.61
+    ],
+    [
+     "fist,",
+     0.61,
+     1.26
+    ],
+    [
+     "and",
+     1.26,
+     1.38
+    ],
+    [
+     "look.",
+     1.38,
+     1.86
+    ],
+    [
+     "That",
+     2.3,
+     2.53
+    ],
+    [
+     "is",
+     2.53,
+     2.65
+    ],
+    [
+     "about",
+     2.65,
+     2.92
+    ],
+    [
+     "how",
+     2.92,
+     3.12
+    ],
+    [
+     "big",
+     3.12,
+     3.45
+    ],
+    [
+     "your",
+     3.45,
+     3.6
+    ],
+    [
+     "heart",
+     3.6,
+     3.99
+    ],
+    [
+     "is!",
+     3.99,
+     4.45
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hold up a fist",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "How big is your heart? As big as your fist, or as big as a car?",
+   "t0": 82.1875,
+   "t1": 90.9375,
+   "v0": 82.5261666666667,
+   "dur": 4.761083333333334,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.24
+    ],
+    [
+     "big",
+     0.24,
+     0.58
+    ],
+    [
+     "is",
+     0.58,
+     0.71
+    ],
+    [
+     "your",
+     0.71,
+     0.87
+    ],
+    [
+     "heart?",
+     0.87,
+     1.43
+    ],
+    [
+     "As",
+     1.86,
+     2.07
+    ],
+    [
+     "big",
+     2.07,
+     2.36
+    ],
+    [
+     "as",
+     2.36,
+     2.49
+    ],
+    [
+     "your",
+     2.49,
+     2.62
+    ],
+    [
+     "fist,",
+     2.62,
+     3.2
+    ],
+    [
+     "or",
+     3.2,
+     3.45
+    ],
+    [
+     "as",
+     3.45,
+     3.6
+    ],
+    [
+     "big",
+     3.6,
+     3.9
+    ],
+    [
+     "as",
+     3.9,
+     4.04
+    ],
+    [
+     "a",
+     4.04,
+     4.1
+    ],
+    [
+     "car?",
+     4.1,
+     4.76
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart pumps all day, and all night, all the time!",
+   "t0": 90.9375,
+   "t1": 95.0,
+   "v0": 91.02725000000004,
+   "dur": 3.4840416666666667,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.15
+    ],
+    [
+     "heart",
+     0.15,
+     0.46
+    ],
+    [
+     "pumps",
+     0.46,
+     0.82
+    ],
+    [
+     "all",
+     0.82,
+     1.14
+    ],
+    [
+     "day,",
+     1.14,
+     1.61
+    ],
+    [
+     "and",
+     1.91,
+     2.04
+    ],
+    [
+     "all",
+     2.04,
+     2.24
+    ],
+    [
+     "night,",
+     2.24,
+     2.58
+    ],
+    [
+     "all",
+     2.58,
+     2.82
+    ],
+    [
+     "the",
+     2.82,
+     2.93
+    ],
+    [
+     "time!",
+     2.93,
+     3.48
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "day and night",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Even when you sleep at night, your heart keeps pumping.",
+   "t0": 95.0,
+   "t1": 98.75,
+   "v0": 95.05129166666671,
+   "dur": 3.449625,
+   "words": [
+    [
+     "Even",
+     0.0,
+     0.32
+    ],
+    [
+     "when",
+     0.32,
+     0.51
+    ],
+    [
+     "you",
+     0.51,
+     0.64
+    ],
+    [
+     "sleep",
+     0.64,
+     1.06
+    ],
+    [
+     "at",
+     1.06,
+     1.17
+    ],
+    [
+     "night,",
+     1.17,
+     1.65
+    ],
+    [
+     "your",
+     1.96,
+     2.16
+    ],
+    [
+     "heart",
+     2.16,
+     2.54
+    ],
+    [
+     "keeps",
+     2.54,
+     2.85
+    ],
+    [
+     "pumping.",
+     2.85,
+     3.45
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "night window",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart keeps on going, nice and calm.",
+   "t0": 98.75,
+   "t1": 102.5,
+   "v0": 99.04091666666672,
+   "dur": 2.977708333333333,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.16
+    ],
+    [
+     "heart",
+     0.16,
+     0.47
+    ],
+    [
+     "keeps",
+     0.47,
+     0.83
+    ],
+    [
+     "on",
+     0.83,
+     0.99
+    ],
+    [
+     "going,",
+     0.99,
+     1.53
+    ],
+    [
+     "nice",
+     1.77,
+     2.29
+    ],
+    [
+     "and",
+     2.29,
+     2.43
+    ],
+    [
+     "calm.",
+     2.43,
+     2.978
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "asleep",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Sitting, walking, or playing, your heart is always working!",
+   "t0": 102.5,
+   "t1": 106.875,
+   "v0": 102.55862500000006,
+   "dur": 4.086458333333334,
+   "words": [
+    [
+     "Sitting,",
+     0.01,
+     0.6
+    ],
+    [
+     "walking,",
+     0.6,
+     1.16
+    ],
+    [
+     "or",
+     1.16,
+     1.32
+    ],
+    [
+     "playing,",
+     1.32,
+     1.95
+    ],
+    [
+     "your",
+     2.34,
+     2.49
+    ],
+    [
+     "heart",
+     2.49,
+     2.91
+    ],
+    [
+     "is",
+     2.91,
+     3.05
+    ],
+    [
+     "always",
+     3.05,
+     3.56
+    ],
+    [
+     "working!",
+     3.56,
+     4.086
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "always working",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "When does your heart pump? Only in the day, or all the time?",
+   "t0": 106.875,
+   "t1": 114.6875,
+   "v0": 107.18508333333341,
+   "dur": 3.81625,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.14
+    ],
+    [
+     "does",
+     0.14,
+     0.3
+    ],
+    [
+     "your",
+     0.3,
+     0.42
+    ],
+    [
+     "heart",
+     0.42,
+     0.82
+    ],
+    [
+     "pump?",
+     0.82,
+     1.29
+    ],
+    [
+     "Only",
+     1.7,
+     2.05
+    ],
+    [
+     "in",
+     2.05,
+     2.16
+    ],
+    [
+     "the",
+     2.16,
+     2.24
+    ],
+    [
+     "day,",
+     2.24,
+     2.69
+    ],
+    [
+     "or",
+     2.69,
+     2.92
+    ],
+    [
+     "all",
+     2.92,
+     3.17
+    ],
+    [
+     "the",
+     3.17,
+     3.27
+    ],
+    [
+     "time?",
+     3.27,
+     3.816
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 4",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. My heart is a muscle!",
+   "t0": 114.6875,
+   "t1": 117.8125,
+   "v0": 114.74133333333342,
+   "dur": 2.7625416666666665,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.32
+    ],
+    [
+     "it",
+     0.32,
+     0.42
+    ],
+    [
+     "with",
+     0.42,
+     0.65
+    ],
+    [
+     "me.",
+     0.65,
+     0.95
+    ],
+    [
+     "My",
+     1.31,
+     1.51
+    ],
+    [
+     "heart",
+     1.51,
+     1.97
+    ],
+    [
+     "is",
+     1.97,
+     2.1
+    ],
+    [
+     "a",
+     2.1,
+     2.16
+    ],
+    [
+     "muscle!",
+     2.16,
+     2.76
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A muscle, as big as your fist, pumping all the time!",
+   "t0": 117.8125,
+   "t1": 122.1875,
+   "v0": 118.04387500000009,
+   "dur": 3.6605833333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.07
+    ],
+    [
+     "muscle,",
+     0.07,
+     0.69
+    ],
+    [
+     "as",
+     0.69,
+     0.85
+    ],
+    [
+     "big",
+     0.85,
+     1.13
+    ],
+    [
+     "as",
+     1.13,
+     1.25
+    ],
+    [
+     "your",
+     1.25,
+     1.38
+    ],
+    [
+     "fist,",
+     1.38,
+     1.97
+    ],
+    [
+     "pumping",
+     2.25,
+     2.69
+    ],
+    [
+     "all",
+     2.69,
+     2.92
+    ],
+    [
+     "the",
+     2.92,
+     3.02
+    ],
+    [
+     "time!",
+     3.02,
+     3.66
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "part 1 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does your heart pump around your body? Blood!",
+   "t0": 122.1875,
+   "t1": 125.625,
+   "v0": 122.24445833333343,
+   "dur": 3.0995,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.3
+    ],
+    [
+     "your",
+     0.3,
+     0.41
+    ],
+    [
+     "heart",
+     0.41,
+     0.78
+    ],
+    [
+     "pump",
+     0.78,
+     1.1
+    ],
+    [
+     "around",
+     1.1,
+     1.41
+    ],
+    [
+     "your",
+     1.41,
+     1.51
+    ],
+    [
+     "body?",
+     1.51,
+     2.08
+    ],
+    [
+     "Blood!",
+     2.46,
+     3.099
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "blood",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Blood gives your body oxygen, and good things from your food.",
+   "t0": 125.625,
+   "t1": 130.625,
+   "v0": 125.88395833333344,
+   "dur": 4.41825,
+   "words": [
+    [
+     "Blood",
+     0.0,
+     0.41
+    ],
+    [
+     "gives",
+     0.41,
+     0.7
+    ],
+    [
+     "your",
+     0.7,
+     0.81
+    ],
+    [
+     "body",
+     0.81,
+     1.31
+    ],
+    [
+     "oxygen,",
+     1.31,
+     2.15
+    ],
+    [
+     "and",
+     2.52,
+     2.73
+    ],
+    [
+     "good",
+     2.73,
+     3.0
+    ],
+    [
+     "things",
+     3.0,
+     3.52
+    ],
+    [
+     "from",
+     3.52,
+     3.69
+    ],
+    [
+     "your",
+     3.69,
+     3.8
+    ],
+    [
+     "food.",
+     3.8,
+     4.418
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "oxygen and food",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "It carries oxygen to every part of you, from your head to your toes!",
+   "t0": 130.625,
+   "t1": 135.9375,
+   "v0": 130.84220833333342,
+   "dur": 4.704208333333334,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.12
+    ],
+    [
+     "carries",
+     0.12,
+     0.6
+    ],
+    [
+     "oxygen",
+     0.6,
+     1.32
+    ],
+    [
+     "to",
+     1.32,
+     1.42
+    ],
+    [
+     "every",
+     1.42,
+     1.77
+    ],
+    [
+     "part",
+     1.77,
+     2.12
+    ],
+    [
+     "of",
+     2.12,
+     2.24
+    ],
+    [
+     "you,",
+     2.24,
+     2.56
+    ],
+    [
+     "from",
+     2.93,
+     3.18
+    ],
+    [
+     "your",
+     3.18,
+     3.34
+    ],
+    [
+     "head",
+     3.34,
+     3.69
+    ],
+    [
+     "to",
+     3.69,
+     3.79
+    ],
+    [
+     "your",
+     3.79,
+     3.94
+    ],
+    [
+     "toes!",
+     3.94,
+     4.7
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "head to toes",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Touch your head, and then touch your toes!",
+   "t0": 135.9375,
+   "t1": 140.3125,
+   "v0": 136.08641666666674,
+   "dur": 2.422083333333333,
+   "words": [
+    [
+     "Touch",
+     0.0,
+     0.26
+    ],
+    [
+     "your",
+     0.26,
+     0.41
+    ],
+    [
+     "head,",
+     0.41,
+     0.95
+    ],
+    [
+     "and",
+     0.95,
+     1.1
+    ],
+    [
+     "then",
+     1.1,
+     1.27
+    ],
+    [
+     "touch",
+     1.27,
+     1.56
+    ],
+    [
+     "your",
+     1.56,
+     1.69
+    ],
+    [
+     "toes!",
+     1.69,
+     2.42
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "head and toes",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does blood carry? Oxygen, or sand?",
+   "t0": 140.3125,
+   "t1": 147.1875,
+   "v0": 140.64850000000007,
+   "dur": 2.9036666666666666,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.36
+    ],
+    [
+     "blood",
+     0.36,
+     0.67
+    ],
+    [
+     "carry?",
+     0.67,
+     1.15
+    ],
+    [
+     "Oxygen,",
+     1.46,
+     2.12
+    ],
+    [
+     "or",
+     2.12,
+     2.25
+    ],
+    [
+     "sand?",
+     2.25,
+     2.9
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Oxygen is in the air. Breathe in slowly, and breathe out.",
+   "t0": 147.1875,
+   "t1": 153.75,
+   "v0": 147.29216666666673,
+   "dur": 4.091166666666667,
+   "words": [
+    [
+     "Oxygen",
+     0.01,
+     0.68
+    ],
+    [
+     "is",
+     0.68,
+     0.83
+    ],
+    [
+     "in",
+     0.83,
+     0.93
+    ],
+    [
+     "the",
+     0.93,
+     1.08
+    ],
+    [
+     "air.",
+     1.08,
+     1.52
+    ],
+    [
+     "Breathe",
+     1.94,
+     2.28
+    ],
+    [
+     "in",
+     2.28,
+     2.41
+    ],
+    [
+     "slowly,",
+     2.41,
+     3.18
+    ],
+    [
+     "and",
+     3.18,
+     3.34
+    ],
+    [
+     "breathe",
+     3.34,
+     3.66
+    ],
+    [
+     "out.",
+     3.66,
+     4.09
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "breathe",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart sends blood to your lungs.",
+   "t0": 153.75,
+   "t1": 156.5625,
+   "v0": 153.9233333333334,
+   "dur": 2.203291666666667,
+   "words": [
+    [
+     "Your",
+     0.01,
+     0.16
+    ],
+    [
+     "heart",
+     0.16,
+     0.52
+    ],
+    [
+     "sends",
+     0.52,
+     0.89
+    ],
+    [
+     "blood",
+     0.89,
+     1.33
+    ],
+    [
+     "to",
+     1.33,
+     1.44
+    ],
+    [
+     "your",
+     1.44,
+     1.57
+    ],
+    [
+     "lungs.",
+     1.57,
+     2.2
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "to the lungs",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "There, the blood picks up oxygen!",
+   "t0": 156.5625,
+   "t1": 159.375,
+   "v0": 156.66662500000007,
+   "dur": 2.2280416666666665,
+   "words": [
+    [
+     "There,",
+     0.0,
+     0.39
+    ],
+    [
+     "the",
+     0.39,
+     0.51
+    ],
+    [
+     "blood",
+     0.51,
+     0.95
+    ],
+    [
+     "picks",
+     0.95,
+     1.23
+    ],
+    [
+     "up",
+     1.23,
+     1.39
+    ],
+    [
+     "oxygen!",
+     1.39,
+     2.228
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "picks up oxygen",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Where does blood pick up oxygen? In your lungs, or in your toes?",
+   "t0": 159.375,
+   "t1": 167.5,
+   "v0": 159.43466666666671,
+   "dur": 4.497083333333333,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.13
+    ],
+    [
+     "does",
+     0.13,
+     0.35
+    ],
+    [
+     "blood",
+     0.35,
+     0.71
+    ],
+    [
+     "pick",
+     0.71,
+     0.93
+    ],
+    [
+     "up",
+     0.93,
+     1.09
+    ],
+    [
+     "oxygen?",
+     1.09,
+     1.85
+    ],
+    [
+     "In",
+     2.29,
+     2.41
+    ],
+    [
+     "your",
+     2.41,
+     2.57
+    ],
+    [
+     "lungs,",
+     2.57,
+     3.22
+    ],
+    [
+     "or",
+     3.22,
+     3.42
+    ],
+    [
+     "in",
+     3.42,
+     3.58
+    ],
+    [
+     "your",
+     3.58,
+     3.73
+    ],
+    [
+     "toes?",
+     3.73,
+     4.497
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 6",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The lungs! Then your heart pumps the blood all around your body.",
+   "t0": 167.5,
+   "t1": 172.1875,
+   "v0": 167.67175000000003,
+   "dur": 4.207666666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "lungs!",
+     0.09,
+     0.83
+    ],
+    [
+     "Then",
+     1.21,
+     1.44
+    ],
+    [
+     "your",
+     1.44,
+     1.58
+    ],
+    [
+     "heart",
+     1.58,
+     1.99
+    ],
+    [
+     "pumps",
+     1.99,
+     2.37
+    ],
+    [
+     "the",
+     2.37,
+     2.46
+    ],
+    [
+     "blood",
+     2.46,
+     2.84
+    ],
+    [
+     "all",
+     2.84,
+     3.21
+    ],
+    [
+     "around",
+     3.21,
+     3.56
+    ],
+    [
+     "your",
+     3.56,
+     3.66
+    ],
+    [
+     "body.",
+     3.66,
+     4.208
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "all around",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Tubes called blood vessels carry it away, and bring it back!",
+   "t0": 172.1875,
+   "t1": 176.875,
+   "v0": 172.41941666666668,
+   "dur": 3.9665,
+   "words": [
+    [
+     "Tubes",
+     0.0,
+     0.46
+    ],
+    [
+     "called",
+     0.46,
+     0.76
+    ],
+    [
+     "blood",
+     0.76,
+     1.1
+    ],
+    [
+     "vessels",
+     1.1,
+     1.59
+    ],
+    [
+     "carry",
+     1.59,
+     1.95
+    ],
+    [
+     "it",
+     1.95,
+     2.03
+    ],
+    [
+     "away,",
+     2.03,
+     2.61
+    ],
+    [
+     "and",
+     2.94,
+     3.11
+    ],
+    [
+     "bring",
+     3.11,
+     3.34
+    ],
+    [
+     "it",
+     3.34,
+     3.45
+    ],
+    [
+     "back!",
+     3.45,
+     3.966
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "out and back",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Does the blood come back to your heart? Yes, or no?",
+   "t0": 176.875,
+   "t1": 184.0625,
+   "v0": 176.92591666666667,
+   "dur": 3.594291666666667,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.25
+    ],
+    [
+     "the",
+     0.25,
+     0.33
+    ],
+    [
+     "blood",
+     0.33,
+     0.7
+    ],
+    [
+     "come",
+     0.7,
+     0.97
+    ],
+    [
+     "back",
+     0.97,
+     1.23
+    ],
+    [
+     "to",
+     1.23,
+     1.34
+    ],
+    [
+     "your",
+     1.34,
+     1.45
+    ],
+    [
+     "heart?",
+     1.45,
+     1.94
+    ],
+    [
+     "Yes,",
+     2.29,
+     2.79
+    ],
+    [
+     "or",
+     2.79,
+     3.08
+    ],
+    [
+     "no?",
+     3.08,
+     3.59
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 7",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Yes! Away and back, over and over again.",
+   "t0": 184.0625,
+   "t1": 187.5,
+   "v0": 184.2602083333333,
+   "dur": 2.867125,
+   "words": [
+    [
+     "Yes!",
+     0.0,
+     0.59
+    ],
+    [
+     "Away",
+     0.59,
+     0.93
+    ],
+    [
+     "and",
+     0.93,
+     1.06
+    ],
+    [
+     "back,",
+     1.06,
+     1.72
+    ],
+    [
+     "over",
+     1.72,
+     2.06
+    ],
+    [
+     "and",
+     2.06,
+     2.16
+    ],
+    [
+     "over",
+     2.16,
+     2.43
+    ],
+    [
+     "again.",
+     2.43,
+     2.867
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "over and over",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Draw a big circle in the air with your finger!",
+   "t0": 187.5,
+   "t1": 192.1875,
+   "v0": 187.6673333333333,
+   "dur": 2.5079166666666666,
+   "words": [
+    [
+     "Draw",
+     0.01,
+     0.27
+    ],
+    [
+     "a",
+     0.27,
+     0.31
+    ],
+    [
+     "big",
+     0.31,
+     0.59
+    ],
+    [
+     "circle",
+     0.59,
+     1.11
+    ],
+    [
+     "in",
+     1.11,
+     1.21
+    ],
+    [
+     "the",
+     1.21,
+     1.39
+    ],
+    [
+     "air",
+     1.39,
+     1.65
+    ],
+    [
+     "with",
+     1.65,
+     1.85
+    ],
+    [
+     "your",
+     1.85,
+     1.95
+    ],
+    [
+     "finger!",
+     1.95,
+     2.508
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "draw a circle",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. My heart pumps blood!",
+   "t0": 192.1875,
+   "t1": 195.3125,
+   "v0": 192.31524999999993,
+   "dur": 2.7121666666666666,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.38
+    ],
+    [
+     "with",
+     0.38,
+     0.6
+    ],
+    [
+     "me.",
+     0.6,
+     0.9
+    ],
+    [
+     "My",
+     1.19,
+     1.34
+    ],
+    [
+     "heart",
+     1.34,
+     1.73
+    ],
+    [
+     "pumps",
+     1.73,
+     2.09
+    ],
+    [
+     "blood!",
+     2.09,
+     2.71
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Where does blood get oxygen? In your lungs, or in your hair?",
+   "t0": 195.3125,
+   "t1": 203.125,
+   "v0": 195.5674166666666,
+   "dur": 4.0412083333333335,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.13
+    ],
+    [
+     "does",
+     0.13,
+     0.35
+    ],
+    [
+     "blood",
+     0.35,
+     0.71
+    ],
+    [
+     "get",
+     0.71,
+     0.91
+    ],
+    [
+     "oxygen?",
+     0.91,
+     1.67
+    ],
+    [
+     "In",
+     2.11,
+     2.23
+    ],
+    [
+     "your",
+     2.23,
+     2.37
+    ],
+    [
+     "lungs,",
+     2.37,
+     3.02
+    ],
+    [
+     "or",
+     3.02,
+     3.23
+    ],
+    [
+     "in",
+     3.23,
+     3.35
+    ],
+    [
+     "your",
+     3.35,
+     3.53
+    ],
+    [
+     "hair?",
+     3.53,
+     4.04
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 7b",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The lungs! Then the heart sends it all around, and back again.",
+   "t0": 203.125,
+   "t1": 207.8125,
+   "v0": 203.3486249999999,
+   "dur": 4.112041666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "lungs!",
+     0.08,
+     0.82
+    ],
+    [
+     "Then",
+     1.22,
+     1.42
+    ],
+    [
+     "the",
+     1.42,
+     1.49
+    ],
+    [
+     "heart",
+     1.49,
+     1.86
+    ],
+    [
+     "sends",
+     1.86,
+     2.21
+    ],
+    [
+     "it",
+     2.21,
+     2.28
+    ],
+    [
+     "all",
+     2.28,
+     2.61
+    ],
+    [
+     "around,",
+     2.61,
+     3.18
+    ],
+    [
+     "and",
+     3.18,
+     3.33
+    ],
+    [
+     "back",
+     3.33,
+     3.64
+    ],
+    [
+     "again.",
+     3.64,
+     4.11
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "part 2 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Listen to a heartbeat. It sounds like lub, dub!",
+   "t0": 207.8125,
+   "t1": 211.875,
+   "v0": 208.00066666666658,
+   "dur": 3.4615416666666667,
+   "words": [
+    [
+     "Listen",
+     0.01,
+     0.44
+    ],
+    [
+     "to",
+     0.44,
+     0.61
+    ],
+    [
+     "a",
+     0.61,
+     0.64
+    ],
+    [
+     "heartbeat.",
+     0.64,
+     1.43
+    ],
+    [
+     "It",
+     1.74,
+     1.87
+    ],
+    [
+     "sounds",
+     1.87,
+     2.27
+    ],
+    [
+     "like",
+     2.27,
+     2.48
+    ],
+    [
+     "lub,",
+     2.48,
+     2.9
+    ],
+    [
+     "dub!",
+     2.9,
+     3.46
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "lub dub",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Clap with me, like a heartbeat. Lub, dub! Lub, dub!",
+   "t0": 211.875,
+   "t1": 217.8125,
+   "v0": 212.00220833333324,
+   "dur": 3.9642916666666665,
+   "words": [
+    [
+     "Clap",
+     0.0,
+     0.37
+    ],
+    [
+     "with",
+     0.37,
+     0.5
+    ],
+    [
+     "me,",
+     0.5,
+     0.63
+    ],
+    [
+     "like",
+     0.63,
+     0.83
+    ],
+    [
+     "a",
+     0.83,
+     0.87
+    ],
+    [
+     "heartbeat.",
+     0.87,
+     1.63
+    ],
+    [
+     "Lub,",
+     1.96,
+     2.36
+    ],
+    [
+     "dub!",
+     2.36,
+     3.01
+    ],
+    [
+     "Lub,",
+     3.01,
+     3.44
+    ],
+    [
+     "dub!",
+     3.44,
+     3.96
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "clap lub dub",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Inside your heart are little doors, called valves.",
+   "t0": 217.8125,
+   "t1": 221.5625,
+   "v0": 217.9064999999999,
+   "dur": 3.249041666666667,
+   "words": [
+    [
+     "Inside",
+     0.0,
+     0.55
+    ],
+    [
+     "your",
+     0.55,
+     0.67
+    ],
+    [
+     "heart",
+     0.67,
+     1.1
+    ],
+    [
+     "are",
+     1.1,
+     1.2
+    ],
+    [
+     "little",
+     1.2,
+     1.46
+    ],
+    [
+     "doors,",
+     1.46,
+     2.08
+    ],
+    [
+     "called",
+     2.08,
+     2.48
+    ],
+    [
+     "valves.",
+     2.48,
+     3.249
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "valves",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "When the doors close, they make the sound. Lub, dub!",
+   "t0": 221.5625,
+   "t1": 225.625,
+   "v0": 221.69554166666657,
+   "dur": 3.587083333333333,
+   "words": [
+    [
+     "When",
+     0.01,
+     0.12
+    ],
+    [
+     "the",
+     0.12,
+     0.2
+    ],
+    [
+     "doors",
+     0.2,
+     0.63
+    ],
+    [
+     "close,",
+     0.63,
+     0.99
+    ],
+    [
+     "they",
+     0.99,
+     1.1
+    ],
+    [
+     "make",
+     1.1,
+     1.33
+    ],
+    [
+     "the",
+     1.33,
+     1.42
+    ],
+    [
+     "sound.",
+     1.42,
+     2.14
+    ],
+    [
+     "Lub,",
+     2.56,
+     3.01
+    ],
+    [
+     "dub!",
+     3.01,
+     3.587
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "doors close",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What makes the heartbeat sound? Little doors closing, or a tiny drum?",
+   "t0": 225.625,
+   "t1": 234.375,
+   "v0": 225.8226249999999,
+   "dur": 5.045166666666667,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.18
+    ],
+    [
+     "makes",
+     0.18,
+     0.46
+    ],
+    [
+     "the",
+     0.46,
+     0.54
+    ],
+    [
+     "heartbeat",
+     0.54,
+     1.09
+    ],
+    [
+     "sound?",
+     1.09,
+     1.73
+    ],
+    [
+     "Little",
+     2.17,
+     2.39
+    ],
+    [
+     "doors",
+     2.39,
+     2.86
+    ],
+    [
+     "closing,",
+     2.86,
+     3.55
+    ],
+    [
+     "or",
+     3.55,
+     3.85
+    ],
+    [
+     "a",
+     3.85,
+     3.9
+    ],
+    [
+     "tiny",
+     3.9,
+     4.49
+    ],
+    [
+     "drum?",
+     4.49,
+     5.04
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 8",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your heart has four rooms. Two on top, and two on the bottom!",
+   "t0": 234.375,
+   "t1": 239.375,
+   "v0": 234.60779166666654,
+   "dur": 4.296791666666667,
+   "words": [
+    [
+     "Your",
+     0.01,
+     0.19
+    ],
+    [
+     "heart",
+     0.19,
+     0.55
+    ],
+    [
+     "has",
+     0.55,
+     0.8
+    ],
+    [
+     "four",
+     0.8,
+     1.18
+    ],
+    [
+     "rooms.",
+     1.18,
+     1.75
+    ],
+    [
+     "Two",
+     2.14,
+     2.38
+    ],
+    [
+     "on",
+     2.38,
+     2.56
+    ],
+    [
+     "top,",
+     2.56,
+     3.03
+    ],
+    [
+     "and",
+     3.03,
+     3.19
+    ],
+    [
+     "two",
+     3.19,
+     3.48
+    ],
+    [
+     "on",
+     3.48,
+     3.61
+    ],
+    [
+     "the",
+     3.61,
+     3.68
+    ],
+    [
+     "bottom!",
+     3.68,
+     4.297
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "four rooms",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "How many rooms are in your heart? Two, or four?",
+   "t0": 239.375,
+   "t1": 246.25,
+   "v0": 239.4445833333332,
+   "dur": 3.1818333333333335,
+   "words": [
+    [
+     "How",
+     0.0,
+     0.14
+    ],
+    [
+     "many",
+     0.14,
+     0.36
+    ],
+    [
+     "rooms",
+     0.36,
+     0.79
+    ],
+    [
+     "are",
+     0.79,
+     0.89
+    ],
+    [
+     "in",
+     0.89,
+     0.96
+    ],
+    [
+     "your",
+     0.96,
+     1.08
+    ],
+    [
+     "heart?",
+     1.08,
+     1.59
+    ],
+    [
+     "Two,",
+     1.88,
+     2.38
+    ],
+    [
+     "or",
+     2.38,
+     2.56
+    ],
+    [
+     "four?",
+     2.56,
+     3.18
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 9",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Four! Let's count them. One, two, three, four!",
+   "t0": 246.25,
+   "t1": 250.0,
+   "v0": 246.36641666666654,
+   "dur": 3.230958333333333,
+   "words": [
+    [
+     "Four!",
+     0.01,
+     0.44
+    ],
+    [
+     "Let's",
+     0.44,
+     0.71
+    ],
+    [
+     "count",
+     0.71,
+     1.06
+    ],
+    [
+     "them.",
+     1.06,
+     1.38
+    ],
+    [
+     "One,",
+     1.77,
+     1.99
+    ],
+    [
+     "two,",
+     1.99,
+     2.27
+    ],
+    [
+     "three,",
+     2.27,
+     2.61
+    ],
+    [
+     "four!",
+     2.61,
+     3.23
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count rooms",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Listen again. Lub, dub, lub, dub. Your heart never stops!",
+   "t0": 250.0,
+   "t1": 255.0,
+   "v0": 250.13737499999985,
+   "dur": 4.412583333333333,
+   "words": [
+    [
+     "Listen",
+     0.01,
+     0.44
+    ],
+    [
+     "again.",
+     0.44,
+     0.97
+    ],
+    [
+     "Lub,",
+     1.37,
+     1.71
+    ],
+    [
+     "dub,",
+     1.71,
+     2.03
+    ],
+    [
+     "lub,",
+     2.03,
+     2.36
+    ],
+    [
+     "dub.",
+     2.36,
+     2.92
+    ],
+    [
+     "Your",
+     2.92,
+     3.06
+    ],
+    [
+     "heart",
+     3.06,
+     3.38
+    ],
+    [
+     "never",
+     3.38,
+     3.67
+    ],
+    [
+     "stops!",
+     3.67,
+     4.41
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "listen again",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "When you run and play, your heart pumps faster!",
+   "t0": 255.0,
+   "t1": 258.4375,
+   "v0": 255.0899583333332,
+   "dur": 2.899958333333333,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.14
+    ],
+    [
+     "you",
+     0.14,
+     0.27
+    ],
+    [
+     "run",
+     0.27,
+     0.52
+    ],
+    [
+     "and",
+     0.52,
+     0.66
+    ],
+    [
+     "play,",
+     0.66,
+     1.09
+    ],
+    [
+     "your",
+     1.31,
+     1.47
+    ],
+    [
+     "heart",
+     1.47,
+     1.83
+    ],
+    [
+     "pumps",
+     1.83,
+     2.18
+    ],
+    [
+     "faster!",
+     2.18,
+     2.9
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "run and play",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Why? So your muscles get more oxygen, and can work harder.",
+   "t0": 258.4375,
+   "t1": 262.8125,
+   "v0": 258.52991666666657,
+   "dur": 3.958833333333333,
+   "words": [
+    [
+     "Why?",
+     0.01,
+     0.49
+    ],
+    [
+     "So",
+     0.69,
+     0.83
+    ],
+    [
+     "your",
+     0.83,
+     0.97
+    ],
+    [
+     "muscles",
+     0.97,
+     1.45
+    ],
+    [
+     "get",
+     1.45,
+     1.66
+    ],
+    [
+     "more",
+     1.66,
+     1.93
+    ],
+    [
+     "oxygen,",
+     1.93,
+     2.8
+    ],
+    [
+     "and",
+     2.8,
+     2.94
+    ],
+    [
+     "can",
+     2.94,
+     3.1
+    ],
+    [
+     "work",
+     3.1,
+     3.4
+    ],
+    [
+     "harder.",
+     3.4,
+     3.959
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "why faster",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Can you march in place? Left, right, left, right!",
+   "t0": 262.8125,
+   "t1": 267.8125,
+   "v0": 263.02874999999995,
+   "dur": 3.2942916666666666,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.14
+    ],
+    [
+     "you",
+     0.14,
+     0.25
+    ],
+    [
+     "march",
+     0.25,
+     0.7
+    ],
+    [
+     "in",
+     0.7,
+     0.83
+    ],
+    [
+     "place?",
+     0.83,
+     1.41
+    ],
+    [
+     "Left,",
+     1.78,
+     2.21
+    ],
+    [
+     "right,",
+     2.21,
+     2.52
+    ],
+    [
+     "left,",
+     2.52,
+     2.88
+    ],
+    [
+     "right!",
+     2.88,
+     3.29
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "march",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Let's hop five times! One, two, three, four, five!",
+   "t0": 267.8125,
+   "t1": 272.5,
+   "v0": 267.8630416666666,
+   "dur": 3.8056666666666668,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.3
+    ],
+    [
+     "hop",
+     0.3,
+     0.55
+    ],
+    [
+     "five",
+     0.55,
+     0.91
+    ],
+    [
+     "times!",
+     0.91,
+     1.61
+    ],
+    [
+     "One,",
+     1.98,
+     2.19
+    ],
+    [
+     "two,",
+     2.19,
+     2.46
+    ],
+    [
+     "three,",
+     2.46,
+     2.77
+    ],
+    [
+     "four,",
+     2.77,
+     3.16
+    ],
+    [
+     "five!",
+     3.16,
+     3.806
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hop five",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Now, hand on your chest. Is your heart beating faster?",
+   "t0": 272.5,
+   "t1": 279.0625,
+   "v0": 272.8087083333333,
+   "dur": 3.8257083333333335,
+   "words": [
+    [
+     "Now,",
+     0.01,
+     0.35
+    ],
+    [
+     "hand",
+     0.35,
+     0.74
+    ],
+    [
+     "on",
+     0.74,
+     0.84
+    ],
+    [
+     "your",
+     0.84,
+     0.94
+    ],
+    [
+     "chest.",
+     0.94,
+     1.6
+    ],
+    [
+     "Is",
+     1.99,
+     2.12
+    ],
+    [
+     "your",
+     2.12,
+     2.26
+    ],
+    [
+     "heart",
+     2.26,
+     2.63
+    ],
+    [
+     "beating",
+     2.63,
+     3.07
+    ],
+    [
+     "faster?",
+     3.07,
+     3.826
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "feel it faster",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "When you run and play, does your heart beat faster, or slower?",
+   "t0": 279.0625,
+   "t1": 286.5625,
+   "v0": 279.1744166666667,
+   "dur": 3.825083333333333,
+   "words": [
+    [
+     "When",
+     0.01,
+     0.14
+    ],
+    [
+     "you",
+     0.14,
+     0.27
+    ],
+    [
+     "run",
+     0.27,
+     0.52
+    ],
+    [
+     "and",
+     0.52,
+     0.65
+    ],
+    [
+     "play,",
+     0.65,
+     1.12
+    ],
+    [
+     "does",
+     1.4,
+     1.54
+    ],
+    [
+     "your",
+     1.54,
+     1.65
+    ],
+    [
+     "heart",
+     1.65,
+     1.97
+    ],
+    [
+     "beat",
+     1.97,
+     2.25
+    ],
+    [
+     "faster,",
+     2.25,
+     2.91
+    ],
+    [
+     "or",
+     2.91,
+     3.11
+    ],
+    [
+     "slower?",
+     3.11,
+     3.82
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 10",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ghills",
+   "say": "Running and swimming help keep your heart healthy!",
+   "t0": 286.5625,
+   "t1": 289.6875,
+   "v0": 286.7395,
+   "dur": 2.69525,
+   "words": [
+    [
+     "Running",
+     0.01,
+     0.55
+    ],
+    [
+     "and",
+     0.55,
+     0.72
+    ],
+    [
+     "swimming",
+     0.72,
+     1.22
+    ],
+    [
+     "help",
+     1.22,
+     1.51
+    ],
+    [
+     "keep",
+     1.51,
+     1.8
+    ],
+    [
+     "your",
+     1.8,
+     1.91
+    ],
+    [
+     "heart",
+     1.91,
+     2.18
+    ],
+    [
+     "healthy!",
+     2.18,
+     2.69
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "keep it healthy",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. Lub, dub! My heart works hard!",
+   "t0": 289.6875,
+   "t1": 293.75,
+   "v0": 289.97475000000003,
+   "dur": 3.446,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.35
+    ],
+    [
+     "with",
+     0.35,
+     0.56
+    ],
+    [
+     "me.",
+     0.56,
+     0.86
+    ],
+    [
+     "Lub,",
+     1.24,
+     1.6
+    ],
+    [
+     "dub!",
+     1.6,
+     2.05
+    ],
+    [
+     "My",
+     2.05,
+     2.25
+    ],
+    [
+     "heart",
+     2.25,
+     2.55
+    ],
+    [
+     "works",
+     2.55,
+     2.87
+    ],
+    [
+     "hard!",
+     2.87,
+     3.446
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Quiz time! Let's remember what we learned.",
+   "t0": 293.75,
+   "t1": 296.875,
+   "v0": 293.9607500000001,
+   "dur": 2.547125,
+   "words": [
+    [
+     "Quiz",
+     0.0,
+     0.25
+    ],
+    [
+     "time!",
+     0.25,
+     0.78
+    ],
+    [
+     "Let's",
+     0.92,
+     1.17
+    ],
+    [
+     "remember",
+     1.17,
+     1.63
+    ],
+    [
+     "what",
+     1.63,
+     1.85
+    ],
+    [
+     "we",
+     1.85,
+     1.98
+    ],
+    [
+     "learned.",
+     1.98,
+     2.547
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz time",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "How big is your heart? As big as your fist, or as big as a bus?",
+   "t0": 296.875,
+   "t1": 305.3125,
+   "v0": 297.0478750000001,
+   "dur": 4.676583333333333,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.25
+    ],
+    [
+     "big",
+     0.25,
+     0.58
+    ],
+    [
+     "is",
+     0.58,
+     0.71
+    ],
+    [
+     "your",
+     0.71,
+     0.86
+    ],
+    [
+     "heart?",
+     0.86,
+     1.41
+    ],
+    [
+     "As",
+     1.86,
+     2.06
+    ],
+    [
+     "big",
+     2.06,
+     2.34
+    ],
+    [
+     "as",
+     2.34,
+     2.46
+    ],
+    [
+     "your",
+     2.46,
+     2.6
+    ],
+    [
+     "fist,",
+     2.6,
+     3.19
+    ],
+    [
+     "or",
+     3.19,
+     3.45
+    ],
+    [
+     "as",
+     3.45,
+     3.6
+    ],
+    [
+     "big",
+     3.6,
+     3.88
+    ],
+    [
+     "as",
+     3.88,
+     4.01
+    ],
+    [
+     "a",
+     4.01,
+     4.08
+    ],
+    [
+     "bus?",
+     4.08,
+     4.677
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 1",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Your fist! A strong muscle, pumping all the time.",
+   "t0": 305.3125,
+   "t1": 309.0625,
+   "v0": 305.4644583333334,
+   "dur": 3.302416666666667,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.18
+    ],
+    [
+     "fist!",
+     0.18,
+     0.79
+    ],
+    [
+     "A",
+     0.97,
+     1.04
+    ],
+    [
+     "strong",
+     1.04,
+     1.51
+    ],
+    [
+     "muscle,",
+     1.51,
+     1.94
+    ],
+    [
+     "pumping",
+     1.94,
+     2.41
+    ],
+    [
+     "all",
+     2.41,
+     2.63
+    ],
+    [
+     "the",
+     2.63,
+     2.72
+    ],
+    [
+     "time.",
+     2.72,
+     3.3
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 1 answer",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Where does blood pick up oxygen? In your lungs, or in your ears?",
+   "t0": 309.0625,
+   "t1": 317.1875,
+   "v0": 309.3068750000001,
+   "dur": 4.445458333333334,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.13
+    ],
+    [
+     "does",
+     0.13,
+     0.35
+    ],
+    [
+     "blood",
+     0.35,
+     0.71
+    ],
+    [
+     "pick",
+     0.71,
+     0.93
+    ],
+    [
+     "up",
+     0.93,
+     1.09
+    ],
+    [
+     "oxygen?",
+     1.09,
+     1.85
+    ],
+    [
+     "In",
+     2.29,
+     2.41
+    ],
+    [
+     "your",
+     2.41,
+     2.57
+    ],
+    [
+     "lungs,",
+     2.57,
+     3.21
+    ],
+    [
+     "or",
+     3.21,
+     3.42
+    ],
+    [
+     "in",
+     3.42,
+     3.58
+    ],
+    [
+     "your",
+     3.58,
+     3.76
+    ],
+    [
+     "ears?",
+     3.76,
+     4.44
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "In your lungs! Fresh oxygen for your blood.",
+   "t0": 317.1875,
+   "t1": 320.9375,
+   "v0": 317.4923333333334,
+   "dur": 3.1963333333333335,
+   "words": [
+    [
+     "In",
+     0.0,
+     0.14
+    ],
+    [
+     "your",
+     0.14,
+     0.31
+    ],
+    [
+     "lungs!",
+     0.31,
+     1.0
+    ],
+    [
+     "Fresh",
+     1.24,
+     1.66
+    ],
+    [
+     "oxygen",
+     1.66,
+     2.35
+    ],
+    [
+     "for",
+     2.35,
+     2.5
+    ],
+    [
+     "your",
+     2.5,
+     2.66
+    ],
+    [
+     "blood.",
+     2.66,
+     3.196
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 2 answer",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What makes the lub, dub sound? Little doors, or little bells?",
+   "t0": 320.9375,
+   "t1": 329.0625,
+   "v0": 321.22866666666675,
+   "dur": 4.322583333333333,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.19
+    ],
+    [
+     "makes",
+     0.19,
+     0.46
+    ],
+    [
+     "the",
+     0.46,
+     0.55
+    ],
+    [
+     "lub,",
+     0.55,
+     0.99
+    ],
+    [
+     "dub",
+     0.99,
+     1.32
+    ],
+    [
+     "sound?",
+     1.32,
+     1.96
+    ],
+    [
+     "Little",
+     2.42,
+     2.64
+    ],
+    [
+     "doors,",
+     2.64,
+     3.26
+    ],
+    [
+     "or",
+     3.26,
+     3.42
+    ],
+    [
+     "little",
+     3.42,
+     3.66
+    ],
+    [
+     "bells?",
+     3.66,
+     4.32
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Little doors inside your heart, closing. Lub, dub!",
+   "t0": 329.0625,
+   "t1": 333.4375,
+   "v0": 329.2912500000001,
+   "dur": 3.8560416666666666,
+   "words": [
+    [
+     "Little",
+     0.01,
+     0.25
+    ],
+    [
+     "doors",
+     0.25,
+     0.75
+    ],
+    [
+     "inside",
+     0.75,
+     1.24
+    ],
+    [
+     "your",
+     1.24,
+     1.35
+    ],
+    [
+     "heart,",
+     1.35,
+     1.74
+    ],
+    [
+     "closing.",
+     1.74,
+     2.39
+    ],
+    [
+     "Lub,",
+     2.83,
+     3.28
+    ],
+    [
+     "dub!",
+     3.28,
+     3.856
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 3 answer",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpark",
+   "say": "Muscle, blood, oxygen, lub, dub! Thanks for exploring with me!",
+   "t0": 333.4375,
+   "t1": 339.0625,
+   "v0": 333.6872916666668,
+   "dur": 4.934125,
+   "words": [
+    [
+     "Muscle,",
+     0.0,
+     0.5
+    ],
+    [
+     "blood,",
+     0.5,
+     1.07
+    ],
+    [
+     "oxygen,",
+     1.07,
+     1.89
+    ],
+    [
+     "lub,",
+     1.89,
+     2.31
+    ],
+    [
+     "dub!",
+     2.31,
+     2.82
+    ],
+    [
+     "Thanks",
+     3.26,
+     3.58
+    ],
+    [
+     "for",
+     3.58,
+     3.76
+    ],
+    [
+     "exploring",
+     3.76,
+     4.47
+    ],
+    [
+     "with",
+     4.47,
+     4.66
+    ],
+    [
+     "me!",
+     4.66,
+     4.93
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "goodbye",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 339.0625,
+   "t1": 342.1875,
+   "v0": 339.375,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 342.1875,
+   "t1": 345.3125,
+   "v0": 342.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 345.3125,
+   "t1": 350.625,
+   "v0": 345.625,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 350.625,
+   "t1": 353.5866666666667,
+   "v0": 350.745,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

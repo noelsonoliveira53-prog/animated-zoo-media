@@ -2048,7 +2048,10 @@
    "The Animated Zoo"
   ],
   "video_id": "GmXK2AmsXE0",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep14_short2.mp4",
@@ -2079,7 +2082,10 @@
    "The Animated Zoo"
   ],
   "video_id": "iILOquPZc0M",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep14_short3.mp4",
@@ -2110,7 +2116,10 @@
    "The Animated Zoo"
   ],
   "video_id": "feQqWCeItOc",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep15_short1.mp4",
@@ -2239,7 +2248,10 @@
    "The Animated Zoo"
   ],
   "video_id": "Pb-KejtRP4w",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep16_short2.mp4",
@@ -2269,7 +2281,10 @@
    "The Animated Zoo"
   ],
   "video_id": "FEbwpVrjQsg",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep16_short3.mp4",
@@ -2299,7 +2314,10 @@
    "The Animated Zoo"
   ],
   "video_id": "ksDI_2Qe5CQ",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep17_short1.mp4",
@@ -2329,7 +2347,10 @@
    "The Animated Zoo"
   ],
   "video_id": "1m4v9Zd6N_8",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep17_short2.mp4",
@@ -2359,7 +2380,10 @@
    "The Animated Zoo"
   ],
   "video_id": "GhxLvRGXT6c",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep17_short3.mp4",
@@ -2389,6 +2413,9 @@
    "The Animated Zoo"
   ],
   "video_id": "fpxKzHKJHaQ",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  }
 ]

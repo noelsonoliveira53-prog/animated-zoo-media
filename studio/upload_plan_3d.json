@@ -3772,7 +3772,11 @@
   "thumb_text": "NO GILLS?!",
   "seconds": 358.3,
   "video_id": "k4JJ9jHPKaE",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "every",
+   "facts"
+  ]
  },
  {
   "file": "cartoon/za_ep17.mp4",
@@ -3836,6 +3840,10 @@
   "thumb_text": "DOOR?!",
   "seconds": 364.6,
   "video_id": "Y8sm8GAMf8o",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "every",
+   "facts"
+  ]
  }
 ]

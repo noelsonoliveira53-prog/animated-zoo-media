@@ -2084,7 +2084,7 @@
  {
   "file": "cartoon/zc_ep14_short3.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep14",
   "res": "2160x3840",
@@ -2108,7 +2108,9 @@
    "preschool",
    "Milo the bluebird",
    "The Animated Zoo"
-  ]
+  ],
+  "video_id": "feQqWCeItOc",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep15_short1.mp4",

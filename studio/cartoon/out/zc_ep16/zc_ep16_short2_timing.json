@@ -147,8 +147,8 @@
  "plan": {
   "length": 87.4,
   "shots": 18,
-  "visual_changes": 91,
-  "mean_gap": 0.96,
+  "visual_changes": 93,
+  "mean_gap": 0.94,
   "longest_gap": 4.66,
   "longest_gap_at": 70.4,
   "over_6s": [],
@@ -207,9 +207,19 @@
    "the blue ocean secret 2"
   ],
   [
+   2.87,
+   "action",
+   "tur walks"
+  ],
+  [
    4.1,
    "word",
    "2"
+  ],
+  [
+   5.01,
+   "action",
+   "bubbles rise"
   ],
   [
    5.01,
@@ -223,8 +233,8 @@
   ],
   [
    7.81,
-   "new shot",
-   "the blue ocean question 2a"
+   "new place",
+   "the kelp forest question 2a"
   ],
   [
    8.02,
@@ -776,7 +786,7 @@
    "sung": false
   },
   {
-   "place": "ocean",
+   "place": "kelp",
    "say": "Up to the top of the water? Or down to the sand?",
    "t0": 7.8125,
    "t1": 14.6875,

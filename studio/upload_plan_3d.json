@@ -3748,12 +3748,29 @@
   "date": "2026-11-29",
   "time": "5:30 PM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet.",
-  "theme_title": "How Do Sea Turtles Breathe?"
+  "note": "Built Nov 27 2026 by the hand-fired 1:17 PM lesson build (catch-up; session in the commits' Claude-Session line): facts read at the source today (Smithsonian Ocean, Olive Ridley Project, State of the World's Sea Turtles, Florida Museum, NOAA Fisheries, Scuba Diving; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 in two rounds plus fixes; frames of the finished file (middle and end of every shot, every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the file; thumbnail looked at; review.py. New art the owner has not seen: the top of the sea, the lungs cut-away, the slow heart board. Run note docs/cartoon/runs/zc_ep16.md. NOT uploaded: the daily run schedules it.",
+  "theme_title": "How Do Sea Turtles Breathe?",
+  "description": "How does a sea turtle breathe in the sea? Find Tula the green sea turtle's three breathing secrets with Milo the bluebird! A gentle animal lesson for ages 2-6 with questions to answer, things to count, moves to copy and a quiz at the end.\nKids learn that a sea turtle cannot breathe under the water because it has no gills: it is a reptile that breathes air with lungs right under its shell; that it must swim up to the top of the water and pop its head out for a breath; and that a resting sea turtle can hold its breath for hours and even sleep under the water, while its heart beats very slowly to save its air.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSmithsonian Ocean (sea turtles); Olive Ridley Project (sea turtle breathing); State of the World's Sea Turtles (how long sea turtles hold their breath); Florida Museum of Natural History (sea turtle adaptations); NOAA Fisheries (turtle facts); Scuba Diving, Ask a Marine Biologist (how sea turtles breathe).",
+  "tags": [
+   "how do sea turtles breathe",
+   "sea turtle facts for kids",
+   "sea turtle",
+   "ocean animals for kids",
+   "green sea turtle",
+   "do turtles have gills",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb": "brand/zoo/thumb_zc_ep16.jpg",
+  "thumb_text": "NO GILLS?!",
+  "seconds": 358.3
  },
  {
   "file": "cartoon/za_ep17.mp4",

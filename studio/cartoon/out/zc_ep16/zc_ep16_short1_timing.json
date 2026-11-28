@@ -349,8 +349,8 @@
   ],
   [
    33.75,
-   "new shot",
-   "the picture board board: under the shell"
+   "new place",
+   "the picture board (blue) board: under the shell"
   ],
   [
    35.61,
@@ -379,7 +379,7 @@
   ],
   [
    38.44,
-   "new shot",
+   "new place",
    "the picture board board: lungs fill"
   ],
   [
@@ -1148,7 +1148,7 @@
    "sung": false
   },
   {
-   "place": "paper",
+   "place": "paper_blue",
    "say": "Its lungs are right under its shell. Look! In, and out.",
    "t0": 33.75,
    "t1": 38.4375,

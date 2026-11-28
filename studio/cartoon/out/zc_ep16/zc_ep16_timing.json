@@ -581,7 +581,7 @@
  "plan": {
   "length": 358.3,
   "shots": 74,
-  "visual_changes": 465,
+  "visual_changes": 467,
   "mean_gap": 0.77,
   "longest_gap": 5.08,
   "longest_gap_at": 79.6,
@@ -1228,8 +1228,8 @@
   ],
   [
    63.12,
-   "new shot",
-   "the picture board board: under the shell"
+   "new place",
+   "the picture board (blue) board: under the shell"
   ],
   [
    64.89,
@@ -1258,7 +1258,7 @@
   ],
   [
    67.81,
-   "new shot",
+   "new place",
    "the picture board board: lungs fill"
   ],
   [
@@ -1507,9 +1507,19 @@
    "the blue ocean secret 2"
   ],
   [
+   118.76,
+   "action",
+   "tur walks"
+  ],
+  [
    119.99,
    "word",
    "2"
+  ],
+  [
+   120.9,
+   "action",
+   "bubbles rise"
   ],
   [
    120.9,
@@ -1523,8 +1533,8 @@
   ],
   [
    123.75,
-   "new shot",
-   "the blue ocean question 2a"
+   "new place",
+   "the kelp forest question 2a"
   ],
   [
    123.91,
@@ -3761,7 +3771,7 @@
    "sung": false
   },
   {
-   "place": "paper",
+   "place": "paper_blue",
    "say": "Its lungs are right under its shell. Look! In, and out.",
    "t0": 63.125,
    "t1": 67.8125,
@@ -4543,7 +4553,7 @@
    "sung": false
   },
   {
-   "place": "ocean",
+   "place": "kelp",
    "say": "Up to the top of the water? Or down to the sand?",
    "t0": 123.75,
    "t1": 130.625,

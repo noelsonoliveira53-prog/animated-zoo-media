@@ -66,7 +66,7 @@ def slow_heart(pid):
     """A big heart and a heartbeat line under it with long flat stretches between the beats (the heart beats very slowly). Parts: -h (the heart,
     it pulses), -line, -dot (a dot that travels along the line). Centred at 0 0."""
     line = "M-600 260 L-380 260 L-350 190 L-320 330 L-290 260 L300 260 L330 190 L360 330 L390 260 L600 260"
-    return (f'<g id="{pid}"><g id="{pid}-h" transform="translate(0 -60) scale(3.4)">{art2.heart(pid + "-hh")}</g>'
+    return (f'<g id="{pid}"><g id="{pid}-h"><g transform="translate(0 -60) scale(3.4)">{art2.heart(pid + "-hh")}</g></g>'
             f'<path id="{pid}-line" d="{line}" stroke="#e63946" stroke-width="16" fill="none" stroke-linejoin="round" stroke-linecap="round"/>'
             f'<circle id="{pid}-dot" cx="-600" cy="260" r="22" fill="#ffd23f" stroke="{INK}" stroke-width="6"/></g>')
 

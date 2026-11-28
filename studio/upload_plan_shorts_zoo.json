@@ -2208,37 +2208,85 @@
  {
   "file": "cartoon/zc_ep16_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep16",
   "res": "2160x3840",
   "watermark": "top",
   "date": "2026-12-02",
   "time": "7:30 PM",
-  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet."
+  "note": "Built Nov 27 2026 by the hand-fired 1:17 PM lesson build (catch-up; session in the commits' Claude-Session line): facts read at the source today (Smithsonian Ocean, Olive Ridley Project, State of the World's Sea Turtles, Florida Museum, NOAA Fisheries, Scuba Diving; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 in two rounds plus fixes; frames of the finished file (middle and end of every shot, every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the file; thumbnail looked at; review.py. New art the owner has not seen: the top of the sea, the lungs cut-away, the slow heart board. Run note docs/cartoon/runs/zc_ep16.md. NOT uploaded: the daily run schedules it.",
+  "title": "Can a Sea Turtle Breathe Under Water?",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep16_short1.jpg",
+  "thumb_text": "LUNGS!",
+  "seconds": 89.8,
+  "description": "Can a sea turtle breathe under the water? Find out with Milo the bluebird and Tula the green sea turtle! A sea turtle has no gills, so it cannot take air from the water. It is a reptile that breathes air, just like you, with lungs right under its shell. A quick animal fact for kids from the lesson “How Do Sea Turtles Breathe?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSmithsonian Ocean (sea turtles); Olive Ridley Project (sea turtle breathing); Florida Museum of Natural History (sea turtle adaptations); Scuba Diving, Ask a Marine Biologist (how sea turtles breathe).",
+  "tags": [
+   "how do sea turtles breathe",
+   "sea turtle facts for kids",
+   "do turtles have gills",
+   "sea turtle lungs",
+   "ocean animals for kids",
+   "animal facts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  },
  {
   "file": "cartoon/zc_ep16_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep16",
   "res": "2160x3840",
   "watermark": "top",
   "date": "2026-12-03",
   "time": "7:30 PM",
-  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet."
+  "note": "Built Nov 27 2026 by the hand-fired 1:17 PM lesson build (catch-up; session in the commits' Claude-Session line): facts read at the source today (Smithsonian Ocean, Olive Ridley Project, State of the World's Sea Turtles, Florida Museum, NOAA Fisheries, Scuba Diving; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 in two rounds plus fixes; frames of the finished file (middle and end of every shot, every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the file; thumbnail looked at; review.py. New art the owner has not seen: the top of the sea, the lungs cut-away, the slow heart board. Run note docs/cartoon/runs/zc_ep16.md. NOT uploaded: the daily run schedules it.",
+  "title": "Where Do Sea Turtles Go for Air?",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep16_short2.jpg",
+  "thumb_text": "POP UP!",
+  "seconds": 87.5,
+  "description": "Where does a sea turtle go for air? Find out with Milo the bluebird and Tula the green sea turtle! Sea turtles must come up to the top of the water to breathe. Tula pops her head out for a breath, then swims back down to eat seagrass. A quick animal fact for kids from the lesson “How Do Sea Turtles Breathe?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSmithsonian Ocean (sea turtles); Olive Ridley Project (sea turtle breathing); NOAA Fisheries (turtle facts).",
+  "tags": [
+   "sea turtle facts for kids",
+   "how do sea turtles breathe",
+   "green sea turtle",
+   "sea turtle breathing",
+   "ocean animals for kids",
+   "animal facts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  },
  {
   "file": "cartoon/zc_ep16_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep16",
   "res": "2160x3840",
   "watermark": "top",
   "date": "2026-12-04",
   "time": "7:30 PM",
-  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet."
+  "note": "Built Nov 27 2026 by the hand-fired 1:17 PM lesson build (catch-up; session in the commits' Claude-Session line): facts read at the source today (Smithsonian Ocean, Olive Ridley Project, State of the World's Sea Turtles, Florida Museum, NOAA Fisheries, Scuba Diving; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 in two rounds plus fixes; frames of the finished file (middle and end of every shot, every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the file; thumbnail looked at; review.py. New art the owner has not seen: the top of the sea, the lungs cut-away, the slow heart board. Run note docs/cartoon/runs/zc_ep16.md. NOT uploaded: the daily run schedules it.",
+  "title": "How Long Can a Sea Turtle Hold Its Breath?",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep16_short3.jpg",
+  "thumb_text": "HOURS!",
+  "seconds": 88.3,
+  "description": "How long can a sea turtle hold its breath? Find out with Milo the bluebird and Tula the green sea turtle! A resting sea turtle can hold its breath for hours, and sea turtles can even sleep under the water, while their heart beats very slowly to save their air. A quick animal fact for kids from the lesson “How Do Sea Turtles Breathe?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSmithsonian Ocean (sea turtles); Olive Ridley Project (sea turtle breathing); State of the World's Sea Turtles (how long sea turtles hold their breath); Florida Museum of Natural History (sea turtle adaptations).",
+  "tags": [
+   "how long can a sea turtle hold its breath",
+   "sea turtle facts for kids",
+   "sea turtle sleep",
+   "sea turtle",
+   "ocean animals for kids",
+   "animal facts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  }
 ]

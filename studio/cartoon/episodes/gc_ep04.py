@@ -51,15 +51,15 @@ SRC = ("WHERE THE FACTS COME FROM\nKidsHealth from Nemours: Your Heart and Circu
 EP = {"id": "gc_ep04", "nest": True, "beat": True, "voice": "am_michael", "speed": 0.85, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0, "wm": "brand/gizmo",      # Gizmo's OWN main intro (intro_gizmo.py): after the hook and as the last four shots
       "cast": {"gizmo": {"voice": "am_michael", "speed": 0.85}},
       "title": "How Does Your Heart Work? Gizmo Explains", "thumb_text": "THUMP!", "series": "Gizmo Explains",
-      "description": ("How does your heart work? Gizmo the robot has no heart, but you do! He shows where your heart is, how big it is, where it sends your "
-                      "blood, what makes the heartbeat sound and why it beats faster when you run and play. A gentle science lesson for ages 4-8 with "
-                      "questions to answer, things to try and a quiz at the end.\n"
+      "description": ("How does your heart work? Gizmo the robot has no heart, but you do! He shows where your heart is, how big it is, how it sends "
+                      "oxygen all around your body, what makes the heartbeat sound and why it beats faster when you run and play. A gentle science lesson "
+                      "for ages 4-8 with questions to answer, things to try and a quiz at the end.\n"
                       "Kids learn that the heart is a muscle about the size of their fist, in the chest a little to the left of the middle; that it pumps "
-                      "blood all day and all night; that blood picks up oxygen in the lungs and carries it all around the body, then comes back to the heart; "
-                      "that the lub-dub sound is little doors inside the heart (valves) closing; that the heart has four rooms (chambers); and that the "
-                      "heart pumps faster when we exercise, so our muscles get more oxygen.\n\n"
+                      "all day and all night; that the lungs give the body oxygen and the heart sends it to every part of the body and back again; that the "
+                      "lub-dub sound is little doors inside the heart (valves) closing; that the heart has four rooms (chambers); and that the heart pumps "
+                      "faster when we exercise, so our muscles get more oxygen.\n\n"
                       + BOILER + "\n\n" + SRC),
-      "tags": ["how does your heart work", "heart for kids", "human body for kids", "heartbeat for kids", "blood for kids", "lungs for kids",
+      "tags": ["how does your heart work", "heart for kids", "human body for kids", "heartbeat for kids", "lungs for kids", "how the heart pumps",
                "science for kids", "body science for kids", "Gizmo Explains", "Gizmo the robot", "preschool science", "kindergarten science"]}
 
 GX, GY, GS = 700, 900, .7
@@ -291,7 +291,7 @@ SHORTS = [
     {"id": "gc_ep04_short1", "title": "How Big Is Your Heart? Gizmo Explains", "band": ("HOW BIG IS", "IT?"), "thumb_text": "FIST SIZE", "part": 1,
      "extra_first": [S("paper_gz", BOARD, "How big is the heart inside your chest?", part=1, q=True, tag="hook: how big", pcam=PBOARD, who="gizmo", pcam2=W(PBOARD, .94),
                        props=[b_heart(720, 720, .85, 740, 700, .66), b_fist()], fx=[BEAT(0.1, "#{p}ht", 5)], words=[("w:chest?", "?", .5, .2, 2.0, "sun", (.5, .36), 1.3)])]},
-    {"id": "gc_ep04_short2", "title": "Where Does Your Blood Go? Gizmo Explains", "band": ("WHERE DOES", "IT GO?"), "thumb_text": "OUT, BACK!", "part": 2,
+    {"id": "gc_ep04_short2", "title": "Where Does Your Oxygen Go? Gizmo Explains", "band": ("WHERE DOES", "IT GO?"), "thumb_text": "OUT, BACK!", "part": 2,
      "extra_first": [S("paper_gz", BODY, "Where does your blood go, all day long?", part=2, q=True, tag="hook: where does blood go", pcam=PBODY, who="gizmo", pcam2=W(PBODY, .94),
                        props=[b_body()], fx=[BEAT(0.1, "#{p}bd-h", 4)] + OUTWAY(0.4, "#{p}bd"), words=[("w:long?", "?", .78, .3, 2.0, "sun", (.75, .3), 1.3)])]},
     {"id": "gc_ep04_short3", "title": "What Makes the Heartbeat Sound? Gizmo Explains", "band": ("WHAT MAKES", "THE SOUND?"), "thumb_text": "LUB DUB", "part": 3,
@@ -310,7 +310,7 @@ THUMBS = {
                 "props": [(A.heart, 640, 640, 1.35)],
                 "words": [("THUMP", 1380, 400, 190, ""), ("THUMP!", 1380, 660, 200, "sun")]},
     "gc_ep04_short1": {"place": "paper_gz", "cam": (960, 640, 1400), "actors": [],
-                       "props": [(A.heart, 720, 700, .95), (A.fist, 1200, 650, 1.0)],
+                       "props": [(A.heart, 770, 720, .8), (A.fist, 1170, 680, .8)],
                        "words": [("FIST", 540, 330, 220, ""), ("SIZE", 540, 1560, 220, "sun")]},
     "gc_ep04_short2": {"place": "paper_gz", "cam": (960, 560, 1500), "actors": [],
                        "props": [(lambda p: A.body(p).replace('opacity="0"', 'opacity="1"'), 960, 560, .78)],

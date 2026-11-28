@@ -90,6 +90,14 @@ git checkout main
 HyperFrames refuses to start under 1 GB of free disk (`df -h .`). If needed: `git sparse-checkout set --no-cone '/*' '!/truck/' '!/moon/' '!/bloop/' '!/gizmo/' '!/fruity/' '!/space/' '!/wild/'` (they stay in git).
 Renders and encodes: ONE at a time, started as a tracked background command, never `nohup ... &` (the render is cancelled when the launching call returns). No `git pull`, stash or rebase while one writes.
 
+## GOODBYE: LIKE AND SUBSCRIBE (owner, Nov 27 2026 7:29 PM)
+Every new long Zoo episode (za_ep17+, zc_ep17+) ends: the story's goodbye shot (without "Bye-bye"), then Milo alone saying `SUBSCRIBE_LINE` (`from intro import INTRO_STAGES, intro_shots, SUBSCRIBE_LINE`), then `*intro_shots()`:
+```
+S("zoo_eve", say=SUBSCRIBE_LINE, part=4, tag="goodbye: like and subscribe", fx=[("hop", "w:Thank", "milo"), ("hop", "w:subscribe,", "milo")],
+  words=[("w:Thank", "THANK YOU!", .8, .18, .9, "sun", (.5, .33), .8)], **MILO("zoo_eve", 940)),
+```
+(the place needs Milo in STAGES; "zoo_eve" or "zoo" as in the lessons). The plan check fails a new episode without it. Not in Shorts, not on Gizmo, not in titles or descriptions. Look at its still like every other shot.
+
 ## Steps (all in `studio/cartoon/`)
 1. `python3 toon.py <id> --plan` must exit 0 (300-390 s, no stretch over 6 s, 6 places, the story beats, every word placed, `sync`: all cuts on the half-beat, songs on a beat, no suspect word).
 2. `./stills.sh <id> L <sheet.jpg> 8 300`: LOOK at one still of EVERY shot. Fix what the plan check cannot see (a character inside another, a word on a face or on the watermark, half a character at the edge, a prop that is not where the line says, a sign over a face). Stills again after each fix (`TAGS="tag a|tag b"` limits them).

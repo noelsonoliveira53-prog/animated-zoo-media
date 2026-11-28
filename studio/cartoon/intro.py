@@ -75,6 +75,10 @@ art.BG["intro_logo"] = bg_logo; art.PLACE["intro_logo"] = "the logo (main intro)
 
 # (name, rig, x, y, size, mirrored[, flies]). Sizes and places from the rigs' measured outlines (Nov 20): no friend stands inside another, the
 # left-hand friends face right and the right-hand friends face left (toward the middle).
+# The goodbye line of every new long Zoo episode (owner, Nov 27 2026 7:29 PM: Milo asks his friends to like and subscribe). Milo says it in the
+# last shot before the closing `*intro_shots()`, in an ordinary spoken shot (toon.py's plan check looks for it in za_ep17+ / zc_ep17+).
+SUBSCRIBE_LINE = "Thank you, friends! If you like The Animated Zoo, don't forget to like and subscribe, to keep supporting our zoo friends. See you next time!"
+
 INTRO_STAGES = {
     "intro_gate": [("mango", "monkey", 180, 880, .5), ("tumble", "tumble", 450, 875, .55), ("poppy", "bear", 880, 860, .40), ("clover", "lamb", 1165, 860, .40, True),
                    ("sandy", "calf", 1420, 878, .48), ("tula", "turtle", 1750, 888, .45, True), ("hazel", "hedgehog", 1000, 985, .40),

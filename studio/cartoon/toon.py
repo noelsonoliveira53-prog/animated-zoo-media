@@ -567,6 +567,13 @@ def plan_gate(film, total, ep):
         else:
             if ix[0] == 0 or film.shots[ix[0]]["t0"] > 30: fails.append(f"the first main intro starts at {film.shots[ix[0]]['t0']:.0f} s: it goes right after the hook (the hook first, then the intro, inside the first 30 s)")
             if ix[1] != len(film.shots) - 4: fails.append("the second main intro must be the LAST four shots of the episode (after the goodbye)")
+            # the goodbye asks to like and subscribe (owner, Nov 27 2026 7:29 PM): Milo's last shot before the closing intro says intro.SUBSCRIBE_LINE.
+            # New Zoo long episodes only (za_ep17+, zc_ep17+); older episodes keep their goodbye. Never in a Short (no intro there), never on Gizmo.
+            _m = re.match(r"z[ac]_ep(\d+)$", str(ep.get("id", "")))
+            if not gz_ep and _m and int(_m.group(1)) >= 17 and len(film.shots) > 5:
+                _g = film.shots[len(film.shots) - 5]
+                if "like and subscribe" not in (_g.get("say") or "").lower() or _g.get("who") != "milo":
+                    fails.append("the shot right before the closing main intro must be Milo saying intro.SUBSCRIBE_LINE (the goodbye asks to like and subscribe; CLAUDE.md, owner Nov 27 7:29 PM)")
     if not film.portrait:
         if len(real) < 6: fails.append(f"only {len(real)} places (need 6)")
         if total - t_intro < 300: fails.append(f"only {total - t_intro:.0f} s of its own content ({total:.0f} s with the main intro; need 300 without it)")

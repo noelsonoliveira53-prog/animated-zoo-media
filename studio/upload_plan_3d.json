@@ -3748,7 +3748,7 @@
   "date": "2026-11-29",
   "time": "5:30 PM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3770,7 +3770,9 @@
   ],
   "thumb": "brand/zoo/thumb_zc_ep16.jpg",
   "thumb_text": "NO GILLS?!",
-  "seconds": 358.3
+  "seconds": 358.3,
+  "video_id": "k4JJ9jHPKaE",
+  "thumb_set": true
  },
  {
   "file": "cartoon/za_ep17.mp4",

@@ -155,8 +155,8 @@
  "plan": {
   "length": 91.9,
   "shots": 17,
-  "visual_changes": 85,
-  "mean_gap": 1.08,
+  "visual_changes": 86,
+  "mean_gap": 1.07,
   "longest_gap": 5.06,
   "longest_gap_at": 62.7,
   "over_6s": [],
@@ -585,6 +585,11 @@
    86.42,
    "thinking dot",
    "1"
+  ],
+  [
+   86.85,
+   "action",
+   "the hollow middle blinks"
   ],
   [
    87.09,

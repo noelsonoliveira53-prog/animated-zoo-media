@@ -581,7 +581,7 @@
  "plan": {
   "length": 358.3,
   "shots": 71,
-  "visual_changes": 446,
+  "visual_changes": 449,
   "mean_gap": 0.8,
   "longest_gap": 5.06,
   "longest_gap_at": 178.2,
@@ -1291,6 +1291,11 @@
    "a picture pulses"
   ],
   [
+   83.98,
+   "word",
+   "?"
+  ],
+  [
    84.82,
    "sign",
    "YES"
@@ -1304,6 +1309,11 @@
    86.5,
    "thinking dot",
    "1"
+  ],
+  [
+   86.94,
+   "action",
+   "a picture pulses"
   ],
   [
    87.18,
@@ -1839,6 +1849,11 @@
    201.86,
    "thinking dot",
    "1"
+  ],
+  [
+   202.29,
+   "action",
+   "the hollow middle blinks"
   ],
   [
    202.53,

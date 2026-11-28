@@ -154,8 +154,8 @@
  "plan": {
   "length": 91.4,
   "shots": 17,
-  "visual_changes": 82,
-  "mean_gap": 1.11,
+  "visual_changes": 84,
+  "mean_gap": 1.09,
   "longest_gap": 3.63,
   "longest_gap_at": 27.2,
   "over_6s": [],
@@ -430,6 +430,11 @@
    "a picture pulses"
   ],
   [
+   54.92,
+   "word",
+   "?"
+  ],
+  [
    55.76,
    "sign",
    "YES"
@@ -443,6 +448,11 @@
    57.44,
    "thinking dot",
    "1"
+  ],
+  [
+   57.87,
+   "action",
+   "a picture pulses"
   ],
   [
    58.11,

@@ -229,3 +229,4 @@
 | 2026-11-27 | cartoon/zc_ep15_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-27 | cartoon/zc_ep15_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-27 | cartoon/zc_ep15_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-27 | cartoon/za_ep17.mp4 | cartoon_adventure | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |

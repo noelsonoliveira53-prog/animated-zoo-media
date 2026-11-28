@@ -120,8 +120,8 @@ SHOTS = [
     S("dusk_wood", (800, 700, 1240), "Yes! Come and see what a hedgehog does at night!", who="hazel", beat="goal", tag="Hazel: yes, come and see",
       cam2=(810, 710, 1180), actors=[HZ(620, 940), MI(1000, 800)], fx=[("face", 0.02, "hazel", "happy"), ("hop", "w:Yes!", "hazel"), ("hop", "w:see", "milo")],
       words=[("w:Yes!", "YES!", .5, .14, .9, "sun")]),
-    S("dusk_wood", (800, 700, 1280), "When does Hazel look for her snacks? In the day, or at night?", q=True, beat="goal", tag="question: day or night", pause=3.2,
-      cam2=(810, 710, 1220), actors=[HZ(620, 940), MI(1000, 800)], fx=[("face", 0.02, "hazel", "happy"), SNIFFS(0.4, 3), ("signs", "w:day,", ["DAY", "NIGHT"], 1, "wait:1.8")]),
+    S("dusk_wood", (700, 640, 1560), "When does Hazel look for her snacks? In the day, or at night?", q=True, beat="goal", tag="question: day or night", pause=3.2,
+      cam2=(780, 700, 1320), actors=[HZ(620, 940), MI(1000, 800)], fx=[("face", 0.02, "hazel", "happy"), SNIFFS(0.4, 3), ("signs", "w:day,", ["DAY", "NIGHT"], 1, "wait:1.8")]),
     S("paper", (960, 520, 1560), "Hedgehogs sleep in the day. At night, they wake up, and look for food.", beat="fact", tag="fact: hedgehogs sleep in the day, hunt at night",
       cam2=(960, 530, 1480), actors=[("hz1", "hedgehog", 600, 800, .62, False), ("hz2", "hedgehog", 1320, 800, .62, False)],
       props=[DAYCARD(560, 430, .9), NIGHTCARD(1340, 430, .9), prop("lid", A.hog_lids, 600, 800, .62), prop("zz", A.zzz, 760, 590, .7)],
@@ -281,11 +281,11 @@ SHOTS = [
       hide=["hazel"], fx=[("face", 0.02, "milo", "happy"), ("hop", "w:night.", "milo"), ("nod", "w:Thank", "milo")],
       words=[("w:night.", "AWAKE AT NIGHT", .5, .16, .66, "pill"), ("w:Thank", "THANK YOU!", .76, .34, .7, "sun")]),
     S("dawn_wood", (860, 680, 1700), "Do you remember? When do hedgehogs look for food? At night, or in the day?", q=True, beat="ending", tag="question: night or day again", pause=3.2,
-      cam2=(860, 690, 1660), actors=[HZ(380, 940, .62), MI(1100, 760)], props=[prop("lid", A.hog_lids, 380, 940, .62), prop("zz", A.zzz, 540, 760, .6)],
+      cam2=(700, 780, 1200), actors=[HZ(380, 940, .62), MI(1100, 760)], props=[prop("lid", A.hog_lids, 380, 940, .62), prop("zz", A.zzz, 540, 760, .6)],
       fx=[("to", 0.3, "#{p}zz", {"y": -30, "duration": .5, "yoyo": True, "repeat": 13}, "the z's float"),
           ("hop", "w:remember?", "milo"), ("signs", "w:night,", ["NIGHT", "DAY"], 0, "wait:1.8")]),
-    S("dawn_wood", (880, 660, 1600), "And what helps Hazel find her food? Her eyes, or her nose?", q=True, beat="ending", tag="question: eyes or nose", pause=3.2,
-      cam2=(885, 668, 1560), actors=[HZ(380, 940, .62), MI(1100, 760)], props=[prop("lid", A.hog_lids, 380, 940, .62), prop("zz", A.zzz, 540, 760, .6)],
+    S("dawn_wood", (960, 540, 1920), "And what helps Hazel find her food? Her eyes, or her nose?", q=True, beat="ending", tag="question: eyes or nose", pause=3.2,
+      cam2=(900, 600, 1720), actors=[HZ(380, 940, .62), MI(1100, 760)], props=[prop("lid", A.hog_lids, 380, 940, .62), prop("zz", A.zzz, 540, 760, .6)],
       fx=[("to", 0.3, "#{p}zz", {"y": -30, "duration": .5, "yoyo": True, "repeat": 13}, "the z's float"),
           ("fly", 0.5, "milo", 1180, 700, 1.2), ("signs", "w:eyes,", ["EYES", "NOSE"], 1, "wait:1.8")]),
     S("dawn_wood", (900, 580, 1800), "Sniff and snuffle, through the night. My little nose can find a bite!", beat="ending", tag="the closing rhyme", cam2=(900, 600, 1720),
@@ -302,7 +302,8 @@ SHOTS = [
 
 # thumbnail (thumb.py): the promise: Hazel's nose down to the ground under a big moon, smell lines rising; 2 words, none of the title's words, no watermark
 THUMBS = {
-    "za_ep17": {"place": "logglade", "cam": (1100, 620, 1300),
+    "za_ep17": {"place": "logglade", "cam": (1120, 600, 1340),
                 "actors": [("hedgehog", 1000, 940, 1.35, False, "gsap.set('#P-neck',{rotation:16,svgOrigin:'90 -110'});")],
+                "props": [(A.sniff, 1490, 945, 1.25)],
                 "words": [("SNIFF, SNIFF!", 820, 260, 170, "sun", -5)]},
 }

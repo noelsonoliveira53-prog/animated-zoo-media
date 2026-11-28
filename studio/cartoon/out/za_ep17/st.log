@@ -1,0 +1,88 @@
+{
+ "length": 339.1,
+ "shots": 58,
+ "visual_changes": 540,
+ "mean_gap": 0.63,
+ "longest_gap": 4.73,
+ "longest_gap_at": 161.4,
+ "over_6s": [],
+ "places": [
+  "nightforest",
+  "intro_gate",
+  "intro_logo",
+  "dusk_wood",
+  "darkwood",
+  "leafwood",
+  "logglade",
+  "dawn_wood"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 16,
+ "longest_without_question": 43.4,
+ "first_words_at": 0.42,
+ "shot_mean": 5.85,
+ "main_intro": {
+  "at": [
+   7.8,
+   323.4
+  ],
+  "seconds": 30.0
+ },
+ "beats": {
+  "hook": 1,
+  "song": 8,
+  "goal": 5,
+  "fact": 7,
+  "obstacle1": 5,
+  "obstacle2": 6,
+  "obstacle3": 6,
+  "low": 3,
+  "solution": 7,
+  "ending": 8
+ },
+ "fails": [],
+ "words_placed": "624/624",
+ "sync": {
+  "pauses_checked": 58,
+  "onset_err_mean_ms": 28.3,
+  "onset_err_max_ms": 100.0,
+  "suspect_words": [],
+  "cuts": 57,
+  "cuts_on_the_half_beat": 57,
+  "songs_entering_on_a_beat": "8/8",
+  "process": "3D (beat)"
+ }
+}
+6.45
+    },
+    {
+      "path": "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/frame-58-at-338.857s.png",
+      "time": 338.857
+    }
+  ],
+  "contactSheets": [
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-1.jpg",
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-2.jpg",
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-3.jpg",
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-4.jpg",
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-5.jpg",
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-6.jpg",
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-7.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.231",
+    "latestVersion": "0.9.104",
+    "updateAvailable": true
+  }
+}
+ -0ea471d6e870/contact-sheet-3.jpg (grid view for AI review)
+   /home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-4.jpg (grid view for AI review)
+   /home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-5.jpg (grid view for AI review)
+   /home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-6.jpg (grid view for AI review)
+   /home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/proj_l/.hyperframes/artifacts/snapshots/4ed28857-c67e-4c2a-ae3c-0ea471d6e870/contact-sheet-7.jpg (grid view for AI review)
+
+EXIT 0

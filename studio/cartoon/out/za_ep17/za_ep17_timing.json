@@ -593,7 +593,9 @@
    "solution": 7,
    "ending": 8
   },
-  "fails": [],
+  "fails": [
+   "the shot right before the closing main intro must be Milo saying intro.SUBSCRIBE_LINE (the goodbye asks to like and subscribe; CLAUDE.md, owner Nov 27 7:29 PM)"
+  ],
   "words_placed": "624/624",
   "sync": {
    "pauses_checked": 58,

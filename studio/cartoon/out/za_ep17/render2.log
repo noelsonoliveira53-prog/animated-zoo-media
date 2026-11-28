@@ -1,0 +1,170 @@
+{
+ "length": 339.1,
+ "shots": 58,
+ "visual_changes": 540,
+ "mean_gap": 0.63,
+ "longest_gap": 4.73,
+ "longest_gap_at": 161.4,
+ "over_6s": [],
+ "places": [
+  "nightforest",
+  "intro_gate",
+  "intro_logo",
+  "dusk_wood",
+  "darkwood",
+  "leafwood",
+  "logglade",
+  "dawn_wood"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 16,
+ "longest_without_question": 43.4,
+ "first_words_at": 0.42,
+ "shot_mean": 5.85,
+ "main_intro": {
+  "at": [
+   7.8,
+   323.4
+  ],
+  "seconds": 30.0
+ },
+ "beats": {
+  "hook": 1,
+  "song": 8,
+  "goal": 5,
+  "fact": 7,
+  "obstacle1": 5,
+  "obstacle2": 6,
+  "obstacle3": 6,
+  "low": 3,
+  "solution": 7,
+  "ending": 8
+ },
+ "fails": [
+  "the shot right before the closing main intro must be Milo saying intro.SUBSCRIBE_LINE (the goodbye asks to like and subscribe; CLAUDE.md, owner Nov 27 7:29 PM)"
+ ],
+ "words_placed": "624/624",
+ "sync": {
+  "pauses_checked": 58,
+  "onset_err_mean_ms": 28.3,
+  "onset_err_max_ms": 100.0,
+  "suspect_words": [],
+  "cuts": 57,
+  "cuts_on_the_half_beat": 57,
+  "songs_entering_on_a_beat": "8/8",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)")
+[BrowserManager] Browser launched (HeadlessChrome/158.0.8127.36, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (1ms)
+[initSession:screenshot] page.goto complete (331ms)
+[Browser:WARN] GSAP target #s0c1,#s0c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s3c1,#s3c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s5c1,#s5c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s6c1,#s6c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s9c1,#s9c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s14c1,#s14c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s15c1,#s15c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s16c1,#s16c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s17c1,#s17c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s18c1,#s18c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s19c1,#s19c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s20c1,#s20c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-fl not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-fl not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-bl not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-bl not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-fl2 not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-fl2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-bl2 not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s20_milo-bl2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-fl not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-fl not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-bl not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-bl not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-fl2 not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-fl2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-bl2 not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s22_milo-bl2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s24c1,#s24c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s25c1,#s25c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s26c1,#s26c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s27c1,#s27c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s28c1,#s28c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s29c1,#s29c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s30c1,#s30c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s31c1,#s31c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s32c1,#s32c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s33c1,#s33c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s34c1,#s34c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-fl not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-fl not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-bl not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-bl not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-fl2 not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-fl2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-bl2 not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s34_milo-bl2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s35c1,#s35c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s36c1,#s36c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s37c1,#s37c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s38c1,#s38c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s39c1,#s39c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s40c1,#s40c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s41c1,#s41c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s42c1,#s42c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s43c1,#s43c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s44c1,#s44c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s48_milo-neck not found. https://gsap.com
+[Browser:WARN] GSAP target #s56c1,#s56c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s57c1,#s57c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] GSAP proxy flush complete (1841ms)
+[initSession:screenshot] pollHfReady complete (1891ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (1907ms)
+[initSession:screenshot] applyVideoMetadataHints complete (1907ms)
+[initSession:screenshot] media + fonts + tailwind ready (1914ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (1968ms)
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+4K 3840x2160 /home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/za_ep17.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/za_ep17/za_ep17.mp4 339.1 s
+EXIT 0
